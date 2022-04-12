@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+:root
+{
+    --blue: #287bff;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+}
+body
+{
+    background-image: url("./image/planeta.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.details
+{
+    position: relative;
+    width: 100%;
+    padding: 250px;
+    display: grid;
+    grid-gap: 30px;
+    /*margin-top: 10px;*/
+}
+.details .recentOrders
+{
+    position: relative;
+    display: grid;
+    min-height: 370px;
+    background: #ffffff;
+    padding: auto;
+    /*box-shadow: 0 7px 25px rgba(3, 3, 3, 0.658);*/
+    border-radius: 20px;
+}
+.cardHeader
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardHeader h2
+{
+    font-weight: 600;
+    color: var(--blue);
+}
+
+   label.alinha {
+    height: 40px;
+    width: 70px; 
+    display: inline-block;
+   }  
+   
+   button {
+    font-size: 20px;
+    margin: 10px;
+    margin-top: 10px;
+    width: 250px;
+    height: 40px;
+   }
+   
+   p {
+    text-align: center;
+    border: 5px 5px 5px 2px #000000;;
+    background: #ffffff;
+    width: 50%;
+    margin: 20px auto;
+   }
+   
+   span {
+    font-weight: bold;
+    font-style: italic;
+    color: #002E06;
+   }
+   
+   input[name*="nome"], input[name*="login"], input[name*="email"], input[name*="senha"] {
+    width: 300px;
+    height: 30px;
+   }
+   
+   a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: #000;
+   }
+
+
+div {
+margin: 0 auto;
+width: 1000px;
+display: table-cell;
+vertical-align: middle;
+text-align: center;
+}
+
+h2{
+    width: 1000px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .buttonClass {
+    font-size:15px;
+    font-family:Arial;
+    width:250px;
+    height:50px;
+    border-width:1px;
+    color:#000000;
+    /*font-weight:bold;*/
+    border-color:#124d77;
+    border-top-left-radius:3px;
+    border-top-right-radius:3px;
+    border-bottom-left-radius:3px;
+    border-bottom-right-radius:3px;
+    box-shadow:inset 0px 1px 0px 0px #54a3f7;
+    text-shadow:inset 0px 1px 0px #154682;
+    background:linear-gradient(#007dc1, #0061a7);
+  }
+  
+  .buttonClass:hover {
+    background: linear-gradient(#0061a7, #007dc1);
+  }
+   
+   
