@@ -1,35 +1,3 @@
-<?php
-  $conn = mysqli_connect('localhost','root','', 'beise2');
-  
-  $sql = "SELECT * FROM dados";
-  $resultado = $conn->query($sql);
-  
-  while ($registro = $resultado->fetch_array()) 
-  {
-   //evitando que os dados do MySQL para nosso código em PHP seja quebrado por um cracker da vida, conhecido como XSS.
-   $time               =  $registro[0];
-   $jogos_total        =  $registro[1];
-   $jogos_blueside     =  $registro[2];
-   $pegou_blueside     =  $registro[3];
-   $jogos_redside      =  $registro[4];
-   $pegou_redside      =  $registro[5];
-  
-   $mediaBlue = ($registro[3] * 100 / $registro[2]);
-   $mediaRed  =  ($registro[5] * 100 / $registro[4]);
-  
-   $time           = htmlentities($time, ENT_QUOTES, "UTF-8");
-   $jogos_total    = htmlentities($jogos_total,  ENT_QUOTES, "UTF-8");
-   $jogos_blueside = htmlentities($jogos_blueside,  ENT_QUOTES, "UTF-8");
-   $pegou_blueside = htmlentities($pegou_blueside,  ENT_QUOTES, "UTF-8");
-   $jogos_redside  = htmlentities($jogos_redside,  ENT_QUOTES, "UTF-8");
-   $pegou_redside  = htmlentities($pegou_redside,  ENT_QUOTES, "UTF-8");
-   $mediaBlue      = htmlentities($mediaBlue,  ENT_QUOTES, "UTF-8");
-   $mediaRed       = htmlentities($mediaRed,  ENT_QUOTES, "UTF-8");
-   
-  }
-
-?>
-
 <!DOCTYPE html> 
 <html lang="pt-BR"> 
 <head> 
@@ -158,11 +126,7 @@
                                 }
 
                                 echo "</table>";?>                      
-                           <!--<td><span class="status delivered">Delivered</span></td> -->
-
            </div>
-
-
           </div>
    </div>
 </div>
