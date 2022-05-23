@@ -10,33 +10,39 @@
   <div class="navigantion">
       <ul>
           <li>
-              <a href="#"> <!--- colocar -->
-                  <span class="icon"><ion-icon name="albums"></ion-icon></span>
-                  <span class="title"> Nome criativo </span>
+              <a href="index.php"> <!--- colocar -->
+                  <!--<span class="icon"><ion-icon name="albums"></ion-icon></span>-->
+                  <img src="./image/logo.png" class="Teste" title="eSports" width="300">
               </a>
           </li>
           <li>
               <a href="#"> <!--- colocar -->
-                  <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                  <!--<span class="icon"><ion-icon name="home-outline"></ion-icon></span>-->
                   <span class="title">Home</span>
               </a>
           </li>
           <li>
               <a href="#"> <!--- colocar -->
-                  <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
-                  <span class="title">Usuário</span>
+                  <!--<span class="icon"><ion-icon name="person-outline"></ion-icon></span>-->
+                  <span class="title">Torneios</span>
               </a>
           </li>
           <li>
               <a href="#"> <!--- colocar -->
-                  <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
-                  <span class="title">Mensagem</span>
+                  <!--<span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>-->
+                  <span class="title">Times</span>
               </a>
           </li>
           <li> 
               <a href="#"> <!--- colocar -->
-                  <span class="icon"><ion-icon name="help-outline"></ion-icon></span>
-                  <span class="title">Ajuda</span>
+                  <!--<span class="icon"><ion-icon name="help-outline"></ion-icon></span>-->
+                  <span class="title">Jogadores</span>
+              </a>
+          </li>
+          <li> 
+              <a href="#"> <!--- colocar -->
+                  <!--- <span class="icon"><ion-icon name="help-outline"></ion-icon></span>-->
+                  <span class="title">Campeãos</span>
               </a>
           </li>
       </ul>
@@ -46,7 +52,6 @@
    <div class="main">
        <div class="topbar">
            <div class="toggle">
-              
            </div>
            <!-- search-->
            <div class="search">
@@ -54,10 +59,6 @@
                   <input type="text" placeholder="Search Here" name="busca">                 
               </label>
            </div>
-           <!-- userimg-->
-           <!--<div class="user">
-               <img src="./image/user.jpg">
-           </div> -->
        </div>
 
        <!-- cards -->
@@ -81,8 +82,8 @@
                           <td>Torres na blue side</td>
                           <td>Jogos red side</td>
                           <td>Torres na red side</td>
-                          <td>Porcentagem de 1* torre Blue side</td>
-                          <td>Porcentagem de 1* torre Red side</td>
+                          <td>Porcentagem de 1° torre Blue side</td>
+                          <td>Porcentagem de 1° torre Red side</td>
                        </tr>                            
                    </thead>
                    <tbody >
@@ -125,11 +126,15 @@
                                                 </td>";
                                 }
 
-                                echo "</table>";?>                      
+                                echo "</table>"; ?>                      
            </div>
-          </div>
-   </div>
-</div>
+        </div>
+        <!-- OUTRA -->
+   </div>                               
+</div>  
+
+
+
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

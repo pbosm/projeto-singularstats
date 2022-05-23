@@ -34,17 +34,6 @@ body
     transition: 0.5s;
     overflow: hidden;
 }
-.navigantion.active
-{
-    width: 80px;
-}
-.navigantion ul
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
 .navigantion ul li
 {
     position: relative;
@@ -60,7 +49,7 @@ body
 }
 .navigantion ul li:nth-child(1)
 {
-    margin-bottom: 250px;
+    margin-bottom: 300px;
     pointer-events: none;
 }
 .navigantion ul li a
@@ -180,25 +169,13 @@ body
     outline: none;
     border: 1px solid var(--black2);
 }
-.search label ion-icon
-{
-    position: absolute;
-    /*position: fixed;
-    left: 880px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    font-size: 1.2em;*/
-    top: 0;
-    left: 10px;
-    font-size: 1.2em;
-}
-
 .cardBox
 {
     position: relative;
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    margin-left: 23%;
 }
 
 .cardBox .card .numbers
@@ -250,6 +227,7 @@ body
 {
     font-weight: 600;
     color: var(--blue);
+    margin-left: 500px;
 }
 .btn
 {
@@ -258,7 +236,7 @@ body
     background: var(--blue);
     text-decoration: none;
     color: var(--white);
-    border-radius: 6px;
+    border-radius: 100px;
 }
 .details table
 {
@@ -312,31 +290,8 @@ body
     border-radius: 20px;
 }
 
+.Teste {
+    margin-left: -25px;
+    margin-top: 10px;
+}
 
-/* responsive design*/
-@media (max-width: 991px)
-{
-   .main.active
-   {
-    left: 300px;
-   }
-   .cardBox
-   {
-       grid-template-columns: repeat(2,1fr);
-   }
-}
-@media (max-width: 768px)
-{
-    .details
-    {
-        grid-template-columns: repeat(1,1fr);
-    }
-    .recentOrders
-    {
-        overflow-x: auto;
-    }
-    .status.inprogress
-    {
-        white-space: nowrap;
-    }
-}
