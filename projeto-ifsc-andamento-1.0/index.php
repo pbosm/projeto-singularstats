@@ -10,37 +10,37 @@
   <div class="navigantion">
       <ul>
           <li>
-              <a href="index.php"> <!--- colocar -->
+              <a href="#"> <!--- colocar -->
                   <!--<span class="icon"><ion-icon name="albums"></ion-icon></span>-->
                   <img src="./image/logo.png" class="Teste" title="eSports" width="300">
               </a>
           </li>
           <li>
-              <a href="#"> <!--- colocar -->
+              <a href="index.php"> <!--- colocar -->
                   <!--<span class="icon"><ion-icon name="home-outline"></ion-icon></span>-->
                   <span class="title">Home</span>
               </a>
           </li>
           <li>
-              <a href="#"> <!--- colocar -->
+              <a href="./paginas/torneios.php"> <!--- colocar -->
                   <!--<span class="icon"><ion-icon name="person-outline"></ion-icon></span>-->
                   <span class="title">Torneios</span>
               </a>
           </li>
           <li>
-              <a href="#"> <!--- colocar -->
+              <a href="./paginas/times.php"> <!--- colocar -->
                   <!--<span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>-->
                   <span class="title">Times</span>
               </a>
           </li>
           <li> 
-              <a href="#"> <!--- colocar -->
+              <a href="./paginas/jogadores.php"> <!--- colocar -->
                   <!--<span class="icon"><ion-icon name="help-outline"></ion-icon></span>-->
                   <span class="title">Jogadores</span>
               </a>
           </li>
           <li> 
-              <a href="#"> <!--- colocar -->
+              <a href="./paginas/campeaos.php"> <!--- colocar -->
                   <!--- <span class="icon"><ion-icon name="help-outline"></ion-icon></span>-->
                   <span class="title">Campeãos</span>
               </a>
