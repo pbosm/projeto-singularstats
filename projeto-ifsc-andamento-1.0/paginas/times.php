@@ -2,7 +2,7 @@
 <html lang="pt-BR"> 
 <head> 
   <meta charset="utf-8"> 
-  <title> Home </title> 
+  <title> Times </title> 
   <link rel="stylesheet" type="text/css" href="../css/styletimes.css"> 
 </head> 
 
@@ -60,10 +60,10 @@
        <div class="details">
            <div class="recentOrders">
                <div class="cardHeader">
-                   <h2>Dados dos times registrados</h2>
+                   <h2>Times</h2>
                    <div class="search">
                     <label>
-                    <form class="form-inline" action="busca.php" method="POST">
+                    <form class="form-inline" action="../busca/buscatimes.php" method="POST">
                         <input type="text" placeholder="Procure por algum time específico" name="pesquisar">              
                         <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button> -->
                     </form>

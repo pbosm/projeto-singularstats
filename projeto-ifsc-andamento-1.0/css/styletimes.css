@@ -14,6 +14,12 @@
     --black1: #222;
     --black2: #999;
 }
+ thead{
+    text-align: center;   
+}
+tbody{
+    text-align: center;
+}  
 body
 {
     min-height: 100vh;
@@ -247,19 +253,6 @@ body
 {
     padding: 10px;
 }
-.details .recentOrders table tr td:last-child
-{
-    text-align: end;
-}
-.details .recentOrders table tr td:nth-child(2)
-{
-    text-align: end;
-}
-.details .recentOrders table tr td:nth-child(3)
-{
-    text-align: center;
-}
-
 .recentCustomers
 {
     position: relative;

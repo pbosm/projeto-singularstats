@@ -80,29 +80,34 @@
                    </thead>
                    <tbody >
                        <tr>     <?php
+                                $pesquisar = $_POST['pesquisar'];
                                 $conn = mysqli_connect('localhost','root','', 'beise2');
+                                $sqltorneios = "SELECT * FROM `torneios` where regiao like '%$pesquisar%'";
+                                $result = $conn->query($sqltorneios);
 
                                 $sql = "SELECT * FROM torneios";
                                 $resultado = $conn->query($sql);
-                                while ($registro = $resultado->fetch_array()) 
-                                {                                   
-                                    $regiao  =  $registro[0];
+                                
+                                while ($sqltorneios = mysqli_fetch_assoc($result) and $registro = $resultado->fetch_array())                                   
+                                {               
+                                    
+                                    $regiao = $sqltorneios['regiao'];
                                     $games   =  $registro[1];
                                     $duracao =  $registro[2];
-
+    
                                     $regiao  = htmlentities($regiao, ENT_QUOTES, "UTF-8");
                                     $games   = htmlentities($games,  ENT_QUOTES, "UTF-8");
                                     $duracao = htmlentities($duracao,  ENT_QUOTES, "UTF-8");
-
-
+    
+    
                                     echo "<tr>
-                                                <td> $registro[0] </td> 
-                                                <td> $registro[1] </td>
-                                                <td> $registro[2] </td>
-                                                </td>";
+                                            <td> $regiao </td> 
+                                            <td> $registro[1] </td>
+                                            <td> $registro[2] </td>
+                                            </td>";
                                 }
-                              
-                                echo "</table>"; ?>                      
+                                  
+                                    echo "</table>"; ?>                       
            </div>
         </div>
         <!-- OUTRA -->

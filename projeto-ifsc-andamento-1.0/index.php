@@ -71,12 +71,12 @@
            <div class="recentOrders">
                <div class="cardHeader">
                    <h2>Dados dos times registrados</h2>
-                   <a href="#" class="btn">Ver todos</a>
+                   <a href="./paginas/times.php" class="btn">Ver todos</a>
                </div>
                <table >
                    <thead>
-                       <tr>                          
-                          <td>Time</td>
+                       <tr>                         
+                          <td>Time</td>                       
                           <td>Total jogos</td>
                           <td>Jogos blue side</td>
                           <td>Torres na blue side</td>
@@ -112,14 +112,13 @@
                                     $pegou_redside  = htmlentities($pegou_redside,  ENT_QUOTES, "UTF-8");
                                     $mediaBlue  = htmlentities($mediaBlue,  ENT_QUOTES, "UTF-8");
                                     $mediaRed  = htmlentities($mediaRed,  ENT_QUOTES, "UTF-8");
-
-
+                                   
                                     echo "<tr>
-                                                <td> $registro[0] </td> 
+                                    <td><a href='$time.php'> $registro[0] </td>
                                                 <td> $registro[1] </td>
                                                 <td> $registro[2] </td>
                                                 <td> $registro[3] </td>
-                                                <td> $registro[4] </td>
+                                                <td> ".$registro[4]." </td>
                                                 <td> $registro[5] </td>
                                                 <td> $mediaBlue % </td>
                                                 <td> $mediaRed % </td>
