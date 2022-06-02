@@ -79,14 +79,14 @@
                        </tr>                            
                    </thead>
                    <tbody >
-                       <tr>     <?php
+                       <tr>     
+                           <?php
                                 $pesquisar = $_POST['pesquisar'];
                                 $conn = mysqli_connect('localhost','root','', 'beise2');
                                 $sqltorneios = "SELECT * FROM `torneios` where regiao like '%$pesquisar%'";
                                 $result = $conn->query($sqltorneios);
-
-                                $sql = "SELECT * FROM torneios";
-                                $resultado = $conn->query($sql);
+                               
+                                $resultado = $conn->query($sqltorneios);
                                 
                                 while ($sqltorneios = mysqli_fetch_assoc($result) and $registro = $resultado->fetch_array())                                   
                                 {               
@@ -107,7 +107,8 @@
                                             </td>";
                                 }
                                   
-                                    echo "</table>"; ?>                       
+                                    echo "</table>"; 
+                            ?>                       
            </div>
         </div>
         <!-- OUTRA -->

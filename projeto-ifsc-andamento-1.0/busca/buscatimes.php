@@ -82,15 +82,14 @@
                        </tr>                            
                    </thead>
                    <tbody >
-                       <tr>     <?php
-
+                       <tr>     
+                           <?php
                                 $pesquisar = $_POST['pesquisar'];
                                 $conn = mysqli_connect('localhost','root','', 'beise2');
                                 $sql1 = "SELECT * FROM `dados` where team like '%$pesquisar%'";
                                 $result = $conn->query($sql1);
 
-                                $sql = "SELECT * FROM dados";
-                                $resultado = $conn->query($sql);
+                                $resultado = $conn->query($sql1);
                                 
                                 while ($sql1 = mysqli_fetch_assoc($result) and $registro = $resultado->fetch_array()) 
                                 {                                   
@@ -123,7 +122,8 @@
                                                 </td>";
                                 }
                               
-                                echo "</table>"; ?>                     
+                                echo "</table>"; 
+                            ?>                     
            </div>
         </div>
         <!-- OUTRA -->

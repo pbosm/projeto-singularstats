@@ -3,7 +3,7 @@
 <head> 
   <meta charset="utf-8"> 
   <title> Home </title> 
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head> 
 
 <div class="container">
@@ -87,7 +87,8 @@
                        </tr>                            
                    </thead>
                    <tbody >
-                       <tr>     <?php
+                       <tr>     
+                           <?php
                                 $conn = mysqli_connect('localhost','root','', 'beise2');
 
                                 $sql = "SELECT * FROM dados";
@@ -125,7 +126,8 @@
                                                 </td>";
                                 }
 
-                                echo "</table>"; ?>                      
+                                echo "</table>"; 
+                            ?>                      
            </div>
         </div>
         <!-- OUTRA -->

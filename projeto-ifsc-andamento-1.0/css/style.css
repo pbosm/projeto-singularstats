@@ -68,19 +68,6 @@ body
 {
     color: var(--blue);
 }
-.navigantion ul li a .icon
-{
-    position: relative;
-    display: block;
-    min-width: 60px;
-    height: 60px;
-    line-height: 80px;
-    text-align: center;
-}
-.navigantion ul li a .icon ion-icon
-{
-    font-size: 1.75em;
-}
 .navigantion ul li a .title
 {
     position: relative;

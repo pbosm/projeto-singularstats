@@ -79,7 +79,8 @@
                        </tr>                            
                    </thead>
                    <tbody >
-                       <tr>     <?php
+                       <tr>     
+                           <?php
                                 $conn = mysqli_connect('localhost','root','', 'beise2');
 
                                 $sql = "SELECT * FROM torneios";
@@ -102,7 +103,8 @@
                                                 </td>";
                                 }
                               
-                                echo "</table>"; ?>                      
+                                echo "</table>"; 
+                            ?>                      
            </div>
         </div>
         <!-- OUTRA -->
