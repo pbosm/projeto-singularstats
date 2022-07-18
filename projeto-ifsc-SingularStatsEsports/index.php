@@ -153,7 +153,7 @@
                                     }
                                     
                                     echo "<tr> 
-                                    <td> $teamname</td> 
+                                    <td><a href='./times/$teamname.php'>$teamname</td> 
                                     <td> $league</td> 
                                     <td> $split</td> 
                                     <td> $datahora </td>
