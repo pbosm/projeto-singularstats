@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="../cssdostimes/styleintz.css"> 
 </head> 
 
+<body>
 <div class="container">
   <div class="navigantion">
       <ul>

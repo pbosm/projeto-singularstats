@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="../css/styletorneios.css"> 
 </head> 
 
+<body>
 <div class="container">
   <div class="navigantion">
       <ul>
@@ -62,7 +63,13 @@
                <div class="cardHeader">
                    <h2>Torneios</h2>
                </div>
-               <table >
+                    <!-- <div class="region_filter">
+                        <span>Torneios</span>
+                        <span>
+                        <select id="cblol" name="cblol" class="form-control" onchange="recharge()"></select>
+                        </span>
+                    </div> -->
+               <table>
                    <thead>
                        <tr>                          
                           <td>Região</td>

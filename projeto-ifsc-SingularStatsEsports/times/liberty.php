@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="../cssdostimes/styleliberty.css"> 
 </head> 
 
+<body>
 <div class="container">
   <div class="navigantion">
       <ul>

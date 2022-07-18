@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head> 
 
+<body>
 <div class="container">
   <div class="navigantion">
       <ul>
@@ -41,7 +42,6 @@
           </li>
           <li> 
               <a href="./paginas/campeaos.php"> <!--- colocar -->
-                  <!--- <span class="icon"><ion-icon name="help-outline"></ion-icon></span>-->
                   <span class="title">Campeãos</span>
               </a>
           </li>
@@ -60,7 +60,7 @@
        <div class="details">
            <div class="recentOrders">
                <div class="cardHeader">
-                   <h2>Ultimos jogos</h2>
+                   <h2>Ultimos jogos</h2>                   
                    <a href="./paginas/times.php" class="btn">Ver todos times</a>
                </div>
                <table>
@@ -174,6 +174,7 @@
    </div>                               
 </div>  
 
+    <script src="https://kit.fontawesome.com/fee2dfa58c.js" crossorigin="anonymous"></script>
 </body>
 </html>
 

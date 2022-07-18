@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="../css/stylecampeaos.css"> 
 </head> 
 
+<body>
 <div class="container">
   <div class="navigantion">
       <ul>
