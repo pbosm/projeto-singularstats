@@ -1,75 +1,35 @@
 <!DOCTYPE html> 
 <html lang="pt-BR"> 
 <head> 
-  <meta charset="utf-8"> 
-  <title> Campeãos </title> 
-  <link rel="stylesheet" type="text/css" href="../css/stylecampeaos.css"> 
+    <meta charset="utf-8"> 
+    <title> Campeões </title> 
+    <link rel="stylesheet" type="text/css" href="../css/stylecampeaos.css"> 
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <div class="navigation"></div>
 </head> 
-
 <body>
-<div class="container">
-  <div class="navigantion">
-      <ul>
-          <li>
-              <a href="#"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="albums"></ion-icon></span>-->
-                  <img src="../image/SingularPreto.png" class="logo" title="eSports" width="250">
-              </a>
-          </li>
-          <li>
-              <a href="../index.php"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="home-outline"></ion-icon></span>-->
-                  <span class="title">Home</span>
-              </a>
-          </li>
-          <li>
-              <a href="../paginas/torneios.php"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="person-outline"></ion-icon></span>-->
-                  <span class="title">Torneios</span>
-              </a>
-          </li>
-          <li>
-              <a href="../paginas/times.php"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>-->
-                  <span class="title">Times</span>
-              </a>
-          </li>
-          <li> 
-              <a href="../paginas/jogadores.php"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="help-outline"></ion-icon></span>-->
-                  <span class="title">Jogadores</span>
-              </a>
-          </li>
-          <li> 
-              <a href="../paginas/campeaos.php"> <!--- colocar -->
-                  <!--- <span class="icon"><ion-icon name="help-outline"></ion-icon></span>-->
-                  <span class="title">Campeãos</span>
-              </a>
-          </li>
-      </ul>
-   </div>
-   
-   <!-- main -->
-   <div class="main">
-
-       <!-- cards -->
-       <div class="cardBox">
-           <img src="../image/SingularAzul.png" alt="Imagem" title="SingularStats" width="1500">
+    <div class="main">
+        <div class="cardBox">
+            <a href="#"><img class='logo' src="../image/SingularPreto.png" alt="Imagem" title="SingularStats" width="300"></a>
        </div>
-
-       <!-- order details list -->
+       <div class="search">
+        <label>
+            <form class="form-inline" action="./busca/buscachamp.php" method="POST">
+                <input type="text" placeholder="Pesquisar campeões" name="pesquisar"> <i class="fa fa-search" aria-hidden="true"></i>   
+            </form>
+        </label>
+        </div>
+    <div class="menu">
+          <a href="../index.php"><span class="title">Home </span><img src="../image/torneios.png" width="30"></a>
+          <a href="../paginas/torneios.php"><span class="title">Torneios</span><img src="../image/times.png" width="30"></a>
+          <a href="../paginas/times.php"><span class="title">Times</span><img src="../image/jogadores.png" width="30"></a>
+          <a href="../paginas/jogadores.php"><span class="title">Jogadores</span><img src="../image/campeoes.png" width="25"></a>
+          <a href="../paginas/campeaos.php"><span class="title">Campeões</span></a>
+   </div>
        <div class="details">
            <div class="recentOrders">
                <div class="cardHeader">
-                   <h2>Campeãos</h2>
-                   <div class="search">
-                    <label>
-                    <form class="form-inline" action="../busca/buscachamp.php" method="POST">
-                        <input type="text" placeholder="Procure por algum champ específico" name="pesquisar">              
-                        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button> -->
-                    </form>
-                    </label>
-                 </div>
+                   <h3>Campeões</h3>
                </div>
                <table >
                    <thead>
@@ -171,11 +131,47 @@
                                                 </td>";
                                 }                                
                             ?>                                           
-                        </tr>                 
+                        </tr>            
+                    </tbody>  
+                </table>                
            </div>
         </div>
    </div>                               
 </div>  
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawStacked);
+
+function drawStacked() {
+      var data = google.visualization.arrayToDataTable([
+        ['', '2010 Population', '2000 Population'],
+        ['', parseInt('<?php echo $format_fbpart; ?>'), 100]
+      ]);
+
+      var options = {
+      	width: 100,
+        height: 50,
+        chartArea: {width: '50%'},
+        isStacked: true,
+        legend: {position: 'none'},
+        backgroundColor: 'transparent',
+       	baselineColor: 'transparent',
+        colors: ['#2b2b50','#242424'],
+        enableInteractivity: false,
+        hAxis: {
+          minValue: 0,
+          textPosition: 'none',
+          gridlines: {color: 'transparent'},
+
+        },
+        vAxis: {
+        }
+      };
+      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+</script>
 
 </body>
 </html>

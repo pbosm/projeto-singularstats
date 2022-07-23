@@ -1,75 +1,36 @@
 <!DOCTYPE html> 
 <html lang="pt-BR"> 
 <head> 
-  <meta charset="utf-8"> 
-  <title> Times </title> 
-  <link rel="stylesheet" type="text/css" href="../css/styletimes.css"> 
-</head> 
-
+    <meta charset="utf-8"> 
+    <title> Times </title> 
+    <link rel="stylesheet" type="text/css" href="../css/styletimes.css"> 
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <div class="navigation"></div>
+</head>
 <body>
-<div class="container">
-  <div class="navigantion">
-      <ul>
-          <li>
-              <a href="#"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="albums"></ion-icon></span>-->
-                  <img src="../image/SingularPreto.png" class="logo" title="eSports" width="250">
-              </a>
-          </li>
-          <li>
-              <a href="../index.php"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="home-outline"></ion-icon></span>-->
-                  <span class="title">Home</span>
-              </a>
-          </li>
-          <li>
-              <a href="../paginas/torneios.php"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="person-outline"></ion-icon></span>-->
-                  <span class="title">Torneios</span>
-              </a>
-          </li>
-          <li>
-              <a href="../paginas/times.php"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>-->
-                  <span class="title">Times</span>
-              </a>
-          </li>
-          <li> 
-              <a href="../paginas/jogadores.php"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="help-outline"></ion-icon></span>-->
-                  <span class="title">Jogadores</span>
-              </a>
-          </li>
-          <li> 
-              <a href="../paginas/campeaos.php"> <!--- colocar -->
-                  <!--- <span class="icon"><ion-icon name="help-outline"></ion-icon></span>-->
-                  <span class="title">Campeãos</span>
-              </a>
-          </li>
-      </ul>
-   </div>
-   
-   <!-- main -->
-   <div class="main">
-
-       <!-- cards -->
-       <div class="cardBox">
-           <img src="../image/SingularAzul.png" alt="Imagem" title="SingularStats" width="1500">
+    <div class="main">
+        <div class="cardBox">
+            <a href="#"><img class='logo' src="../image/SingularPreto.png" alt="Imagem" title="SingularStats" width="300"></a>
        </div>
-
-       <!-- order details list -->
+       <div class="search">
+        <label>
+            <form class="form-inline" action="./busca/buscatimes.php" method="POST">
+                <input type="text" placeholder="Pesquisar times" name="pesquisar"> <i class="fa fa-search" aria-hidden="true"></i>          
+            </form>
+        </label>
+        </div>
+    </div>
+    <div class="menu">
+          <a href="../index.php"><span class="title">Home </span><img src="../image/torneios.png" width="30"></a>
+          <a href="../paginas/torneios.php"><span class="title">Torneios</span><img src="../image/times.png" width="30"></a>
+          <a href="../paginas/times.php"><span class="title">Times</span><img src="../image/jogadores.png" width="30"></a>
+          <a href="../paginas/jogadores.php"><span class="title">Jogadores</span><img src="../image/campeoes.png" width="25"></a>
+          <a href="../paginas/campeaos.php"><span class="title">Campeões</span></a>
+   </div>
        <div class="details">
            <div class="recentOrders">
                <div class="cardHeader">
-                   <h2>Times</h2>
-                   <div class="search">
-                    <label>
-                    <form class="form-inline" action="../busca/buscatimes.php" method="POST">
-                        <input type="text" placeholder="Procure por algum time específico" name="pesquisar">              
-                        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button> -->
-                    </form>
-                    </label>
-                 </div>
+                   <h3>Times</h3>   
                </div>
                <table >
                    <thead>
@@ -162,7 +123,6 @@
                             ?>                      
            </div>
         </div>
-        <!-- OUTRA -->
    </div>                               
 </div>  
 
