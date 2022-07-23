@@ -14,7 +14,7 @@
        </div>
        <div class="search">
         <label>
-            <form class="form-inline" action="./busca/buscatimes.php" method="POST">
+            <form class="form-inline" action="../busca/buscatimes.php" method="POST">
                 <input type="text" placeholder="Pesquisar times" name="pesquisar"> <i class="fa fa-search" aria-hidden="true"></i>          
             </form>
         </label>

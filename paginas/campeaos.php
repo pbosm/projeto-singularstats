@@ -14,7 +14,7 @@
        </div>
        <div class="search">
         <label>
-            <form class="form-inline" action="./busca/buscachamp.php" method="POST">
+            <form class="form-inline" action="../busca/buscachamp.php" method="POST">
                 <input type="text" placeholder="Pesquisar campeões" name="pesquisar"> <i class="fa fa-search" aria-hidden="true"></i>   
             </form>
         </label>
