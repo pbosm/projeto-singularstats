@@ -6,155 +6,74 @@
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
     text-decoration: none;
-    color: inherit;
 }
+  
 :root
 {
-    --blue: #287bff;
-    --white: #fff;
+    --blue: #131314;
+    --white: #0f0d1a;
     --grey: #f5f5f5;
-    --black1: #222;
+    --black1: rgb(172, 172, 172);
     --black2: #999;
 }
-thead{
-    text-align: center;   
-}
-tbody{
-    text-align: center;
-}  
+
 body
 {
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow: auto;
+    background: var(--blue);
 }
-.container
-{
-    position: relative;
-    width: 100%;
-}
-.navigantion
+
+.navigation
 {
     position: fixed;
-    width: 300px;
-    height: 100%;
-    background: var(--blue);
+    width: 100%;
+    height: 5%;
+    background: #15151e;
     border-left: 10px solid var(--blue);
     transition: 0.5s;
-    overflow: hidden;
+    overflow: auto;
+    z-index: 500;
+    top:0px;
 }
-.navigantion.active
-{
-    width: 80px;
-}
-.navigantion ul
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-.navigantion ul li
-{
+
+.title
+{    
     position: relative;
-    width: 100%;
-    list-style: none;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-}
-.navigantion ul li:hover,
-.navigantion ul li.hovered
-{
-    background: var(--white);
-}
-.navigantion ul li:nth-child(1)
-{
-    margin-bottom: 100%;
-    pointer-events: none;
-}
-.navigantion ul li a
-{
-    position: relative;
-    display: block;
-    width: 100%;
-    display: flex;
-    text-decoration: none;
-    color: var(--black1);
-}
-.navigantion ul li:hover a,
-.navigantion ul li.hovered a
-{
-    color: var(--black1);
-}
-.navigantion ul li a .icon
-{
-    position: relative;
-    display: block;
-    min-width: 60px;
-    height: 60px;
-    line-height: 80px;
-    text-align: center;
-}
-.navigantion ul li a .icon ion-icon
-{
-    font-size: 1.75em;
-}
-.navigantion ul li a .title
-{
-    position: relative;
-    display: block;
-    padding: 0 10px;
-    height: 60px;
+    padding-left: 40px;
     line-height: 60px;
-    text-align: start;
-    white-space: nowrap;
+    color: #e9e5e5;
+    text-transform: uppercase;
+    font-family: monospace;
+    font-size: 15px;
+    left: 366px;
+    font-weight: bold;
 }
-
-/* curve outside */
-
-.navigantion ul li:hover a::before,
-.navigantion ul li.hovered a::before
-{
-    content: '';
-    position: absolute;
-    right: 0;
-    top: -50px;
-    width: 50px;
-    height: 50px;
-    background: transparent;
-    border-radius: 50%;
-    box-shadow: 35px 35px 0 10px var(--white);
-    pointer-events: none;
-}
-.navigantion ul li:hover a::after,
-.navigantion ul li.hovered a::after
-{
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -50px;
-    width: 50px;
-    height: 50px;
-    background: transparent;
-    border-radius: 50%;
-    box-shadow: 35px -35px 0 10px var(--white);
-    pointer-events: none;
-}
-
-/* main */
 
 .main
 {
-    position: absolute;
-    width: calc(100% - 300px);
-    left: 300px;
-    min-height: 100vh;
-    background: var(--white);
-    transition: 0.5s;
+    position: fixed;
+    width: 100%;
+    top: 27px;
+    height: 9%;
+    background-color: #1c1c1c;
+    z-index: 500;
+}
+
+.menu {
+    position: fixed;
+    width: 100%;
+    top: 87px;
+    margin-top: 25px;
+    background-color: #1c1c1c;
+    z-index: 500;
 }
 
 .logoteam
 {
-    background: var(--white);
+    position: relative;
+    top: 185px;
+    background: #1a1a1a;
     padding: 20px;
     box-shadow: 0 7px 25px rgb(0 0 0 / 50%);
     border-radius: 30px;
@@ -162,56 +81,66 @@ body
     margin-left: 25px;
     margin-top: 15px;
     margin-bottom: 10px;
-    text-align: center;
 }
 .teamroster
 {
-    background: var(--white);
+    position: relative;
+    top: 222px;
+    background: #1a1a1a;
     padding: 20px;
     box-shadow: 0 7px 25px rgb(0 0 0 / 50%);
     border-radius: 30px;
-    width: 400px;
+    width: 600px;
     margin-left: 20px;
-    text-align: center;
-}
-p 
-{
-    width: 550px;
-    margin: -80px;
-    font-family: 'Ubuntu', sans-serif;
-    color: inherit;
-    text-align: center;
-    font-weight: bold;
 }
 
 .table1
 {
-    position: relative;
-    min-height: 200px;
-    background: var(--white);
+    position: fixed;
+    background: #1a1a1a;
     padding: 20px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 30px;
-    margin-top: 15px;
+    margin-top: 13%;
     left: 20px;
     width: 400px;
+    top: 500px;
 }
 
 .table1 table {
     width: 80%;
     border-collapse: collapse;
+    text-align: center;
+}
+
+.table1 td {
+    text-transform: uppercase;
+    font-family: monospace;
+    color: var(--black1);
+    text-align: center;
 }
 
 .table2
 {
-    position: relative;
-    background: var(--white);
+    position: fixed;
+    background: #1a1a1a;
     padding: 10px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 30px;
-    margin-top: -705px;
     left: 440px;
     width: 70%;
+    top: 200px;
+}
+
+.tableTitulo h3
+{
+    font-weight: 400;
+    color: #0098ad;
+    font-weight: bold;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-family: monospace;
+    padding-bottom: 5px;
 }
 
 .table2 table tr
@@ -219,18 +148,18 @@ p
     color: var(--black1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.table2 table tr:last-child
-{
-    border-bottom: none;
-}
+
 .table2 table tbody tr:hover
 {
-    background: var(--blue);
-    color: var(--white);
+    background: #11101a;
+    color: var(--black1);
 }
 .table2 table tr td
 {
-    padding: 3px;
+    padding: 3.5px;
+    color: var(--black1);
+    text-transform: uppercase;
+    font-family: monospace;
 }
 
 .table2 {
@@ -240,7 +169,6 @@ p
 
 .table2 table
 {
-    /* width: 10%; */
     border-collapse: collapse;
 }
 
@@ -251,15 +179,15 @@ p
 
 .table3
 {
-    position: relative;
-    background: var(--white);
+    position: fixed;
+    background: #1a1a1a;
     padding: 10px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 30px;
-    margin-top: 45px;
-    left: 440px;
+    left: 650px;
     width: 18.5%;
     letter-spacing: 0.5px;
+    top: 490px;
 }
 
 .table3 table tr
@@ -273,13 +201,15 @@ p
 }
 .table3 table tbody tr:hover
 {
-    background: var(--blue);
-    color: var(--white);
+    background: #11101a;
+    color: var(--black1);
 }
 .table3 table tr td
 {
     padding: 3px;
     text-align: center;
+    text-transform: uppercase;
+    font-family: monospace;
 }
 
 .table3 {
@@ -302,15 +232,15 @@ p
 
 .table4
 {
-    position: relative;
-    background: var(--white);
+    position: fixed;
+    background: #1a1a1a;
     padding: 10px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 30px;
-    margin-top: -395px;
-    left: 785px;
+    left: 1030px;
     width: 18.5%;
     letter-spacing: 0.5px;
+    top: 490px;
 }
 
 .table4 table tr
@@ -318,19 +248,19 @@ p
     color: var(--black1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.table4 table tr:last-child
-{
-    border-bottom: none;
-}
+
 .table4 table tbody tr:hover
 {
-    background: var(--blue);
-    color: var(--white);
+    background: #11101a;
+    color: var(--black1);
 }
 .table4 table tr td
 {
     padding: 3px;
     text-align: center;
+    color: var(--black1);
+    text-transform: uppercase;
+    font-family: monospace;
 }
 
 .table4 {
@@ -353,15 +283,15 @@ p
 
 .table5
 {
-    position: relative;
-    background: var(--white);
+    position: fixed;
+    background: #1a1a1a;
     padding: 10px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 30px;
-    margin-top: -395px;
-    left: 1130px;
-    width: 32.99%;
+    left: 1410px;
+    width: 450px;
     letter-spacing: 0.5px;
+    top: 490px;
 }
 
 .table5 table tr
@@ -369,19 +299,19 @@ p
     color: var(--black1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.table5 table tr:last-child
-{
-    border-bottom: none;
-}
+
 .table5 table tbody tr:hover
 {
-    background: var(--blue);
-    color: var(--white);
+    background: #11101a;
+    color: var(--black1);
 }
 .table5 table tr td
 {
     padding: 3px;
     text-align: center;
+    color: var(--black1);
+    text-transform: uppercase;
+    font-family: monospace;
 }
 
 .table5 {
@@ -390,7 +320,7 @@ p
 
 .table5 table
 {
-    width: 550px;
+    width: 430px;
     border-collapse: collapse;
     height: 330px;
 }
@@ -399,67 +329,145 @@ p
 {
     font-weight: 600;
     margin-bottom: 15px;
-    text-align: center
-}
-
-.tableTitulo1 {
-    margin-bottom: 15px;
-    text-align: center
-}
-
-.tableTitulo2 {
-    margin-bottom: 15px;
-    text-align: center
-}
-
-.tableTitulo3 {
-    margin-bottom: 15px;
-    text-align: center
-}
-
-.tableTitulo4 {
-    margin-bottom: 15px;
-    text-align: center
-}
-
-.tableTitulo5 {
-    margin-bottom: 15px;
-    text-align: center
 }
 
 .logo {
     margin-left: 15px;
-    margin-top: 10px;
+    margin-top: 5px;
+    top:35px;
 }
 
 .text-right {
     text-align: right!important;
+    color: var(--black1);
 }
 
 .text-right1 {
     text-align: right!important;
     width: 60%;
+    color: var(--black1);
 }
 
 .text-right2 {
     text-align: right!important;
     width: 60%;
+    color: var(--black1);
 }
 
 .text-right3 {
-    text-align: right!important;
     width: 55%;
+    color: var(--black1);
 }
 
 .text-left {
     text-align: left!important;
+    color: var(--black1);
 }
 
 .text-center {
     text-align: left!important;
+    color: var(--black1);
 }
 
-.img {
-    margin-left: 10%;
-    margin-top: 200px;
+img {
+	position: relative;
+	left: 21%;
+	top: 8px;
+	}
+
+.search input
+{
+    position: relative;
+    height: 40px;
+    border-radius: 40px;
+    padding: 20px;
+    font-size: 12px;
+    background: #121212;
+    color: #b8cbcd;
+    top: 40px;
+    left: 1340px;
+}
+
+.fa {
+    position: relative;
+    height: 55px;
+    color: #b8cbcd;
+    top: 40px;
+    left: 1300px;
+}
+
+.icons {
+    left:405px;
+}
+
+@media screen and (max-width: 1366px) {
+    .title {
+        left: 175px;
+    }
+    .menu {
+        top: 80px;
+    }
+    .main {
+        top:25px;
+    }
+    .logo {
+        left: -5px;
+    }
+
+    .details {
+        top: 165px;
+        width: 70%;
+        left: 60px;
+    }
+    .search input{
+        left: 1000px;
+        top: 35px;
+    }
+    .navigation {
+        height: 4%;
+    }
+    .fa {
+        left:960px;
+        top:35px;
+    }
+    img {
+        left: 17%;
+    }
+  }
+
+@media (min-width: 1366px) and (max-width: 1680px) {
+    .title {
+        left: 330px;
+    }
+    .menu {
+        top: 75px;
+    }
+    .main {
+        top:25px;
+    }
+    .logo {
+        left: 90px;
+        top: -5px;
+    }
+
+    .details {
+        top: 155px;
+        width: 70%;
+        left: 250px;
+    }
+    .search input{
+        left: 1200px;
+        top: 25px;
+    }
+    .navigation {
+        height: 4%;
+    }
+    .fa {
+        left:1160px;
+        top:25px;
+    }
+
+    img {
+        left: 23%;
+    }
 }
