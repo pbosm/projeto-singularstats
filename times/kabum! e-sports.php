@@ -4,54 +4,21 @@
   <meta charset="utf-8"> 
   <title> Kabum! E-sports </title> 
   <link rel="stylesheet" type="text/css" href="../cssdostimes/stylekabum.css"> 
+  <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+  <div class="navigation"></div>
 </head> 
-
-<body>
-<div class="container">
-  <div class="navigantion">
-      <ul>
-          <li>
-              <a href="#"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="albums"></ion-icon></span>-->
-                  <img src="../image/SingularPreto.png" class="logo" title="eSports" width="250">
-              </a>
-          </li>
-          <li>
-              <a href="../index.php"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="home-outline"></ion-icon></span>-->
-                  <span class="title">Home</span>
-              </a>
-          </li>
-          <li>
-              <a href="../paginas/torneios.php"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="person-outline"></ion-icon></span>-->
-                  <span class="title">Torneios</span>
-              </a>
-          </li>
-          <li>
-              <a href="../paginas/times.php"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>-->
-                  <span class="title">Times</span>
-              </a>
-          </li>
-          <li> 
-              <a href="../paginas/jogadores.php"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="help-outline"></ion-icon></span>-->
-                  <span class="title">Jogadores</span>
-              </a>
-          </li>
-          <li> 
-              <a href="../paginas/campeaos.php"> <!--- colocar -->
-                  <!--- <span class="icon"><ion-icon name="help-outline"></ion-icon></span>-->
-                  <span class="title">Campeãos</span>
-              </a>
-          </li>
-      </ul>
+    <div class="main">
+        <div class="cardBox">
+            <a href="#"><img class='logo' src="../image/SingularPreto.png" alt="Imagem" title="SingularStats" width="300"></a>
+       </div>
+    </div>
+    <div class="menu">
+          <a href="../index.php"><span class="title">Home </span><img class='icons' src="../image/torneios.png" width="30"></a>
+          <a href="../paginas/torneios.php"><span class="title">Torneios</span><img class='icons' src="../image/times.png" width="30"></a>
+          <a href="../paginas/times.php"><span class="title">Times</span><img class='icons' src="../image/jogadores.png" width="30"></a>
+          <a href="../paginas/jogadores.php"><span class="title">Jogadores</span><img class='icons' src="../image/campeoes.png" width="25"></a>
+          <a href="../paginas/campeaos.php"><span class="title">Campeões</span></a>
    </div>
-   
-   <!-- main -->
-   <div class="main">
-
        <!-- cards -->
        <div class="logoteam">
             <img src="../image/kabum.png" alt="kabum" title="kabum" width="200">
@@ -104,32 +71,32 @@
                                     $format_winratio = htmlentities($format_winratio,  ENT_QUOTES, "UTF-8");
                                     
                                     echo "
-                                    <div class='tableTitulo1'>
-                                    <h2>$teamname - $year - $split</h2>
+                                    <div class='tableTitulo'>
+                                    <h3>$teamname - $year - $split</h3>
                                     </div>  
                                     
                                     <tr>
-                                    <td class='text-right'>Liga :</td>
+                                    <td class='text-right'>Liga:</td>
                                     <td class='text-aling:center;width:30%'>$league</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right'>Split :</th>
+                                    <td class='text-right'>Split:</th>
                                     <td class='text-aling:center;width:30%'>$split</td>
                                     </tr> 
 
                                     <tr>
-                                    <td class='text-right'>Jogos :</th>
+                                    <td class='text-right'>Jogos:</th>
                                     <td class='text-aling:center;width:30%'>$wins W - $loses L</td>
                                     </tr>                                                                        
                                     
                                     <tr>
-                                    <td class='text-right'>Winratio :</th>
+                                    <td class='text-right'>Winratio:</th>
                                     <td class='text-aling:center;width:30%'>$format_winratio%</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right'>Duração média :</th>
+                                    <td class='text-right'>Duração média:</th>
                                     <td class='text-aling:center;width:30%'>$format_duracao mins</td>
                                     </tr>";
                                 }
@@ -305,42 +272,42 @@
                                     $format_csdiff          = htmlentities($format_csdiff, ENT_QUOTES, "UTF-8");
                                     
                                     echo "
-                                    <div class='tableTitulo2'>
-                                    <h2>Economia</h2>
+                                    <div class='tableTitulo'>
+                                    <h3>Economia</h3>
                                     </div> 
                                    
                                     <tr>
-                                    <td class='text-right1'>Gold por minuto :</td>
+                                    <td class='text-right1'>Gold por minuto:</td>
                                     <td class='text-aling:center;width:30%'>$format_goldpm</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right1'>Gold diff aos 15 :</th>
+                                    <td class='text-right1'>Gold diff aos 15:</th>
                                     <td class='text-aling:center;width:30%'>$format_goldiff</td>
                                     </tr> 
 
                                     <tr>
-                                    <td class='text-right1'>CS por minuto :</th>
+                                    <td class='text-right1'>CS por minuto:</th>
                                     <td class=text-aling:center;width:30%'>$format_cspm</td>
                                     </tr>                                                                        
                                     
                                     <tr>
-                                    <td class='text-right1'>CS diff aos 15 :</th>
+                                    <td class='text-right1'>CS diff aos 15:</th>
                                     <td class='text-aling:center;width:30%'>$format_csdiff</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right1'>First Torre :</th>
+                                    <td class='text-right1'>First Torre:</th>
                                     <td class='text-aling:center;width:30%'>$format_firsttorre%</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right1'>First Torre blue :</th>
+                                    <td class='text-right1'>First Torre blue:</th>
                                     <td class='text-aling:center;width:30%'>$format_firsttorreblue%</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right1'>First Torre red :</th>
+                                    <td class='text-right1'>First Torre red:</th>
                                     <td class='text-aling:center;width:30%'>$format_firsttorrered%</td>
                                     </tr>";
                                 }                       
@@ -396,42 +363,42 @@
                                     $format_wpm            = number_format($wpm, 2, '.', '.');
                                     
                                     echo "
-                                    <div class='tableTitulo4'>
-                                    <h2>Agressividade</h2>
+                                    <div class='tableTitulo'>
+                                    <h3>Agressividade</h3>
                                     </div> 
                                    
                                     <tr>
-                                    <td class='text-right2'>First Blood :</th>
+                                    <td class='text-right2'>First Blood:</th>
                                     <td class='text-aling:center;width:30%'>$format_firstblood%</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right2'>First Blood Blueside :</th>
+                                    <td class='text-right2'>First Blood Blueside:</th>
                                     <td class='text-aling:center;width:30%'>$format_firstbloodblue%</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right2'>First Blood Redside :</th>
+                                    <td class='text-right2'>First Blood Redside:</th>
                                     <td class='text-aling:center;width:30%'>$format_firstbloodred%</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right2'>Media de kills :</td>
+                                    <td class='text-right2'>Media de kills:</td>
                                     <td class='text-aling:center;width:30%'>$format_mediakills</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right2'>Media de mortes :</th>
+                                    <td class='text-right2'>Media de mortes:</th>
                                     <td class='text-aling:center;width:30%'>$format_mediamortes</td>
                                     </tr> 
 
                                     <tr>
-                                    <td class='text-right2'>Visão por minuto :</th>
+                                    <td class='text-right2'>Visão por minuto:</th>
                                     <td class='text-aling:center;width:30%'>$format_vspm</td>
                                     </tr>
                                     
                                     <tr>
-                                    <td class='text-right2'>Wards por minuto :</th>
+                                    <td class='text-right2'>Wards por minuto:</th>
                                     <td class=text-aling:center;width:30%'>$format_wpm</td>
                                     </tr>";
                                 }                        
@@ -491,57 +458,57 @@
                                     $format_baronspgame        = number_format($baronspgame, 2, '.', '.');
                                     
                                     echo "
-                                    <div class='tableTitulo5'>
-                                    <h2>Objetivos</h2>
+                                    <div class='tableTitulo'>
+                                    <h3>Objetivos</h3>
                                     </div> 
                                    
                                     <tr>
-                                    <td class='text-right3'>Dragons por jogo :</th>
+                                    <td class='text-right3'>Dragons por jogo:</th>
                                     <td class='text-aling:center;width:30%'>$format_dragonspgame%</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right3'>1º dragon blueside :</td>
+                                    <td class='text-right3'>1º dragon blueside:</td>
                                     <td class='text-aling:center;width:30%'>$format_firstdragonblue%</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right3'>1º dragon redside :</th>
+                                    <td class='text-right3'>1º dragon redside:</th>
                                     <td class='text-aling:center;width:30%'>$format_firstdragonred%</td>
                                     </tr> 
 
                                     <tr>
-                                    <td class='text-right3'>Porcentagem de 1º arauto :</th>
+                                    <td class='text-right3'>Porcentagem de 1º arauto:</th>
                                     <td class='text-aling:center;width:30%'>$format_firstarauto%</td>
                                     </tr>
                                     
                                     <tr>
-                                    <td class='text-right3'>1º arauto blueside :</th>
+                                    <td class='text-right3'>1º arauto blueside:</th>
                                     <td class=text-aling:center;width:30%'>$format_firstarautoblue%</td>
                                     </tr>
                                     
                                     <tr>
-                                    <td class='text-right3'>1º arauto redside :</th>
+                                    <td class='text-right3'>1º arauto redside:</th>
                                     <td class=text-aling:center;width:30%'>$format_firstarautored%</td>
                                     </tr>
                                     
                                     <tr>
-                                    <td class='text-right3'>Porcentagem de 1º baron :</th>
+                                    <td class='text-right3'>Porcentagem de 1º baron:</th>
                                     <td class=text-aling:center;width:30%'>$format_firstabaron%</td>
                                     </tr>
                                     
                                     <tr>
-                                    <td class='text-right3'>1º baron blueside :</th>
+                                    <td class='text-right3'>1º baron blueside:</th>
                                     <td class=text-aling:center;width:30%'>$format_firstabaronblue%</td>
                                     </tr>
                                     
                                     <tr>
-                                    <td class='text-right3'>1º baron redside :</th>
+                                    <td class='text-right3'>1º baron redside:</th>
                                     <td class=text-aling:center;width:30%'>$format_firstabaronred%</td>
                                     </tr>
                                     
                                     <tr>
-                                    <td class='text-right3'>Barons por game :</th>
+                                    <td class='text-right3'>Barons por game:</th>
                                     <td class=text-aling:center;width:30%'>$format_baronspgame%</td>
                                     </tr>";
                                 }                        
@@ -549,9 +516,6 @@
                     </tbody>  
             </table> 
         </div>
-        <div class="img">
-           <img src="../image/SingularAzul.png" alt="Imagem" title="SingularStats" width="1500">
-       </div>
    </div>                               
 </div>  
 

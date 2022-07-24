@@ -4,54 +4,21 @@
   <meta charset="utf-8"> 
   <title> Flamengo Esports </title> 
   <link rel="stylesheet" type="text/css" href="../cssdostimes/styleflamengo.css">
+  <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+  <div class="navigation"></div>
 </head> 
-
-<body>
-<div class="container">
-  <div class="navigantion">
-      <ul>
-          <li>
-              <a href="#"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="albums"></ion-icon></span>-->
-                  <img src="../image/SingularPreto.png" class="logo" title="eSports" width="250">
-              </a>
-          </li>
-          <li>
-              <a href="../index.php"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="home-outline"></ion-icon></span>-->
-                  <span class="title">Home</span>
-              </a>
-          </li>
-          <li>
-              <a href="../paginas/torneios.php"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="person-outline"></ion-icon></span>-->
-                  <span class="title">Torneios</span>
-              </a>
-          </li>
-          <li>
-              <a href="../paginas/times.php"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>-->
-                  <span class="title">Times</span>
-              </a>
-          </li>
-          <li> 
-              <a href="../paginas/jogadores.php"> <!--- colocar -->
-                  <!--<span class="icon"><ion-icon name="help-outline"></ion-icon></span>-->
-                  <span class="title">Jogadores</span>
-              </a>
-          </li>
-          <li> 
-              <a href="../paginas/campeaos.php"> <!--- colocar -->
-                  <!--- <span class="icon"><ion-icon name="help-outline"></ion-icon></span>-->
-                  <span class="title">Campeãos</span>
-              </a>
-          </li>
-      </ul>
+    <div class="main">
+        <div class="cardBox">
+            <a href="#"><img class='logo' src="../image/SingularPreto.png" alt="Imagem" title="SingularStats" width="300"></a>
+       </div>
+    </div>
+    <div class="menu">
+          <a href="../index.php"><span class="title">Home </span><img class='icons' src="../image/torneios.png" width="30"></a>
+          <a href="../paginas/torneios.php"><span class="title">Torneios</span><img class='icons' src="../image/times.png" width="30"></a>
+          <a href="../paginas/times.php"><span class="title">Times</span><img class='icons' src="../image/jogadores.png" width="30"></a>
+          <a href="../paginas/jogadores.php"><span class="title">Jogadores</span><img class='icons' src="../image/campeoes.png" width="25"></a>
+          <a href="../paginas/campeaos.php"><span class="title">Campeões</span></a>
    </div>
-   
-   <!-- main -->
-   <div class="main">
-
        <!-- cards -->
        <div class="logoteam">
             <img src="../image/flamengo.png" alt="flamengo" title="flamengo" width="200">
@@ -104,8 +71,8 @@
                                     $format_winratio = htmlentities($format_winratio,  ENT_QUOTES, "UTF-8");
                                     
                                     echo "
-                                    <div class='tableTitulo1'>
-                                    <h2>$teamname - $year - $split</h2>
+                                    <div class='tableTitulo'>
+                                    <h3>$teamname - $year - $split</h3>
                                     </div>  
                                     
                                     <tr>
@@ -305,8 +272,8 @@
                                     $format_csdiff          = htmlentities($format_csdiff, ENT_QUOTES, "UTF-8");
                                     
                                     echo "
-                                    <div class='tableTitulo2'>
-                                    <h2>Economia</h2>
+                                    <div class='tableTitulo'>
+                                    <h3>Economia</h3>
                                     </div> 
                                    
                                     <tr>
@@ -396,8 +363,8 @@
                                     $format_wpm            = number_format($wpm, 2, '.', '.');
                                     
                                     echo "
-                                    <div class='tableTitulo4'>
-                                    <h2>Agressividade</h2>
+                                    <div class='tableTitulo'>
+                                    <h3>Agressividade</h3>
                                     </div> 
                                    
                                     <tr>
@@ -491,8 +458,8 @@
                                     $format_baronspgame        = number_format($baronspgame, 2, '.', '.');
                                     
                                     echo "
-                                    <div class='tableTitulo5'>
-                                    <h2>Objetivos</h2>
+                                    <div class='tableTitulo'>
+                                    <h3>Objetivos</h3>
                                     </div> 
                                    
                                     <tr>
@@ -549,9 +516,6 @@
                     </tbody>  
             </table> 
         </div>
-        <div class="img">
-           <img src="../image/SingularAzul.png" alt="Imagem" title="SingularStats" width="1500">
-       </div>
    </div>                               
 </div>  
 
