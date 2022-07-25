@@ -34,7 +34,7 @@
                    if ($pesquisar == null) {
                         $pesquisar = ''; 
                    } else  {
-                      echo "Campeãos com as inicias ", $pesquisar;
+                      echo "Jogadores com as inicias ", $pesquisar;
                    } ?> </h3>
                </div>
                <table >
