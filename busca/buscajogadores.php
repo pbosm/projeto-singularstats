@@ -13,13 +13,13 @@
        </div>
        <div class="search">
         <label>
-            <form class="form-inline" action="./busca/buscatimes.php" method="POST">
-                <input type="text" placeholder="Pesquisar times" name="pesquisar"> <i class="fa fa-search" aria-hidden="true"></i>          
+            <form class="form-inline" action="../busca/buscajogadores.php" method="POST">
+                <input type="text" placeholder="Pesquisar times" name="pesquisar"> <img class="search" src="../image/search.png" width="20">          
             </form>
         </label>
         </div>
     </div>
-    <div class="menu">
+    <div class="menu"><img class ="home" src="../image/home.png" width="20">
           <a href="../index.php"><span class="title">Home </span><img src="../image/torneios.png" width="30"></a>
           <a href="../paginas/torneios.php"><span class="title">Torneios</span><img src="../image/times.png" width="30"></a>
           <a href="../paginas/times.php"><span class="title">Times</span><img src="../image/jogadores.png" width="30"></a>
@@ -31,13 +31,6 @@
                <div class="cardHeader">
                    <?php $pesquisar = $_POST['pesquisar']; ?>
                    <h3>Você está procurando um jogador com as iniciais <?php echo$pesquisar?></h3>
-                   <div class="search">
-                    <label>
-                    <form class="form-inline" action="../busca/buscajogadores.php" method="POST">
-                        <input type="text" placeholder="Procure por algum jogador específico" name="pesquisar">              
-                    </form>
-                    </label>
-                 </div>
                </div>
                <table >
                    <thead>
@@ -168,7 +161,6 @@
                         </tr>                 
            </div>
         </div>
-        <!-- OUTRA -->
    </div>                               
 </div>  
 
