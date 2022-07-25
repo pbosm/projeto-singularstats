@@ -1,25 +1,25 @@
 <!DOCTYPE html> 
 <html lang="pt-BR"> 
 <head> 
-  <meta charset="utf-8"> 
-  <title> Jogadores </title> 
-  <link rel="stylesheet" type="text/css" href="../css/stylejogadores.css"> 
-  <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
-  <div class="navigation"></div>
+    <meta charset="utf-8"> 
+    <title> Jogadores </title> 
+    <link rel="stylesheet" type="text/css" href="../css/stylejogadores.css"> 
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <div class="navigation"></div>
 </head> 
-<body>
     <div class="main">
         <div class="cardBox">
             <a href="#"><img class='logo' src="../image/SingularPreto.png" alt="Imagem" title="SingularStats" width="300"></a>
        </div>
        <div class="search">
-            <label>
+        <label>
             <form class="form-inline" action="../busca/buscajogadores.php" method="POST">
-                <input type="text" placeholder="Pesquisar jogador" name="pesquisar"><i class="fa fa-search" aria-hidden="true"></i>              
+                <input type="text" placeholder="Pesquisar times" name="pesquisar"> <img class="search" src="../image/search.png" width="20">           
             </form>
-            </label>
+        </label>
+        </div>
     </div>
-    <div class="menu">
+    <div class="menu"><img class ="home" src="../image/home.png" width="20">
           <a href="../index.php"><span class="title">Home </span><img src="../image/torneios.png" width="30"></a>
           <a href="../paginas/torneios.php"><span class="title">Torneios</span><img src="../image/times.png" width="30"></a>
           <a href="../paginas/times.php"><span class="title">Times</span><img src="../image/jogadores.png" width="30"></a>
@@ -162,9 +162,7 @@
                                                 </td>";
                                 }
                             ?>                          
-                        </tr>            
-                    </tbody>  
-                </table>                   
+                        </tr>                 
            </div>
         </div>
    </div>                               
