@@ -14,7 +14,7 @@
        <div class="search">
         <label>
             <form class="form-inline" action="../busca/buscajogadores.php" method="POST">
-                <input type="text" placeholder="Pesquisar times" name="pesquisar"> <img class="search" src="../image/search.png" width="20">          
+                <input type="text" placeholder="Pesquisar jogadores" name="pesquisar"> <img class="search" src="../image/search.png" width="20">          
             </form>
         </label>
         </div>
@@ -30,7 +30,12 @@
            <div class="recentOrders">
                <div class="cardHeader">
                    <?php $pesquisar = $_POST['pesquisar']; ?>
-                   <h3>Você está procurando um jogador com as iniciais <?php echo$pesquisar?></h3>
+                   <h3><?php 
+                   if ($pesquisar == null) {
+                        $pesquisar = ''; 
+                   } else  {
+                      echo "Campeãos com as inicias ", $pesquisar;
+                   } ?> </h3>
                </div>
                <table >
                    <thead>

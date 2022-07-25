@@ -14,7 +14,7 @@
        <div class="search">
         <label>
             <form class="form-inline" action="../busca/buscachamp.php" method="POST">
-                <input type="text" placeholder="Pesquisar times" name="pesquisar"> <img class="search" src="../image/search.png" width="20">           
+                <input type="text" placeholder="Pesquisar campeões" name="pesquisar"> <img class="search" src="../image/search.png" width="20">           
             </form>
         </label>
         </div>

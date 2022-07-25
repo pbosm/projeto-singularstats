@@ -30,7 +30,12 @@
            <div class="recentOrders">
                <div class="cardHeader">
                    <?php $pesquisar = $_POST['pesquisar']; ?>
-                   <h3>Você está procurando um time com as iniciais <?php echo$pesquisar?></h3>
+                   <h3><?php 
+                   if ($pesquisar == null) {
+                        $pesquisar = ''; 
+                   } else  {
+                      echo "Campeãos com as inicias ", $pesquisar;
+                   } ?> </h3>
                    <div class="search">
                     <label>
                         <form class="form-inline" action="../busca/buscatimes.php" method="POST">
