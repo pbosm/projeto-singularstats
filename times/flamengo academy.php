@@ -11,13 +11,6 @@
         <div class="cardBox">
             <a href="#"><img class='logo' src="../image/SingularPreto.png" alt="Imagem" title="SingularStats" width="300"></a>
        </div>
-       <div class="search">
-        <label>
-            <form class="form-inline" action="../busca/buscatimes.php" method="POST">
-                <input type="text" placeholder="Pesquisar times" name="pesquisar"> <img class="search" src="../image/search.png" width="20">           
-            </form>
-        </label>
-        </div>
     </div>
     <div class="menu"><img class ="home" src="../image/home.png" width="20">
           <a href="../index.php"><span class="title">Home </span><img class='icons' src="../image/torneios.png" width="30"></a>

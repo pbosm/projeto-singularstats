@@ -21,7 +21,7 @@
    </div>
        <!-- cards -->
        <div class="logoteam">
-       <img src="../image/loud.png" alt="loud" title="loud" width="200">
+            <img src="../image/loud.png" alt="loud" title="loud" width="200">
        </div>
 
        <div class="teamroster">

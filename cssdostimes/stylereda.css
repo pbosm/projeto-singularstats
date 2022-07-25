@@ -40,13 +40,13 @@ body
 .title
 {    
     position: relative;
-    padding-left: 40px;
+    padding-left: 55px;
     line-height: 60px;
     color: #e9e5e5;
     text-transform: uppercase;
     font-family: monospace;
     font-size: 15px;
-    left: 366px;
+    left: -50px;
     font-weight: bold;
 }
 
@@ -81,11 +81,12 @@ body
     margin-left: 25px;
     margin-top: 15px;
     margin-bottom: 10px;
+    text-align: center;
 }
 .teamroster
 {
     position: relative;
-    top: 200px;
+    top: 190px;
     background: #1a1a1a;
     padding: 20px;
     box-shadow: 0 7px 25px rgb(0 0 0 / 50%);
@@ -104,7 +105,7 @@ body
     margin-top: 13%;
     left: 20px;
     width: 400px;
-    top: 485px;
+    top: 460px;
 }
 
 .table1 table {
@@ -141,6 +142,7 @@ body
     text-transform: uppercase;
     font-family: monospace;
     padding-bottom: 5px;
+    text-align: center;
 }
 
 .table2 table tr
@@ -157,6 +159,7 @@ body
 .table2 table tr td
 {
     padding: 3.5px;
+    padding-left: 20px;
     color: var(--black1);
     text-transform: uppercase;
     font-family: monospace;
@@ -170,6 +173,7 @@ body
 .table2 table
 {
     border-collapse: collapse;
+    text-align: center;
 }
 
 .table2 table thead td
@@ -218,7 +222,7 @@ body
 
 .table3 table
 {
-    width: 300px;
+    width: 350px;
     border-collapse: collapse;
     height: 330px;
 }
@@ -269,7 +273,7 @@ body
 
 .table4 table
 {
-    width: 300px;
+    width: 350px;
     border-collapse: collapse;
     height: 330px;
 }
@@ -332,10 +336,9 @@ body
 }
 
 .logo {
-    margin-left: 15px;
-    margin-top: 5px;
-    top:35px;
-    left:430px;
+    position: relative;
+	left: 430px;
+	top: 35px;
 }
 
 .text-right {
@@ -370,11 +373,12 @@ body
     color: var(--black1);
 }
 
-img {
-	position: relative;
-	left: 10%;
-	top: 2px;
-	}
+.logo {
+    margin-left: 30px;
+    margin-top: 5px;
+    top:35px;
+    left:430px;
+}
 
 .search input
 {
@@ -400,13 +404,18 @@ img {
 .icons {
     left:405px;
     top: 8px;
+    margin-bottom: -10px;
 }
 
 .team {
     left: 0%
 }
+
 .home {
     left: 380px;
+    margin-left: 380px;
+    margin-bottom: -5px;
+    margin-right: 20px;
 }
 
 .search {
