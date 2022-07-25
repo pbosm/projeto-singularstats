@@ -12,7 +12,7 @@
             <a href="#"><img class='logo' src="../image/SingularPreto.png" alt="Imagem" title="SingularStats" width="300"></a>
        </div>
     </div>
-    <div class="menu">
+    <div class="menu"><img class ="home" src="../image/home.png" width="20">
           <a href="../index.php"><span class="title">Home </span><img class='icons' src="../image/torneios.png" width="30"></a>
           <a href="../paginas/torneios.php"><span class="title">Torneios</span><img class='icons' src="../image/times.png" width="30"></a>
           <a href="../paginas/times.php"><span class="title">Times</span><img class='icons' src="../image/jogadores.png" width="30"></a>
@@ -25,7 +25,7 @@
        </div>
 
        <div class="teamroster">
-            <img src="../image/libertyacademyroster.png" alt="teamliberty" title="teamliberty" height="200" width="350">
+            <img class='team' src="../image/libertyacademyroster.png" alt="teamliberty" title="teamliberty" height="200" width="350">
        </div>
 
        <!-- order details list -->

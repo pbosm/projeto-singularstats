@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
     <div class="navigation"></div>
 </head> 
-<body>
     <div class="main">
         <div class="cardBox">
             <a href="#"><img class='logo' src="../image/SingularPreto.png" alt="Imagem" title="SingularStats" width="300"></a>
@@ -15,11 +14,12 @@
        <div class="search">
         <label>
             <form class="form-inline" action="../busca/buscachamp.php" method="POST">
-                <input type="text" placeholder="Pesquisar campeões" name="pesquisar"> <i class="fa fa-search" aria-hidden="true"></i>   
+                <input type="text" placeholder="Pesquisar times" name="pesquisar"> <img class="search" src="../image/search.png" width="20">           
             </form>
         </label>
         </div>
-    <div class="menu">
+    </div>
+    <div class="menu"><img class ="home" src="../image/home.png" width="20">
           <a href="../index.php"><span class="title">Home </span><img src="../image/torneios.png" width="30"></a>
           <a href="../paginas/torneios.php"><span class="title">Torneios</span><img src="../image/times.png" width="30"></a>
           <a href="../paginas/times.php"><span class="title">Times</span><img src="../image/jogadores.png" width="30"></a>
@@ -131,13 +131,13 @@
                                                 </td>";
                                 }                                
                             ?>                                           
-                        </tr>            
-                    </tbody>  
-                </table>                
+                         </tr>                 
            </div>
         </div>
    </div>                               
 </div>  
+
+
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
 google.charts.load('current', {packages: ['corechart', 'bar']});
@@ -174,4 +174,4 @@ function drawStacked() {
 </script>
 
 </body>
-</html>
+</html> 

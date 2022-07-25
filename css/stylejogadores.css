@@ -50,7 +50,7 @@ body
 
 img {
 	position: relative;
-	left: 21%;
+	left: 20%;
 	top: 8px;
 	}
 
@@ -85,7 +85,7 @@ img {
 {
     position: absolute;
     width: 80%;
-    top: 170px;
+    top: 200px;
     grid-gap: 30px;
     left: 13%;
 }
@@ -212,6 +212,16 @@ img {
     color: #b8cbcd;
     top: 38px;
     left: 1300px;
+}
+
+.home {
+    margin-bottom:5px;
+    left: 380px;
+}
+
+.search {
+    top: 45px;
+    left: 1295px;
 }
 
 @media screen and (max-width: 1366px) {
