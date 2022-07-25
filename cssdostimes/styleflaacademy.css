@@ -28,7 +28,7 @@ body
 {
     position: fixed;
     width: 100%;
-    height: 3%;
+    height: 5%;
     background: #15151e;
     border-left: 10px solid var(--blue);
     transition: 0.5s;
@@ -85,12 +85,12 @@ body
 .teamroster
 {
     position: relative;
-    top: 195px;
+    top: 200px;
     background: #1a1a1a;
     padding: 20px;
     box-shadow: 0 7px 25px rgb(0 0 0 / 50%);
     border-radius: 30px;
-    width: 600px;
+    width: 395px;
     margin-left: 20px;
 }
 
@@ -104,7 +104,7 @@ body
     margin-top: 13%;
     left: 20px;
     width: 400px;
-    top: 475px;
+    top: 485px;
 }
 
 .table1 table {
@@ -184,10 +184,10 @@ body
     padding: 10px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 30px;
-    left: 650px;
+    left: 550px;
     width: 18.5%;
     letter-spacing: 0.5px;
-    top: 450px;
+    top: 490px;
 }
 
 .table3 table tr
@@ -195,7 +195,10 @@ body
     color: var(--black1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-
+.table3 table tr:last-child
+{
+    border-bottom: none;
+}
 .table3 table tbody tr:hover
 {
     background: #11101a;
@@ -234,10 +237,10 @@ body
     padding: 10px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 30px;
-    left: 1030px;
+    left: 950px;
     width: 18.5%;
     letter-spacing: 0.5px;
-    top: 450px;
+    top: 490px;
 }
 
 .table4 table tr
@@ -285,10 +288,10 @@ body
     padding: 10px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 30px;
-    left: 1410px;
+    left: 1350px;
     width: 450px;
     letter-spacing: 0.5px;
-    top: 450px;
+    top: 490px;
 }
 
 .table5 table tr
@@ -330,8 +333,9 @@ body
 
 .logo {
     margin-left: 15px;
-    margin-top: 10px;
+    margin-top: 5px;
     top:35px;
+    left:430px;
 }
 
 .text-right {
@@ -368,8 +372,8 @@ body
 
 img {
 	position: relative;
-	left: 21%;
-	top: 8px;
+	left: 20%;
+	top: 2px;
 	}
 
 .search input
@@ -393,13 +397,22 @@ img {
     left: 1300px;
 }
 
-.logo {
-    margin-left: 15px;
-    margin-top: 5px;
-}
-
 .icons {
     left:405px;
+    top: 8px;
+}
+
+.team {
+    left: 0%
+}
+
+.home {
+    left: 380px;
+}
+
+.search {
+    top: 45px;
+    left: 1295px;
 }
 
 @media screen and (max-width: 1366px) {
