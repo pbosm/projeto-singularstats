@@ -50,7 +50,7 @@ body
 
 img {
 	position: relative;
-	left: 21%;
+	left: 20%;
 	top: 8px;
 	}
 
@@ -163,6 +163,11 @@ img {
     text-transform: uppercase;
     font-family: monospace;
 }
+a {
+    color: inherit;
+    text-transform: uppercase;
+    font-family: monospace;
+}
 .details .recentOrders table tr td:last-child
 {
     padding: 30px;
@@ -217,6 +222,16 @@ img {
     color: #b8cbcd;
     top: 38px;
     left: 1300px;
+}
+
+.home {
+    margin-bottom:5px;
+    left: 380px;
+}
+
+.search {
+    top: 45px;
+    left: 1295px;
 }
 
 @media screen and (max-width: 1366px) {
