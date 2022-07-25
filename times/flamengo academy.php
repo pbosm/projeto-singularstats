@@ -13,13 +13,13 @@
        </div>
        <div class="search">
         <label>
-            <form class="form-inline" action="./busca/buscatimes.php" method="POST">
-                <input type="text" placeholder="Pesquisar times" name="pesquisar"> <i class="fa fa-search" aria-hidden="true"></i>          
+            <form class="form-inline" action="../busca/buscatimes.php" method="POST">
+                <input type="text" placeholder="Pesquisar times" name="pesquisar"> <img class="search" src="../image/search.png" width="20">           
             </form>
         </label>
         </div>
     </div>
-    <div class="menu">
+    <div class="menu"><img class ="home" src="../image/home.png" width="20">
           <a href="../index.php"><span class="title">Home </span><img class='icons' src="../image/torneios.png" width="30"></a>
           <a href="../paginas/torneios.php"><span class="title">Torneios</span><img class='icons' src="../image/times.png" width="30"></a>
           <a href="../paginas/times.php"><span class="title">Times</span><img class='icons' src="../image/jogadores.png" width="30"></a>
@@ -33,7 +33,7 @@
        </div>
 
        <div class="teamroster">
-           <img src="../image/flamengoacademyroster.png" alt="teamred" title="teamred" height="200" width="350">
+           <img class='team' src="../image/flamengoacademyroster.png" alt="teamred" title="teamred" height="200" width="350">
        </div>
 
        <!-- order details list -->
@@ -521,7 +521,7 @@
             </table> 
         </div>
    </div>                               
-</div>  
+</div> 
 
 </body>
 </html>
