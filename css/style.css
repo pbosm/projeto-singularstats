@@ -88,7 +88,7 @@ img {
     width: 80%;
     top: 200px;
     grid-gap: 30px;
-    left: 19%;
+    left: 180px;
 }
 .details .recentOrders
 {
@@ -98,6 +98,7 @@ img {
     padding: 20px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 20px;
+    width: 1650px;
 }
 
 .cardHeader
