@@ -361,6 +361,7 @@ body
 .text-right3 {
     width: 55%;
     color: var(--black1);
+    text-align: right!important;
 }
 
 .text-left {

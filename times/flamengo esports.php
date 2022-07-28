@@ -277,37 +277,37 @@
                                     </div> 
                                    
                                     <tr>
-                                    <td class='text-right1'>Gold por minuto :</td>
+                                    <td class='text-right1'>Gold por minuto:</td>
                                     <td class='text-aling:center;width:30%'>$format_goldpm</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right1'>Gold diff aos 15 :</th>
+                                    <td class='text-right1'>Gold diff aos 15:</th>
                                     <td class='text-aling:center;width:30%'>$format_goldiff</td>
                                     </tr> 
 
                                     <tr>
-                                    <td class='text-right1'>CS por minuto :</th>
+                                    <td class='text-right1'>CS por minuto:</th>
                                     <td class=text-aling:center;width:30%'>$format_cspm</td>
                                     </tr>                                                                        
                                     
                                     <tr>
-                                    <td class='text-right1'>CS diff aos 15 :</th>
+                                    <td class='text-right1'>CS diff aos 15:</th>
                                     <td class='text-aling:center;width:30%'>$format_csdiff</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right1'>First Torre :</th>
+                                    <td class='text-right1'>First Torre:</th>
                                     <td class='text-aling:center;width:30%'>$format_firsttorre%</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right1'>First Torre blue :</th>
+                                    <td class='text-right1'>First Torre blue:</th>
                                     <td class='text-aling:center;width:30%'>$format_firsttorreblue%</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right1'>First Torre red :</th>
+                                    <td class='text-right1'>First Torre red:</th>
                                     <td class='text-aling:center;width:30%'>$format_firsttorrered%</td>
                                     </tr>";
                                 }                       
@@ -368,37 +368,37 @@
                                     </div> 
                                    
                                     <tr>
-                                    <td class='text-right2'>First Blood :</th>
+                                    <td class='text-right2'>First Blood:</th>
                                     <td class='text-aling:center;width:30%'>$format_firstblood%</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right2'>First Blood Blueside :</th>
+                                    <td class='text-right2'>First Blood Blueside:</th>
                                     <td class='text-aling:center;width:30%'>$format_firstbloodblue%</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right2'>First Blood Redside :</th>
+                                    <td class='text-right2'>First Blood Redside:</th>
                                     <td class='text-aling:center;width:30%'>$format_firstbloodred%</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right2'>Media de kills :</td>
+                                    <td class='text-right2'>Media de kills:</td>
                                     <td class='text-aling:center;width:30%'>$format_mediakills</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right2'>Media de mortes :</th>
+                                    <td class='text-right2'>Media de mortes:</th>
                                     <td class='text-aling:center;width:30%'>$format_mediamortes</td>
                                     </tr> 
 
                                     <tr>
-                                    <td class='text-right2'>Visão por minuto :</th>
+                                    <td class='text-right2'>Visão por minuto:</th>
                                     <td class='text-aling:center;width:30%'>$format_vspm</td>
                                     </tr>
                                     
                                     <tr>
-                                    <td class='text-right2'>Wards por minuto :</th>
+                                    <td class='text-right2'>Wards por minuto:</th>
                                     <td class=text-aling:center;width:30%'>$format_wpm</td>
                                     </tr>";
                                 }                        
@@ -463,52 +463,52 @@
                                     </div> 
                                    
                                     <tr>
-                                    <td class='text-right3'>Dragons por jogo :</th>
+                                    <td class='text-right3'>Dragons por jogo:</th>
                                     <td class='text-aling:center;width:30%'>$format_dragonspgame%</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right3'>1º dragon blueside :</td>
+                                    <td class='text-right3'>1º dragon blueside:</td>
                                     <td class='text-aling:center;width:30%'>$format_firstdragonblue%</td>
                                     </tr>
 
                                     <tr>
-                                    <td class='text-right3'>1º dragon redside :</th>
+                                    <td class='text-right3'>1º dragon redside:</th>
                                     <td class='text-aling:center;width:30%'>$format_firstdragonred%</td>
                                     </tr> 
 
                                     <tr>
-                                    <td class='text-right3'>Porcentagem de 1º arauto :</th>
+                                    <td class='text-right3'>Porcentagem de 1º arauto:</th>
                                     <td class='text-aling:center;width:30%'>$format_firstarauto%</td>
                                     </tr>
                                     
                                     <tr>
-                                    <td class='text-right3'>1º arauto blueside :</th>
+                                    <td class='text-right3'>1º arauto blueside:</th>
                                     <td class=text-aling:center;width:30%'>$format_firstarautoblue%</td>
                                     </tr>
                                     
                                     <tr>
-                                    <td class='text-right3'>1º arauto redside :</th>
+                                    <td class='text-right3'>1º arauto redside:</th>
                                     <td class=text-aling:center;width:30%'>$format_firstarautored%</td>
                                     </tr>
                                     
                                     <tr>
-                                    <td class='text-right3'>Porcentagem de 1º baron :</th>
+                                    <td class='text-right3'>Porcentagem de 1º baron:</th>
                                     <td class=text-aling:center;width:30%'>$format_firstabaron%</td>
                                     </tr>
                                     
                                     <tr>
-                                    <td class='text-right3'>1º baron blueside :</th>
+                                    <td class='text-right3'>1º baron blueside:</th>
                                     <td class=text-aling:center;width:30%'>$format_firstabaronblue%</td>
                                     </tr>
                                     
                                     <tr>
-                                    <td class='text-right3'>1º baron redside :</th>
+                                    <td class='text-right3'>1º baron redside:</th>
                                     <td class=text-aling:center;width:30%'>$format_firstabaronred%</td>
                                     </tr>
                                     
                                     <tr>
-                                    <td class='text-right3'>Barons por game :</th>
+                                    <td class='text-right3'>Barons por game:</th>
                                     <td class=text-aling:center;width:30%'>$format_baronspgame%</td>
                                     </tr>";
                                 }                        
