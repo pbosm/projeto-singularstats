@@ -98,7 +98,8 @@ img {
     padding: 20px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 20px;
-    width: 1650px;
+    width: 1500px;
+    left: 5%;
 }
 
 .cardHeader
@@ -239,7 +240,7 @@ a {
 
 .home {
     margin-bottom:5px;
-    left: 380px;
+    left: 395px;
 }
 
 .search {
