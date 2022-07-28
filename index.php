@@ -24,7 +24,7 @@
             <a href="index.php"><span class="title">Home</span><img src="./image/torneios.png" width="30"></a>
             <a href="./paginas/torneios.php"><span class="title">Torneios</span> <img src="./image/times.png" width="30"></a>
             <a href="./paginas/times.php"><span class="title">Times</span> <img src="./image/jogadores.png" width="30"></a>
-            <a href="./paginas/jogadores.php"><span class="title">Jogadores</span> <img src="./image/campeoes.png" width="25"></a>
+            <a href="./paginas/jogadores.php"><span class="title">Jogadores</span> <img src="./image/jogadores.png" width="25"></a>
             <a href="./paginas/campeaos.php"><span class="title">Campeões</span></a>
     </div>
     <div class="details">
