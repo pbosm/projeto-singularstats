@@ -39,7 +39,7 @@ body
 .title
 {    
     position: relative;
-    padding-left: 40px;
+    padding-left: 60px;
     line-height: 60px;
     color: #e9e5e5;
     text-transform: uppercase;
@@ -51,7 +51,7 @@ body
 
 img {
 	position: relative;
-    left: 19.5%;
+    left: 11.5%;
 	top: 8px;
 }
 
@@ -240,7 +240,11 @@ a {
 
 .home {
     margin-bottom:5px;
-    left: 395px;
+    left: 270px;
+}
+
+.times {
+    left: 260px;
 }
 
 .search {

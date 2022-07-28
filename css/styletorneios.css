@@ -50,9 +50,9 @@ body
 
 img {
 	position: relative;
-    left: 19.5%;
+    left: 11.5%;
 	top: 8px;
-	}
+}
 
 /* main */
 .main
@@ -221,7 +221,11 @@ img {
 
 .home {
     margin-bottom:5px;
-    left: 395px;
+    left: 270px;
+}
+
+.times {
+    left: 260px;
 }
 
 .search {
