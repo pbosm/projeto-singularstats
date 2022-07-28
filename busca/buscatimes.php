@@ -36,13 +36,6 @@
                    } else  {
                       echo "Times com as inicias ", $pesquisar;
                    } ?> </h3>
-                   <div class="search">
-                    <label>
-                        <form class="form-inline" action="../busca/buscatimes.php" method="POST">
-                            <input type="text" placeholder="Procure por algum time específico" name="pesquisar">              
-                        </form>
-                    </label>
-                 </div>
                </div>
                <table >
                    <thead>
