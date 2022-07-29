@@ -58,7 +58,7 @@
                    <tbody >
                        <tr>     
                            <?php
-                                $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
+                                $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
                                 $sql = "SELECT playername, teamname, position, count(teamname), SUM(result=1) / count(teamname) * 100, SUM(kills + assists) / SUM(deaths), SUM(kills) / count(teamname), SUM(deaths) / count(teamname), SUM(assists) / count(teamname), SUM(kills + assists) / SUM(teamkills) * 100, sum(damageshare) / count(teamname) * 100, SUM(dpm) / count(playername) * 100 / 100, SUM(firstblood) / count(teamname) * 100, SUM(vspm) / count(teamname) * 100 / 100, SUM(cspm) / count(teamname), SUM(earnedgpm) / count(teamname), SUM(xpdiffat15) / count(teamname), sum(golddiffat15) / count(teamname), sum(csdiffat15) / count(teamname) from `cblol`
                                 where split in (select split from `cblol` where split = 'split 1')

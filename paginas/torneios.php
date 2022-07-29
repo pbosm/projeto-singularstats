@@ -45,7 +45,7 @@
                    <tbody >
                        <tr>     
                            <?php
-                                $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
+                                $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
                                 $sql = "SELECT league, split, sum(result=1), sum(duracaogame) / 2 / sum(result=1) / 60, sum(teamkills) / sum(result=1) FROM  `lck` 
                                 where league in (SELECT league FROM `lck` WHERE league = 'lck') 
