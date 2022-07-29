@@ -1,3 +1,16 @@
+<?php
+//Get Heroku ClearDB connection information
+$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$cleardb_server = $cleardb_url["host"];
+$cleardb_username = $cleardb_url["user"];
+$cleardb_password = $cleardb_url["pass"];
+$cleardb_db = substr($cleardb_url["path"],1);
+$active_group = 'default';
+$query_builder = TRUE;
+// Connect to DB
+$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+?>
+
 <!DOCTYPE html> 
 <html lang="pt-BR"> 
 <head> 
@@ -64,7 +77,7 @@
                        <tr>     
                            <?php
                                 $pesquisar = $_POST['pesquisar'];
-                                $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
+                                $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
                                 
                                 $sql = "SELECT playername, teamname, position, count(teamname), SUM(kills + assists) / SUM(deaths), SUM(kills) / count(teamname), SUM(deaths) / count(teamname), SUM(assists) / count(teamname), SUM(kills + assists) / SUM(teamkills) * 100, sum(damageshare) / count(teamname) * 100, SUM(dpm) / count(playername) * 100 / 100, SUM(firstblood) / count(teamname) * 100, SUM(vspm) / count(teamname) * 100 / 100,  SUM(cspm) / count(teamname), SUM(earnedgpm) / count(teamname), SUM(xpdiffat15) / count(teamname), sum(golddiffat15) / count(teamname), sum(csdiffat15) / count(teamname) from `cblol` where playername like '%$pesquisar%'
                                 and split in (select split from `cblol` where split = 'split 1')
