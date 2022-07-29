@@ -60,7 +60,7 @@ img {
     position: fixed;
     width: 100%;
     top: 27px;
-    height: 9%;
+    height: 13%;
     background-color: #1c1c1c;
     z-index: 500;
 }
@@ -238,7 +238,7 @@ a {
     left: 1295px;
 }
 
-@media screen and (max-width: 1366px) {
+/* @media screen and (max-width: 1366px) {
     .title {
         left: 175px;
     }
@@ -308,4 +308,4 @@ a {
     img {
         left: 23%;
     }
-}
+} */

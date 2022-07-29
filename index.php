@@ -11,7 +11,6 @@ $query_builder = TRUE;
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 ?>
 
-
 <!DOCTYPE html> 
 <html lang="pt-BR"> 
 <head> 

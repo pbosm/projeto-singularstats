@@ -61,7 +61,7 @@ img {
     position: fixed;
     width: 100%;
     top: 27px;
-    height: 9%;
+    height: 13%;
     background-color: #1c1c1c;
     z-index: 500;
 }
@@ -73,6 +73,7 @@ img {
     margin-top: 25px;
     background-color: #1c1c1c;
     z-index: 500;
+    left: -20px;
 }
 
 .cardBox
@@ -252,7 +253,7 @@ a {
     left: 1295px;
 }
 
-@media screen and (max-width: 1366px) {
+/* @media screen and (max-width: 1366px) {
     .title {
         left: 175px;
     }
@@ -267,9 +268,9 @@ a {
     }
 
     .details {
-        top: 185px;
+        top: 165px;
         width: 70%;
-        left: 150px;
+        left: 60px;
     }
     .search input{
         left: 1000px;
@@ -303,7 +304,7 @@ a {
     }
 
     .details {
-        top: 180px;
+        top: 155px;
         width: 70%;
         left: 250px;
     }
@@ -320,6 +321,6 @@ a {
     }
 
     img {
-        left: 23.2%;
+        left: 23%;
     }
-}
+} */
