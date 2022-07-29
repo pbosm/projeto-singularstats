@@ -1,3 +1,16 @@
+<?php
+//Get Heroku ClearDB connection information
+$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$cleardb_server = $cleardb_url["host"];
+$cleardb_username = $cleardb_url["user"];
+$cleardb_password = $cleardb_url["pass"];
+$cleardb_db = substr($cleardb_url["path"],1);
+$active_group = 'default';
+$query_builder = TRUE;
+// Connect to DB
+$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+?>
+
 <!DOCTYPE html> 
 <html lang="pt-BR"> 
 <head> 
@@ -36,7 +49,7 @@
                    <tbody>
                        <tr> 
                             <?php
-                                $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
+                                $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
                                 $sql = "SELECT teamname, league, split, year, sum(result=1), sum(result=0), avg(result=1) * 100 'Winratio', avg(duracaogame) / 60  from `cblol` 
                                 WHERE position in (SELECT position FROM `cblol` WHERE position = 'team')
@@ -127,7 +140,7 @@
                    <tbody>
                        <tr> 
                             <?php
-                                $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
+                                $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
                                 $sql = "SELECT distinct playername, position, count(teamname)'Jogos', SUM(result=1) / count(teamname) * 100 'Winratio', SUM(kills + assists) / SUM(deaths) 'KDA', SUM(kills) / count(teamname) 'Media de Kills', SUM(deaths) / count(teamname) 'Media de mortes', SUM(assists) / count(teamname)'Media de assist', SUM(kills + assists) / SUM(teamkills) * 100 'Kill participação', sum(damageshare) / count(teamname) * 100 '% dano', SUM(dpm) / count(playername) * 100 / 100 'dano por minuto', SUM(firstblood) / count(teamname) * 100 'FB participação', SUM(vspm) / count(teamname) * 100 / 100 'Ward p minuto', SUM(cspm) / count(teamname) 'Cs por minuto', SUM(earnedgpm) / count(teamname)'Gold por minuto', SUM(xpdiffat15) / count(teamname)'xp aos 15', sum(golddiffat15) / count(teamname) 'gold diff aos 15', sum(csdiffat15) / count(teamname) 'cs diff aos 15'from cblol
                                 where position in (SELECT position FROM `cblol` WHERE position != 'team')
@@ -222,7 +235,7 @@
                    <tbody>
                        <tr> 
                             <?php
-                                $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
+                                $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
                                 $sql = "SELECT  sum(firsttower) / count(teamname) * 100, sum(firsttower=1 and side='Blue') / sum(side='blue') * 100, sum(firsttower=1 and side='red') / sum(side='red') * 100, sum(towers) / count(teamname), sum(towersenemy) / count(teamname), sum(towers) / count(teamname) - sum(towersenemy) / count(teamname) 'Media de torres diff', SUM(earnedgpm) / count(teamname), SUM(xpdiffat15) / count(teamname), sum(golddiffat15) / count(teamname), sum(csdiffat15) / count(teamname), SUM(cspm) / count(teamname) from `cblol` where teamname = 'netshoes miners academy'
                                 and split in (select split from `cblol` where split = 'split 1')
@@ -318,7 +331,7 @@
                    <tbody>
                        <tr>
                             <?php
-                                $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
+                                $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
                                 $sql = "SELECT teamname, avg(teamkills), avg(teamdeaths), avg(dpm), avg(firstblood) * 100, avg(firstblood and side='blue') * 100, avg(firstblood and side='red') * 100, avg(vspm), avg(wpm) from `cblol`
                                 where split in (select split from `cblol` where split = 'split 1')
@@ -408,7 +421,7 @@
                    <tbody>
                        <tr>
                             <?php
-                                $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
+                                $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
                                 $sql = "SELECT avg(dragons) 'Dragons p game', sum(firstdragon=1 and side='blue') / sum(side='blue') * 100 '1 Drag Blueside', sum(firstdragon=1 and side='red') / sum(side='red') * 100 '1 Drag Redside', sum(firstherald) / count(teamname) * 100 '% de 1 Arauto', sum(firstherald=1 and side='blue') / sum(side='blue') * 100 '1 Arauto Blue side', sum(firstherald=1 and side='red') / sum(side='red') * 100 '1 Arauto Red side', sum(firstbaron=1 and side='blue') / sum(side='blue') * 100 '1 Baron Blue side', sum(firstbaron=1 and side='red') / sum(side='red') * 100 '1 Baron Red side', sum(firstbaron) / count(teamname) * 100 '% de Firts Baron', sum(barons) / count(teamname) 'Barons p game'  from `cblol`
                                 where split in (select split from `cblol` where split = 'split 1')
