@@ -97,7 +97,7 @@ body
 
 .table1
 {
-    position: fixed;
+    position: absolute;
     background: #1a1a1a;
     padding: 20px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
