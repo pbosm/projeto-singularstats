@@ -128,7 +128,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                     $cs15           = htmlentities($cs15, ENT_QUOTES, "UTF-8");
 
                                     echo "<tr>                                    
-                                                <td><img class='champion' src='../image/".$champion."'> ../image/".$champion." $champion </td> 
+                                                <td><img class='champion' src='../image/".$champion."'> $registro[0] </td> 
                                                 <td> $registro[1]</td>
                                                 <td> $registro[2]</td>
                                                 <td> $registro[3]</td>
@@ -154,7 +154,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 </div>  
 
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
 google.charts.load('current', {packages: ['corechart', 'bar']});
 google.charts.setOnLoadCallback(drawStacked);
@@ -162,7 +162,7 @@ google.charts.setOnLoadCallback(drawStacked);
 function drawStacked() {
       var data = google.visualization.arrayToDataTable([
         ['', '2010 Population', '2000 Population'],
-        ['', parseInt('<?php echo $format_fbpart; ?>'), 100]
+        ['', parseInt(''), 100]
       ]);
 
       var options = {
@@ -187,7 +187,7 @@ function drawStacked() {
       var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
       chart.draw(data, options);
     }
-</script>
+</script> -->
 
 </body>
 </html> 
