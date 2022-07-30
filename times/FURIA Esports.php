@@ -38,7 +38,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
        </div>
 
        <div class="teamroster">
-            <img class='team' src="../image/furiaroster" alt="teamfuria" title="teamfuria" height="200" width="350">
+            <img class='team' src="../image/furiaroster.png" alt="teamfuria" title="teamfuria" height="200" width="350">
        </div>
 
        <!-- order details list -->
