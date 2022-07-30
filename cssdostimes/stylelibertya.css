@@ -46,7 +46,7 @@ body
     text-transform: uppercase;
     font-family: monospace;
     font-size: 15px;
-    left: -50px;
+    left: -45px;
     font-weight: bold;
 }
 
@@ -65,27 +65,25 @@ body
     width: 100%;
     top: 87px;
     margin-top: 25px;
-    background-color: #1c1c1c;
     z-index: 500;
+    left: 350px;
 }
 
 .logoteam
 {
-    position: relative;
-    top: 185px;
+    top: 151px;
     background: #1a1a1a;
     padding: 20px;
     box-shadow: 0 7px 25px rgb(0 0 0 / 50%);
     border-radius: 30px;
     width: 395px;
     margin-left: 25px;
-    margin-top: 15px;
+    margin-top: 195px;
     margin-bottom: 10px;
     text-align: center;
 }
 .teamroster
 {
-    position: relative;
     top: 190px;
     background: #1a1a1a;
     padding: 20px;
@@ -97,15 +95,15 @@ body
 
 .table1
 {
-    position: absolute;
+    position: relative;
     background: #1a1a1a;
     padding: 20px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 30px;
-    margin-top: 13%;
+    margin-top: 260px;
     left: 20px;
     width: 400px;
-    top: 460px;
+    top: -250px;
 }
 
 .table1 table {
@@ -123,14 +121,14 @@ body
 
 .table2
 {
-    position: fixed;
+    position: relative;
     background: #1a1a1a;
     padding: 10px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 30px;
-    left: 440px;
+    left: 435px;
     width: 70%;
-    top: 200px;
+    top: -890px;
 }
 
 .tableTitulo h3
@@ -167,7 +165,7 @@ body
 
 .table2 {
     border-collapse: collapse;
-    width: 74%;
+    width: 77%;
 }
 
 .table2 table
@@ -183,7 +181,7 @@ body
 
 .table3
 {
-    position: fixed;
+    position: relative;
     background: #1a1a1a;
     padding: 10px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
@@ -191,7 +189,7 @@ body
     left: 550px;
     width: 18.5%;
     letter-spacing: 0.5px;
-    top: 490px;
+    top: -844px;
 }
 
 .table3 table tr
@@ -214,6 +212,7 @@ body
     text-align: center;
     text-transform: uppercase;
     font-family: monospace;
+    width: 200px;
 }
 
 .table3 {
@@ -222,7 +221,6 @@ body
 
 .table3 table
 {
-    width: 350px;
     border-collapse: collapse;
     height: 330px;
 }
@@ -236,7 +234,7 @@ body
 
 .table4
 {
-    position: fixed;
+    position: relative;
     background: #1a1a1a;
     padding: 10px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
@@ -244,7 +242,7 @@ body
     left: 950px;
     width: 18.5%;
     letter-spacing: 0.5px;
-    top: 490px;
+    top: -1215px;
 }
 
 .table4 table tr
@@ -260,11 +258,12 @@ body
 }
 .table4 table tr td
 {
-    padding: 3px;
+    padding: 1px;
     text-align: center;
     color: var(--black1);
     text-transform: uppercase;
     font-family: monospace;
+    width: 200px;
 }
 
 .table4 {
@@ -273,7 +272,6 @@ body
 
 .table4 table
 {
-    width: 350px;
     border-collapse: collapse;
     height: 330px;
 }
@@ -287,7 +285,7 @@ body
 
 .table5
 {
-    position: fixed;
+    position: relative;
     background: #1a1a1a;
     padding: 10px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
@@ -295,7 +293,7 @@ body
     left: 1350px;
     width: 450px;
     letter-spacing: 0.5px;
-    top: 490px;
+    top: -1585px;
 }
 
 .table5 table tr
@@ -316,6 +314,7 @@ body
     color: var(--black1);
     text-transform: uppercase;
     font-family: monospace;
+    width: 300px;
 }
 
 .table5 {
@@ -324,7 +323,6 @@ body
 
 .table5 table
 {
-    width: 430px;
     border-collapse: collapse;
     height: 330px;
 }
@@ -414,9 +412,8 @@ body
 
 .home {
     left: 380px;
-    margin-left: 380px;
     margin-bottom: -5px;
-    margin-right: 20px;
+    margin-right: 5px;
 }
 
 .search {

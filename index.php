@@ -1,45 +1,35 @@
-<?php
-//Get Heroku ClearDB connection information
-$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-$cleardb_server = $cleardb_url["host"];
-$cleardb_username = $cleardb_url["user"];
-$cleardb_password = $cleardb_url["pass"];
-$cleardb_db = substr($cleardb_url["path"],1);
-$active_group = 'default';
-$query_builder = TRUE;
-// Connect to DB
-$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
-?>
-
 <!DOCTYPE html> 
 <html lang="pt-BR"> 
 <head> 
     <meta charset="utf-8"> 
     <title> Singularstats </title> 
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
-</head>
-<body>
     <div class="navigation"></div>
-        <div class="main">
-            <div class="cardBox">
-                <a href="#"><img class='logo' src="./image/SingularPreto.png" alt="Imagem" title="SingularStats" width="300"></a>
+</head>
+
+<body>
+    <div class="main">
+        <div class="logo-logo">
+            <a href="#"><img class='logo' src="./image/SingularPreto.png" alt="Imagem" title="SingularStats" width="300"></a>
         </div>
-        <div class="search">
-        <label>
-            <form class="form-inline" action="./busca/buscatimes.php" method="POST">
-                <input type="text" placeholder="Pesquisar times" name="pesquisar"> <img class="search" src="./image/search.png" width="20">   
-            </form>
-        </label>
+            <div class="search">
+                <label>
+                    <form class="form-inline" action="./busca/buscatimes.php" method="POST">
+                        <input type="text" placeholder="Pesquisar times" name="pesquisar"><img class="lupa" src="./image/search.png" width="20">           
+                    </form>
+                </label>
+            </div>
         </div>
     </div>
-    <div class="menu">
-            <a href="index.php"><span class="title">Home</span><img class="home" src="./image/home.png" width="22"></a>
-            <a href="./paginas/torneios.php"><span class="title">Torneios</span><img src="./image/torneios.png" width="30"></a>
-            <a href="./paginas/times.php"><span class="title">Times</span><img class="times" src="./image/times.png" width="30"></a>
-            <a href="./paginas/jogadores.php"><span class="title">Jogadores</span><img src="./image/jogadores.png" width="30"></a>
-            <a href="./paginas/campeaos.php"><span class="title">Campeões</span><img src="./image/campeoes.png" width="30"></a>
-    </div>
+
+        <div class="menu"><img class ="home" src="./image/home.png" width="20">
+            <a href="index.php"><span class="title">Home </span><img class='icons' src="./image/torneios.png" width="30"></a>
+            <a href="./paginas/torneios.php"><span class="title">Torneios</span><img class='icons' src="./image/times.png" width="30"></a>
+            <a href="./paginas/times.php"><span class="title">Times</span><img class='icons' src="./image/jogadores.png" width="30"></a>
+            <a href="./paginas/jogadores.php"><span class="title">Jogadores</span><img class='icons' src="./image/campeoes.png" width="25"></a>
+            <a href="./paginas/campeaos.php"><span class="title">Campeões</span></a>
+        </div>
+
     <div class="details">
            <div class="recentOrders">
                <div class="cardHeader">
@@ -65,7 +55,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                    <tbody>
                        <tr>
                             <?php
-                                $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+                                $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
  
                                 $sql = "SELECT gameid, league, split, datahora, side, teamname, result=1 FROM `cblol`
                                 where split in (select split from `cblol` where split = 'split 1')
@@ -161,7 +151,8 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                 </table>                    
            </div>
         </div>
-   </div>      
+   </div>   
+      
 </body>
 </html>
 

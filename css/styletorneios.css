@@ -16,42 +16,42 @@
     --black1: rgb(172, 172, 172);
     --black2: #999;
 }
+
 body
 {
     min-height: 100vh;
-    overflow-x: auto;
+    overflow: auto;
     background: var(--blue);
+}
+
+a {
+    color: inherit;
 }
 
 .navigation
 {
     position: fixed;
     width: 100%;
-    height: 3%;
+    height: 5%;
     background: #15151e;
     border-left: 10px solid var(--blue);
     transition: 0.5s;
     overflow: auto;
     z-index: 500;
+    top:0px;
 }
 
 .title
 {    
     position: relative;
-    padding-left: 40px;
+    padding-left: 55px;
     line-height: 60px;
     color: #e9e5e5;
     text-transform: uppercase;
     font-family: monospace;
     font-size: 15px;
-    left: 350px;
+    left: -45px;
     font-weight: bold;
-}
-
-img {
-	position: relative;
-    left: 11.5%;
-	top: 8px;
 }
 
 /* main */
@@ -70,11 +70,11 @@ img {
     width: 100%;
     top: 87px;
     margin-top: 25px;
-    background-color: #1c1c1c;
     z-index: 500;
+    left: 350px;
 }
 
-.cardBox
+.logo-logo
 {
     position: fixed;
     margin-left: 19%;
@@ -85,9 +85,9 @@ img {
 {
     position: absolute;
     width: 80%;
-    top: 170px;
+    top: 200px;
     grid-gap: 30px;
-    left: 13%;
+    left: 180px;
 }
 .details .recentOrders
 {
@@ -96,8 +96,10 @@ img {
     padding: 20px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 20px;
-    left: 350px;
+    width: 1500px;
+    left: 5%;
 }
+
 .cardHeader
 {
     display: flex;
@@ -156,6 +158,7 @@ img {
     text-align: center;
     text-transform: uppercase;
     font-family: monospace;
+    width: 105px;
 }
 
 .details .recentOrders table tr td
@@ -177,10 +180,10 @@ img {
     text-align: center;
 }
 
-.menu a {
+/* .menu a {
     width: 36%;
     margin-left: 15px;
-}
+} */
 
 .recentCustomers
 {
@@ -200,15 +203,14 @@ img {
 
 .search input
 {
-    position: relative;
     height: 40px;
     border-radius: 40px;
     padding: 20px;
     font-size: 12px;
     background: #121212;
     color: #b8cbcd;
-    top: 40px;
-    left: 1340px;
+    margin-top: 45px;
+    margin-left: 1385px;
 }
 
 .fa {
@@ -220,20 +222,24 @@ img {
 }
 
 .home {
-    margin-bottom:5px;
-    left: 270px;
+    position: fixed;
+    left: 320px;
+    top: 132px;
 }
 
-.times {
-    left: 260px;
+.lupa {
+    margin-left: -40px;
+    margin-bottom: -5px;
 }
 
-.search {
-    top: 45px;
-    left: 1295px;
+.icons {
+    left:405px;
+    top: 8px;
+    margin-bottom: -10px;
 }
 
-/* @media screen and (max-width: 1366px) {
+
+/* @media screen and (max-width: 100%) {
     .title {
         left: 175px;
     }
@@ -250,7 +256,7 @@ img {
     .details {
         top: 165px;
         width: 70%;
-        left: 150px;
+        left: 60px;
     }
     .search input{
         left: 1000px;
@@ -280,7 +286,7 @@ img {
     }
     .logo {
         left: 90px;
-        top: -9px;
+        top: -5px;
     }
 
     .details {

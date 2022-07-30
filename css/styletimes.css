@@ -38,21 +38,21 @@ body
 .title
 {    
     position: relative;
-    padding-left: 40px;
+    padding-left: 55px;
     line-height: 60px;
     color: #e9e5e5;
     text-transform: uppercase;
     font-family: monospace;
     font-size: 15px;
-    left: 350px;
+    left: -45px;
     font-weight: bold;
 }
 
-img {
+/* img {
 	position: relative;
     left: 11.5%;
 	top: 8px;
-}
+} */
 
 /* main */
 .main
@@ -68,13 +68,13 @@ img {
 .menu {
     position: fixed;
     width: 100%;
-    top: 86px;
+    top: 87px;
     margin-top: 25px;
-    background-color: #1c1c1c;
     z-index: 500;
+    left: 350px;
 }
 
-.cardBox
+.logo-logo
 {
     position: fixed;
     margin-left: 19%;
@@ -163,11 +163,13 @@ img {
     text-transform: uppercase;
     font-family: monospace;
 }
+
 a {
     color: inherit;
     text-transform: uppercase;
     font-family: monospace;
 }
+
 .details .recentOrders table tr td:last-child
 {
     padding: 30px;
@@ -182,10 +184,10 @@ a {
     text-align: center;
 }
 
-.menu a {
+/* .menu a {
     width: 36%;
     margin-left: 15px;
-}
+} */
 
 .recentCustomers
 {
@@ -205,15 +207,14 @@ a {
 
 .search input
 {
-    position: relative;
     height: 40px;
     border-radius: 40px;
     padding: 20px;
     font-size: 12px;
     background: #121212;
     color: #b8cbcd;
-    top: 38px;
-    left: 1340px;
+    margin-top: 45px;
+    margin-left: 1385px;
 }
 
 .fa {
@@ -225,17 +226,20 @@ a {
 }
 
 .home {
-    margin-bottom:5px;
-    left: 270px;
+    position: fixed;
+    left: 320px;
+    top: 132px;
 }
 
-.times {
-    left: 260px;
+.lupa {
+    margin-left: -40px;
+    margin-bottom: -5px;
 }
 
-.search {
-    top: 45px;
-    left: 1295px;
+.icons {
+    left:405px;
+    top: 8px;
+    margin-bottom: -10px;
 }
 
 /* @media screen and (max-width: 1366px) {

@@ -1,44 +1,34 @@
-<?php
-//Get Heroku ClearDB connection information
-$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-$cleardb_server = $cleardb_url["host"];
-$cleardb_username = $cleardb_url["user"];
-$cleardb_password = $cleardb_url["pass"];
-$cleardb_db = substr($cleardb_url["path"],1);
-$active_group = 'default';
-$query_builder = TRUE;
-// Connect to DB
-$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
-?>
-
 <!DOCTYPE html> 
 <html lang="pt-BR"> 
 <head> 
     <meta charset="utf-8"> 
     <title> Campeões </title> 
     <link rel="stylesheet" type="text/css" href="../css/stylecampeaos.css"> 
-    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
     <div class="navigation"></div>
 </head> 
+
     <div class="main">
-        <div class="cardBox">
-            <a href="#"><img class='logo' src="../image/SingularPreto.png" alt="Imagem" title="SingularStats" width="300"></a>
-       </div>
-       <div class="search">
-        <label>
-            <form class="form-inline" action="../busca/buscachamp.php" method="POST">
-                <input type="text" placeholder="Pesquisar campeões" name="pesquisar"> <img class="search" src="../image/search.png" width="20">           
-            </form>
-        </label>
+        <div class="logo-logo">
+            <a href="../index.php"><img class='logo' src="../image/SingularPreto.png" alt="Imagem" title="SingularStats" width="300"></a>
         </div>
-    </div>
-    <div class="menu">
-            <a href="../index.php"><span class="title">Home</span><img class="home" src="../image/home.png" width="22"></a>
-            <a href="../paginas/torneios.php"><span class="title">Torneios</span><img src="../image/torneios.png" width="30"></a>
-            <a href="../paginas/times.php"><span class="title">Times</span><img class="times" src="../image/times.png" width="30"></a>
-            <a href="../paginas/jogadores.php"><span class="title">Jogadores</span><img src="../image/jogadores.png" width="30"></a>
-            <a href="../paginas/campeaos.php"><span class="title">Campeões</span><img src="../image/campeoes.png" width="30"></a>
-   </div>
+            <div class="search">
+                <label>
+                    <form class="form-inline" action="../busca/buscachamp.php" method="POST">
+                        <input type="text" placeholder="Pesquisar campeão" name="pesquisar"><img class="lupa" src="../image/search.png" width="20">           
+                    </form>
+                </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu"><img class ="home" src="../image/home.png" width="20">
+            <a href="../index.php"><span class="title">Home </span><img class='icons' src="../image/torneios.png" width="30"></a>
+            <a href="../paginas/torneios.php"><span class="title">Torneios</span><img class='icons' src="../image/times.png" width="30"></a>
+            <a href="../paginas/times.php"><span class="title">Times</span><img class='icons' src="../image/jogadores.png" width="30"></a>
+            <a href="../paginas/jogadores.php"><span class="title">Jogadores</span><img class='icons' src="../image/campeoes.png" width="25"></a>
+            <a href="../paginas/campeaos.php"><span class="title">Campeões</span></a>
+        </div>
+
        <div class="details">
            <div class="recentOrders">
                <div class="cardHeader">
@@ -68,7 +58,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                    <tbody >
                        <tr>     
                            <?php
-                                $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+                                $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
 
                                 $sql = "SELECT all champion, sum(champion=champion) 'Jogos', sum(champion=champion and side='blue') 'Jogos blueside', sum(champion=champion and side='red') 'Jogos redside', sum(result=1) / sum(champion=champion) * 100  'win ratio', sum(kills) 'kills', sum(deaths) 'mortes', sum(assists) 'assistencia', SUM(kills + assists) / SUM(deaths) 'KDA', avg(firstblood) * 100 'FB participação', avg(dpm) 'dano por minuto', avg(cspm) 'Cs por minuto', avg(earnedgpm)'Gold por minuto', avg(xpdiffat15)'xp aos 15', avg(golddiffat15)  'gold diff aos 15', avg(csdiffat15) 'cs diff aos 15'  FROM `cblol` 
                                 where league in (SELECT league FROM `cblol` WHERE league = 'CBLOL') 
