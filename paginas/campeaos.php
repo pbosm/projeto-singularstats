@@ -128,7 +128,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                     $cs15           = htmlentities($cs15, ENT_QUOTES, "UTF-8");
 
                                     echo "<tr>                                    
-                                                <td><img class='champion' src='../image/".$champion."'> $registro[0] </td> 
+                                                <td><img class='champion' src='../image/".$champion.".png'> $registro[0] </td> 
                                                 <td> $registro[1]</td>
                                                 <td> $registro[2]</td>
                                                 <td> $registro[3]</td>
