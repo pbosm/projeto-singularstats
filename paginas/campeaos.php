@@ -110,7 +110,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                     $format_gold15     = number_format($gold15, 2, '.', '.');
                                     $format_cs15      = number_format($cs15, 2, '.', '.');
 
-                                    // $champion       = htmlentities($champion, ENT_QUOTES, "UTF-8");
+                                    $champion       = htmlentities($champion, ENT_QUOTES, "UTF-8");
                                     $jogos          = htmlentities($jogos, ENT_QUOTES, "UTF-8");
                                     $jogosblueside  = htmlentities($jogosblueside, ENT_QUOTES, "UTF-8");
                                     $jogosredside   = htmlentities($jogosredside, ENT_QUOTES, "UTF-8");
@@ -128,7 +128,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                     $cs15           = htmlentities($cs15, ENT_QUOTES, "UTF-8");
 
                                     echo "<tr>                                    
-                                                <td><img class='champion' src='../image/".$champion."'> $registro[0] </td> 
+                                                <td><img class='champion' src='../image/".$champion."'> ../image/".$champion." $champion </td> 
                                                 <td> $registro[1]</td>
                                                 <td> $registro[2]</td>
                                                 <td> $registro[3]</td>
