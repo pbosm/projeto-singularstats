@@ -87,7 +87,7 @@ a {
     width: 80%;
     top: 200px;
     grid-gap: 30px;
-    left: 180px;
+    left: 13%;
 }
 .details .recentOrders
 {
@@ -97,7 +97,6 @@ a {
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 20px;
     width: 1500px;
-    left: 5%;
 }
 
 .cardHeader
