@@ -151,11 +151,11 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                     <td> $datahora </td>
                                     <td> $side </td>
                                     <td> $result </td>
-                                    <td> <img class='champion' src='./image/".$championtop."'><br>$championtop </td>
-                                    <td> <img class='champion' src='./image/".$championjng."'><br>$championjng </td>
-                                    <td> <img class='champion' src='./image/".$championmid."'><br>$championmid </td>
-                                    <td> <img class='champion' src='./image/".$championbot."'><br>$championbot </td>
-                                    <td> <img class='champion' src='./image/".$championsup."'><br>$championsup </td>
+                                    <td> <img class='champion' src='./image/".$championtop.".png'><br>$championtop </td>
+                                    <td> <img class='champion' src='./image/".$championjng.".png'><br>$championjng </td>
+                                    <td> <img class='champion' src='./image/".$championmid.".png'><br>$championmid </td>
+                                    <td> <img class='champion' src='./image/".$championbot.".png'><br>$championbot </td>
+                                    <td> <img class='champion' src='./image/".$championsup.".png'><br>$championsup </td>
                                     </td>";
                                 }
                             ?>
