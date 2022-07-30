@@ -35,7 +35,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 
        <!-- cards -->
        <div class="logoteam">
-           <img src="../image/flamengo" alt="flamengo" title="flamengo" width="200">
+           <img src="../image/flamengo.png" alt="flamengo" title="flamengo" width="200">
        </div>
 
        <div class="teamroster">
