@@ -110,7 +110,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                     $format_gold15     = number_format($gold15, 2, '.', '.');
                                     $format_cs15      = number_format($cs15, 2, '.', '.');
 
-                                    $champion       = htmlentities($champion, ENT_QUOTES, "UTF-8");
+                                    // $champion       = htmlentities($champion, ENT_QUOTES, "UTF-8");
                                     $jogos          = htmlentities($jogos, ENT_QUOTES, "UTF-8");
                                     $jogosblueside  = htmlentities($jogosblueside, ENT_QUOTES, "UTF-8");
                                     $jogosredside   = htmlentities($jogosredside, ENT_QUOTES, "UTF-8");
