@@ -247,7 +247,7 @@ a {
 }
 
 
-/* @media screen and (max-width: 100%) {
+@media screen and (max-width: 100%) {
     .title {
         left: 175px;
     }
@@ -277,9 +277,9 @@ a {
         left:960px;
         top:35px;
     }
-    img {
+    /* img {
         left: 17%;
-    }
+    } */
   }
 
 @media (min-width: 1366px) and (max-width: 1680px) {
@@ -313,8 +313,8 @@ a {
         left:1160px;
         top:25px;
     }
-
+/* 
     img {
         left: 23%;
-    }
-} */
+    } */
+}
