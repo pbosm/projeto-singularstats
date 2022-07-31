@@ -169,6 +169,10 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                     $goldiff    = $registro[16];
                                     $csdiff     = $registro[17];
 
+                                    if ($nome == null) {
+                                        $nome = 'Betão';
+                                    }
+                                    
                                     // FORMATADO                                                       
                                     $format_KDA         = number_format($KDA, 2);
                                     $format_killpart    = number_format($killpart, 2, '.', '.');
@@ -210,7 +214,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                     $format_csdiff      = htmlentities($format_csdiff, ENT_QUOTES, "UTF-8");
                                     $format_winratio    = htmlentities($format_winratio, ENT_QUOTES, "UTF-8");
                                     
-                                    echo utf8_encode("<tr>
+                                    echo "<tr>
                                                 <td> $nome </td> 
                                                 <td> $position</td>
                                                 <td> $games</td>
@@ -226,7 +230,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                                 <td> $format_xpdiff </td>
                                                 <td> $format_goldiff </td>
                                                 <td> $format_csdiff</td>
-                                                </td>");
+                                                </td>";
                                 }                       
                             ?>                    
                     </tbody>  
