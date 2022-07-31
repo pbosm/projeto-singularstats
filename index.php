@@ -123,9 +123,12 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                     }
  
                                     $gameid         = htmlentities($gameid, ENT_QUOTES, "UTF-8");
+                                    $league         = htmlentities($league, ENT_QUOTES, "UTF-8");
                                     $split          = htmlentities($split, ENT_QUOTES, "UTF-8");
                                     $datahora       = htmlentities($datahora, ENT_QUOTES, "UTF-8");
                                     $side           = htmlentities($side, ENT_QUOTES, "UTF-8");
+                                    $teamname       = htmlentities($teamname, ENT_QUOTES, "UTF-8");
+                                    $result         = htmlentities($result, ENT_QUOTES, "UTF-8");
  
                                     if($registrotop = $resultadotop->fetch_array()) {
                                         $championtop   =  $registrotop[0];
