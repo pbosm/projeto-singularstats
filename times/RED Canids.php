@@ -14,7 +14,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 <!DOCTYPE html> 
 <html lang="pt-BR"> 
 <head> 
-  <meta charset="utf-8"> 
+  <meta charset="utf8_encode"> 
   <title> Red Canids </title> 
   <link rel="stylesheet" type="text/css" href="../cssdostimes/styleredcanids.css"> 
   <div class="navigation"></div>
