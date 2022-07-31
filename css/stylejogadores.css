@@ -85,10 +85,13 @@ body
 {
     position: absolute;
     width: 80%;
-    top: 200px;
     grid-gap: 30px;
     left: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
 }
+
 .details .recentOrders
 {
     position: absolute;

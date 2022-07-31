@@ -83,21 +83,21 @@ a {
 
 .details
 {
-    position: absolute;
-    width: 80%;
-    top: 200px;
-    grid-gap: 30px;
-    left: 13%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
 }
 
 .details .recentOrders
 {
-    position: absolute;
     background: #1a1a1a;
     padding: 20px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 20px;
     width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
 }
 
 .cardHeader
