@@ -14,7 +14,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 <!DOCTYPE html> 
 <html lang="pt-BR"> 
 <head> 
-  <meta charset="utf8_encode"> 
+  <meta charset="utf-8"> 
   <title> Red Canids </title> 
   <link rel="stylesheet" type="text/css" href="../cssdostimes/styleredcanids.css"> 
   <div class="navigation"></div>
@@ -210,7 +210,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                     $format_csdiff      = htmlentities($format_csdiff, ENT_QUOTES, "UTF-8");
                                     $format_winratio    = htmlentities($format_winratio, ENT_QUOTES, "UTF-8");
                                     
-                                    echo "<tr>
+                                    echo utf8_encode("<tr>
                                                 <td> $nome </td> 
                                                 <td> $position</td>
                                                 <td> $games</td>
@@ -226,7 +226,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                                 <td> $format_xpdiff </td>
                                                 <td> $format_goldiff </td>
                                                 <td> $format_csdiff</td>
-                                                </td>";
+                                                </td>");
                                 }                       
                             ?>                    
                     </tbody>  
