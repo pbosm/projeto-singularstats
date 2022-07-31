@@ -169,10 +169,6 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                     $goldiff    = $registro[16];
                                     $csdiff     = $registro[17];
 
-                                    if ($nome == null) {
-                                        $nome = 'Betão';
-                                    }
-                                    
                                     // FORMATADO                                                       
                                     $format_KDA         = number_format($KDA, 2);
                                     $format_killpart    = number_format($killpart, 2, '.', '.');
