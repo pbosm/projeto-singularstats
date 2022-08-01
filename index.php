@@ -74,11 +74,6 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                           <td>Pick MID</td>
                           <td>Pick BOT</td>
                           <td>Pick SUP</td>
-                          <td>Pick TOP</td>
-                          <td>Pick JNG</td>
-                          <td>Pick MID</td>
-                          <td>Pick BOT</td>
-                          <td>Pick SUP</td>
                        </tr>                            
                    </thead>
                    <tbody>
@@ -86,7 +81,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                             <?php
                                 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
  
-                                $sql = "SELECT gameid, league, split, datahora, side, teamname, result=1, kills, deaths, firstdragon, dragons, firstherald, heralds, barons, firsttower, towers, towersenemy, totalgold FROM `cblol`
+                                $sql = "SELECT teamname, league, split, datahora, side, teamname, result=1, kills, deaths, firstdragon, dragons, firstherald, heralds, barons, firsttower, towers, towersenemy, totalgold FROM `cblol`
                                 where split in (select split from `cblol` where split = 'split 1')
                                 and position in (SELECT position FROM `cblol` WHERE position = 'team')
                                 order by datahora desc";
