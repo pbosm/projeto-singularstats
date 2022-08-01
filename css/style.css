@@ -88,7 +88,7 @@ a {
     padding: 20px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 20px;
-    width: 1500px;
+    width: 1750px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 200px;
@@ -153,6 +153,7 @@ a {
     text-transform: uppercase;
     font-family: monospace;
     width: 550px;
+    padding-right: 10px;
 }
 
 /* .details .recentOrders table tr td
