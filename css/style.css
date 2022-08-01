@@ -148,14 +148,14 @@ a {
 }
 .details .recentOrders table tr td
 {
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     text-transform: uppercase;
     font-family: monospace;
-    width: 105px;
+    width: 550px;
 }
 
-.details .recentOrders table tr td
+/* .details .recentOrders table tr td
 {
     padding: 20px;
     text-align: center;
@@ -172,7 +172,7 @@ a {
 .details .recentOrders table tr td:nth-child(3)
 {
     text-align: center;
-}
+} */
 
 /* .menu a {
     width: 36%;

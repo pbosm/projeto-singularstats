@@ -58,6 +58,22 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                           <td>Data e hora</td>
                           <td>Side</td>
                           <td>Resultado</td>
+                          <td>Kills</td>
+                          <td>Mortes</td>
+                          <td>First dragão</td>
+                          <td>Dragões</td>
+                          <td>First arauto</td>
+                          <td>Arautos</td>
+                          <td>First torre</td>
+                          <td>Torres destruidas</td>
+                          <td>Torres perdidas</td>
+                          <td>Barons</td>
+                          <td>Total gold</td>
+                          <td>Pick TOP</td>
+                          <td>Pick JNG</td>
+                          <td>Pick MID</td>
+                          <td>Pick BOT</td>
+                          <td>Pick SUP</td>
                           <td>Pick TOP</td>
                           <td>Pick JNG</td>
                           <td>Pick MID</td>
@@ -70,7 +86,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                             <?php
                                 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
  
-                                $sql = "SELECT gameid, league, split, datahora, side, teamname, result=1 FROM `cblol`
+                                $sql = "SELECT gameid, league, split, datahora, side, teamname, result=1, kills, deaths, firstdragon, dragons, firstherald, heralds, barons, firsttower, towers, towersenemy, totalgold FROM `cblol`
                                 where split in (select split from `cblol` where split = 'split 1')
                                 and position in (SELECT position FROM `cblol` WHERE position = 'team')
                                 order by datahora desc";
@@ -108,27 +124,48 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
  
                                 while ($registro = $resultado->fetch_array())
                                 {                                                                  
-                                    $gameid     =  $registro[0];
-                                    $league     =  $registro[1];
-                                    $split      =  $registro[2];
-                                    $datahora   =  $registro[3];                                                                  
-                                    $side       =  $registro[4];
-                                    $teamname   =  $registro[5];
-                                    $result     =  $registro[6];
+                                    $teamname    =  $registro[0];
+                                    $league      =  $registro[1];
+                                    $split       =  $registro[2];
+                                    $datahora    =  $registro[3];                                                                  
+                                    $side        =  $registro[4];
+                                    $result      =  $registro[5];
+                                    $kills       =  $registro[6];
+                                    $death       =  $registro[7];
+                                    $fdragon     =  $registro[8];
+                                    $dragons     =  $registro[9];
+                                    $farauto     =  $registro[10];
+                                    $arautos     =  $registro[11];
+                                    $barons      =  $registro[12];
+                                    $ftorre      =  $registro[13];
+                                    $torres      =  $registro[14];
+                                    $torresenemy =  $registro[15];
+                                    $totalgold   =  $registro[16];
 
-                                    if ($registro[6] == 0){
+                                    if ($registro[5] == 0){
                                         $result = 'lose';
                                     } else {
                                         $result = 'win';
                                     }
  
-                                    $gameid         = htmlentities($gameid, ENT_QUOTES, "UTF-8");
+                                    $teamname       = htmlentities($teamname, ENT_QUOTES, "UTF-8");
                                     $league         = htmlentities($league, ENT_QUOTES, "UTF-8");
                                     $split          = htmlentities($split, ENT_QUOTES, "UTF-8");
                                     $datahora       = htmlentities($datahora, ENT_QUOTES, "UTF-8");
                                     $side           = htmlentities($side, ENT_QUOTES, "UTF-8");
-                                    $teamname       = htmlentities($teamname, ENT_QUOTES, "UTF-8");
                                     $result         = htmlentities($result, ENT_QUOTES, "UTF-8");
+                                    $kills          = htmlentities($kills, ENT_QUOTES, "UTF-8");
+                                    $death          = htmlentities($death, ENT_QUOTES, "UTF-8");
+                                    $fdragon        = htmlentities($fdragon, ENT_QUOTES, "UTF-8");
+                                    $dragons        = htmlentities($dragons, ENT_QUOTES, "UTF-8");
+                                    $farauto        = htmlentities($farauto, ENT_QUOTES, "UTF-8");
+                                    $arautos        = htmlentities($arautos, ENT_QUOTES, "UTF-8");
+                                    $barons         = htmlentities($barons, ENT_QUOTES, "UTF-8");
+                                    $ftorre         = htmlentities($ftorre, ENT_QUOTES, "UTF-8");
+                                    $torres         = htmlentities($torres, ENT_QUOTES, "UTF-8");
+                                    $torresenemy    = htmlentities($torresenemy, ENT_QUOTES, "UTF-8");
+                                    $totalgold      = htmlentities($totalgold, ENT_QUOTES, "UTF-8");
+
  
                                     if($registrotop = $resultadotop->fetch_array()) {
                                         $championtop   =  $registrotop[0];
@@ -154,6 +191,17 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                     <td> $datahora </td>
                                     <td> $side </td>
                                     <td> $result </td>
+                                    <td> $kills </td>
+                                    <td> $death </td>
+                                    <td> $fdragon </td>
+                                    <td> $dragons </td>
+                                    <td> $farauto </td>
+                                    <td> $arautos </td>
+                                    <td> $ftorre  </td>
+                                    <td> $torres  </td>
+                                    <td> $torresenemy </td>
+                                    <td> $barons </td>
+                                    <td> $totalgold</td>
                                     <td> <img class='champion' src='./image/".$championtop.".png'><br>$championtop </td>
                                     <td> <img class='champion' src='./image/".$championjng.".png'><br>$championjng </td>
                                     <td> <img class='champion' src='./image/".$championmid.".png'><br>$championmid </td>
