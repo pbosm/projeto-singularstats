@@ -53,7 +53,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 
                                 $sql = "SELECT teamname, league, split, year, sum(result=1), sum(result=0), avg(result=1) * 100 'Winratio', avg(duracaogame) / 60  from `cblol` 
                                 WHERE position in (SELECT position FROM `cblol` WHERE position = 'team')
-                                and teamname in (SELECT teamname FROM `cblol` WHERE teamname = 'furia esports')
+                                and teamname in (SELECT teamname FROM `cblol` WHERE teamname = 'furia')
                                 and split in (select split from `cblol` where split = 'split 1')
                                 and league in (select league from `cblol` where league = 'cblol')";
                                 $resultado = $conn->query($sql);
@@ -145,7 +145,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 
                                 $sql = "SELECT distinct playername, position, count(teamname)'Jogos', SUM(result=1) / count(teamname) * 100 'Winratio', SUM(kills + assists) / SUM(deaths) 'KDA', SUM(kills) / count(teamname) 'Media de Kills', SUM(deaths) / count(teamname) 'Media de mortes', SUM(assists) / count(teamname)'Media de assist', SUM(kills + assists) / SUM(teamkills) * 100 'Kill participação', sum(damageshare) / count(teamname) * 100 '% dano', SUM(dpm) / count(playername) * 100 / 100 'dano por minuto', SUM(firstblood) / count(teamname) * 100 'FB participação', SUM(vspm) / count(teamname) * 100 / 100 'Ward p minuto', SUM(cspm) / count(teamname) 'Cs por minuto', SUM(earnedgpm) / count(teamname)'Gold por minuto', SUM(xpdiffat15) / count(teamname)'xp aos 15', sum(golddiffat15) / count(teamname) 'gold diff aos 15', sum(csdiffat15) / count(teamname) 'cs diff aos 15'from cblol
                                 where position in (SELECT position FROM `cblol` WHERE position != 'team')
-                                and teamname in (SELECT teamname FROM `cblol` WHERE teamname = 'furia esports')
+                                and teamname in (SELECT teamname FROM `cblol` WHERE teamname = 'furia')
                                 and split in (SELECT split FROM `cblol` WHERE split = 'split 1')
                                 group by playername";
                                 $resultado = $conn->query($sql);                       
@@ -238,7 +238,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                             <?php
                                 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
-                                $sql = "SELECT  sum(firsttower) / count(teamname) * 100, sum(firsttower=1 and side='Blue') / sum(side='blue') * 100, sum(firsttower=1 and side='red') / sum(side='red') * 100, sum(towers) / count(teamname), sum(towersenemy) / count(teamname), sum(towers) / count(teamname) - sum(towersenemy) / count(teamname) 'Media de torres diff', SUM(earnedgpm) / count(teamname), SUM(xpdiffat15) / count(teamname), sum(golddiffat15) / count(teamname), sum(csdiffat15) / count(teamname), SUM(cspm) / count(teamname) from `cblol` where teamname = 'furia esports'
+                                $sql = "SELECT  sum(firsttower) / count(teamname) * 100, sum(firsttower=1 and side='Blue') / sum(side='blue') * 100, sum(firsttower=1 and side='red') / sum(side='red') * 100, sum(towers) / count(teamname), sum(towersenemy) / count(teamname), sum(towers) / count(teamname) - sum(towersenemy) / count(teamname) 'Media de torres diff', SUM(earnedgpm) / count(teamname), SUM(xpdiffat15) / count(teamname), sum(golddiffat15) / count(teamname), sum(csdiffat15) / count(teamname), SUM(cspm) / count(teamname) from `cblol` where teamname = 'furia'
                                 and split in (select split from `cblol` where split = 'split 1')
                                 and league in (select league from `cblol` where league = 'cblol')
                                 and position in (select position from `cblol` where position = 'team')";
@@ -339,7 +339,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                 where split in (select split from `cblol` where split = 'split 1')
                                 and league in (select league from `cblol` where league = 'cblol')
                                 and position in (select position from `cblol` where position = 'team')
-                                and teamname in (select teamname from `cblol` where teamname = 'furia esports')";
+                                and teamname in (select teamname from `cblol` where teamname = 'furia')";
                                 $resultado = $conn->query($sql);                       
 
                                 while ($registro = $resultado->fetch_array()) 
@@ -430,7 +430,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                 where split in (select split from `cblol` where split = 'split 1')
                                 and league in (select league from `cblol` where league = 'cblol')
                                 and position in (select position from `cblol` where position = 'team')
-                                and teamname in (select teamname from `cblol` where teamname = 'furia esports')";
+                                and teamname in (select teamname from `cblol` where teamname = 'furia')";
                                 $resultado = $conn->query($sql);                       
 
                                 while ($registro = $resultado->fetch_array()) 

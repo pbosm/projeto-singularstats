@@ -26,7 +26,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
         </div>
             <div class="search">
                 <label>
-                    <form class="form-inline" action="../busca/buscatimes.php" method="POST">
+                    <form class="form-inline" action="../busca/buscatimes1.php" method="POST">
                         <input type="text" placeholder="Pesquisar times" name="pesquisar"><img class="lupa" src="../image/search.png" width="20">           
                     </form>
                 </label>
