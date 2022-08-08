@@ -128,7 +128,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                $format_fb = htmlentities($format_fb,  ENT_QUOTES, "UTF-8");
 
                                echo "<tr>
-                                           <td><a href='../times/$time.php'> $registro[0]</td> 
+                                           <td><a href='../times2/$time.php'> $registro[0]</td> 
                                            <td> $registro[1]</td>
                                            <td> $format_duracao minutos</td>
                                            <td> $registro[3]</td>
