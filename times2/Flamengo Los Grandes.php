@@ -145,6 +145,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                 where position in (SELECT position FROM `cblol` WHERE position != 'team')
                                 and teamname in (SELECT teamname FROM `cblol` WHERE teamname = 'flamengo los grandes')
                                 and split in (SELECT split FROM `cblol` WHERE split = 'split 2')
+                                and league in (select league from `cblol` where league = 'cblol')
                                 group by playername";
                                 $resultado = $conn->query($sql);                       
 
