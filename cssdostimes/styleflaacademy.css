@@ -26,14 +26,11 @@ body
 
 .navigation
 {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 5%;
     background: #15151e;
     border-left: 10px solid var(--blue);
-    transition: 0.5s;
-    overflow: auto;
-    z-index: 500;
     top:0px;
 }
 
@@ -52,39 +49,39 @@ body
 
 .main
 {
-    position: fixed;
+    position: relative;
     width: 100%;
-    top: 27px;
-    height: 14%;
+    top: 25px;
+    height: 155px;
     background-color: #1c1c1c;
     z-index: 500;
 }
 
 .menu {
-    position: fixed;
-    width: 100%;
-    top: 87px;
-    margin-top: 25px;
+    position: relative;
+    top: 85px;
+    margin-top: -120px;
     z-index: 500;
-    left: 350px;
+    margin-left: 20%;
 }
 
 .logoteam
 {
-    top: 151px;
+    position: absolute;
     background: #1a1a1a;
     padding: 20px;
     box-shadow: 0 7px 25px rgb(0 0 0 / 50%);
     border-radius: 30px;
     width: 395px;
     margin-left: 25px;
-    margin-top: 195px;
+    margin-top: 125px;
     margin-bottom: 10px;
     text-align: center;
 }
 .teamroster
 {
-    top: 190px;
+    position: absolute;
+    top: 480px;
     background: #1a1a1a;
     padding: 20px;
     box-shadow: 0 7px 25px rgb(0 0 0 / 50%);
@@ -95,15 +92,14 @@ body
 
 .table1
 {
-    position: relative;
+    position: absolute;
     background: #1a1a1a;
     padding: 20px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 30px;
-    margin-top: 260px;
     left: 20px;
     width: 400px;
-    top: -250px;
+    top: 750px;
 }
 
 .table1 table {
@@ -121,14 +117,14 @@ body
 
 .table2
 {
-    position: relative;
+    position: absolute;
     background: #1a1a1a;
     padding: 10px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 30px;
     left: 435px;
     width: 70%;
-    top: -895px;
+    top: 220px;
 }
 
 .tableTitulo h3
@@ -181,15 +177,15 @@ body
 
 .table3
 {
-    position: relative;
+    position: absolute;
     background: #1a1a1a;
     padding: 10px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 30px;
-    left: 550px;
+    left: 520px;
     width: 18.5%;
     letter-spacing: 0.5px;
-    top: -844px;
+    top: 485px;
 }
 
 .table3 table tr
@@ -234,7 +230,7 @@ body
 
 .table4
 {
-    position: relative;
+    position: absolute;
     background: #1a1a1a;
     padding: 10px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
@@ -242,7 +238,7 @@ body
     left: 950px;
     width: 18.5%;
     letter-spacing: 0.5px;
-    top: -1215px;
+    top: 485px;
 }
 
 .table4 table tr
@@ -285,15 +281,15 @@ body
 
 .table5
 {
-    position: relative;
+    position: absolute;
     background: #1a1a1a;
     padding: 10px;
     box-shadow: 0 7px 25px rgba(0,0,0, 50%);
     border-radius: 30px;
-    left: 1350px;
+    left: 1380px;
     width: 19%;
     letter-spacing: 0.5px;
-    top: -1585px;
+    top: 485px;
 }
 
 .table5 table tr
@@ -411,9 +407,9 @@ body
 }
 
 .home {
-    left: 380px;
-    margin-bottom: -5px;
-    margin-right: 5px;
+    position: relative;
+    left: -5px;
+   top: 5px;
 }
 
 .search {
@@ -421,15 +417,15 @@ body
     left: 1295px;
 }
 
-/* @media screen and (max-width: 1366px) {
+@media (max-width: 920px) {
     .title {
         left: 175px;
     }
-    .menu {
-        top: 80px;
+    .menu {   
+        flex-wrap: wrap;
     }
-    .main {
-        top:25px;
+    .main {   
+        flex-wrap: wrap;
     }
     .logo {
         left: -5px;
@@ -447,24 +443,17 @@ body
     .navigation {
         height: 4%;
     }
-    .fa {
-        left:960px;
-        top:35px;
-    }
-    img {
-        left: 17%;
+    .home {
+        left: 5%;
     }
   }
 
-@media (min-width: 1366px) and (max-width: 1680px) {
+@media (max-width: 380px) {
     .title {
         left: 330px;
     }
     .menu {
-        top: 75px;
-    }
-    .main {
-        top:25px;
+        flex-wrap: wrap;
     }
     .logo {
         left: 90px;
@@ -483,12 +472,7 @@ body
     .navigation {
         height: 4%;
     }
-    .fa {
-        left:1160px;
-        top:25px;
+    .home {
+        left: 5%;
     }
-
-    img {
-        left: 23%;
-    }
-} */
+}

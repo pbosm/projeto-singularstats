@@ -37,7 +37,7 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
        <div class="details">
            <div class="recentOrders">
                <div class="cardHeader">
-                   <h3>Torneios - 2 semestre</h3>
+                   <h3>Torneios - 1 semestre</h3>
                    <a href="../paginas/torneios1.php" class="btn">1 split</a>
                    <a href="../paginas/torneios.php" class="btn2">2 split</a>
                </div>
@@ -58,21 +58,22 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
                    <tbody >
                        <tr>     
                            <?php
-                                $sql = "SELECT league, split, sum(result=1) 'jogos', sum(duracaogame) / 2 / sum(result=1) / 60 'Duração game', sum(teamkills) / sum(result=1) 'Media de kill', sum(result=1 and side='blue') / sum(result=1) * 100 'WinratioBlueside', sum(result=1 and side='red') / sum(result=1) * 100 'WinratioRedside', sum(dragons) / sum(result=1), sum(barons) / sum(result=1) FROM `cblol`
+                                $sql = "SELECT league, split, sum(result=1) 'jogos', sum(duracaogame) / 2 / sum(result=1) / 60 'Duração game', sum(teamkills) / sum(result=1) 'Media de kill', sum(result=1 and side='blue') / sum(result=1) * 100'WinratioBlueside', sum(result=1 and side='red') / sum(result=1) * 100 'WinratioRedside', sum(dragons) / sum(result=1), sum(barons) / sum(result=1) FROM  `lck`
+                                where league in (SELECT league FROM `lck` WHERE league = 'lck') 
+                                and split in (select split from `lck` where split = 'Spring')
+                                and position in (select position from `lck` where position = 'team')
+                                
+                                
+                                union 
+                                SELECT league, split, sum(result=1) 'jogos', sum(duracaogame) / 2 / sum(result=1) / 60 'Duração game', sum(teamkills) / sum(result=1) 'Media de kill', sum(result=1 and side='blue') / sum(result=1) * 100 'WinratioBlueside', sum(result=1 and side='red') / sum(result=1) * 100 'WinratioRedside', sum(dragons) / sum(result=1), sum(barons) / sum(result=1) FROM `cblol`
                                 where league in (SELECT league FROM `cblol` WHERE league = 'cblol') 
-                                and split in (select split from `cblol` where split = 'split 2')
+                                and split in (select split from `cblol` where split = 'split 1')
                                 and position in (select position from `cblol` where position = 'team')
                                 
                                 union
-                                SELECT league, split, sum(result=1) 'jogos', sum(duracaogame) / 2 / sum(result=1) / 60 'Duração game', sum(teamkills) / sum(result=1) 'Media de kill', sum(result=1 and side='blue') / sum(result=1) * 100'WinratioBlueside', sum(result=1 and side='red') / sum(result=1) * 100 'WinratioRedside', sum(dragons) / sum(result=1), sum(barons) / sum(result=1) FROM  `lck`
-                                where league in (SELECT league FROM `lck` WHERE league = 'lck') 
-                                and split in (select split from `lck` where split = 'Summer')
-                                and position in (select position from `lck` where position = 'team')
-
-                                union
                                 SELECT league, split, sum(result=1) 'jogos', sum(duracaogame) / 2 / sum(result=1) / 60 'Duração game', sum(teamkills) / sum(result=1) 'Media de kill', sum(result=1 and side='blue') / sum(result=1) * 100'WinratioBlueside', sum(result=1 and side='red') / sum(result=1) * 100 'WinratioRedside', sum(dragons) / sum(result=1), sum(barons) / sum(result=1) FROM `lpl`
                                 where league in (SELECT league FROM `lpl` WHERE league = 'lpl') 
-                                and split in (select split from `lpl` where split = 'summer')
+                                and split in (select split from `lpl` where split = 'spring')
                                 and position in (select position from `lpl` where position = 'team')
                                 order by league";
                                 $resultado = $conn->query($sql);

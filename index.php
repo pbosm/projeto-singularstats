@@ -55,7 +55,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                           <td>Time</td>
                           <td>Liga</td>                      
                           <td>Split</td>                      
-                          <td>Data e hora</td>
+                          <td>Data</td>
                           <td>Side</td>
                           <td>Resultado</td>
                           <td>Kills</td>
@@ -79,41 +79,34 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                    <tbody>
                        <tr>
                             <?php
-                                $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
- 
-                                $sql = "SELECT teamname, league, split, datahora, side, result=1, kills, deaths, firstdragon, dragons, firstherald, heralds, barons, firsttower, towers, towersenemy, totalgold FROM `cblol`
-                                where split in (select split from `cblol` where split = 'split 1')
-                                and position in (SELECT position FROM `cblol` WHERE position = 'team')
+                                $sql = "SELECT teamname, league, split, DATE_FORMAT(datahora,'%d/%m/%Y'), side, result=1, kills, deaths, firstdragon, dragons, firstherald, heralds, barons, firsttower, towers, towersenemy, totalgold FROM `cblol`
+                                where position in (SELECT position FROM `cblol` WHERE position = 'team')
+                                and league in (select league from `cblol` where league != 'LPL')
                                 order by datahora desc";
                                 $resultado = $conn->query($sql);
  
                                 $sqltop = "SELECT champion FROM `cblol`
                                 where position in (SELECT position FROM `cblol` WHERE position = 'top')
-                                and split in (select split from `cblol` where split = 'split 1')
                                 order by datahora desc";
                                 $resultadotop = $conn->query($sqltop);
  
                                 $sqljng = "SELECT champion FROM `cblol`
                                 where position in (SELECT position FROM `cblol` WHERE position = 'jng')
-                                and split in (select split from `cblol` where split = 'split 1')
                                 order by datahora desc";
                                 $resultadojng = $conn->query($sqljng);
  
                                 $sqlmid = "SELECT champion FROM `cblol`
                                 where position in (SELECT position FROM `cblol` WHERE position = 'mid')
-                                and split in (select split from `cblol` where split = 'split 1')
                                 order by datahora desc";
                                 $resultadomid = $conn->query($sqlmid);
  
                                 $sqlbot = "SELECT champion FROM `cblol`
                                 where position in (SELECT position FROM `cblol` WHERE position = 'bot')
-                                and split in (select split from `cblol` where split = 'split 1')
                                 order by datahora desc";
                                 $resultadobot = $conn->query($sqlbot);
  
                                 $sqlsup = "SELECT champion FROM `cblol`  
                                 where position in (SELECT position FROM `cblol` WHERE position = 'sup')
-                                and split in (select split from `cblol` where split = 'split 1')
                                 order by datahora desc";
                                 $resultadosup = $conn->query($sqlsup);
  
@@ -180,7 +173,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                     }
                                    
                                     echo "<tr>
-                                    <td><a href='./times/$teamname.php'>$teamname</td>
+                                    <td> $teamname</td>
                                     <td> $league</td>
                                     <td> $split</td>
                                     <td> $datahora </td>

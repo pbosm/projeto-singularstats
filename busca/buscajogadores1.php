@@ -17,7 +17,7 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
         </div>
             <div class="search">
                 <label>
-                    <form class="form-inline" action="../busca/buscajogadores.php" method="POST">
+                    <form class="form-inline" action="../busca/buscajogadores1.php" method="POST">
                         <input type="text" placeholder="Pesquisar jogadores" name="pesquisar"><img class="lupa" src="../image/search.png" width="20">           
                     </form>
                 </label>
@@ -36,18 +36,23 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
        <div class="details">
            <div class="recentOrders">
                <div class="cardHeader">
-                   <h3>Jogadores - 2 semestre</h3>
+                   <?php $pesquisar = $_POST['pesquisar']; ?>
+                   <h3><?php 
+                   if ($pesquisar == null) {
+                        $pesquisar = ''; 
+                   } else  {
+                      echo "Jogadores com as inicias ", $pesquisar;
+                   } ?> </h3>
                    <a href="../paginas/jogadores1.php" class="btn">1 split</a>
                    <a href="../paginas/jogadores.php" class="btn2">2 split</a>
                </div>
                <table >
                    <thead>
                        <tr>                          
-                          <td>Player</td>
+                       <td>Player</td>
                           <td>Time</td>
                           <td>Posição</td>
                           <td>Games</td>
-                          <td>Winratio</td>
                           <td>KDA</td>
                           <td>Média de abates</td>
                           <td>Média de mortes</td>
@@ -67,34 +72,34 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
                    <tbody >
                        <tr>     
                            <?php
-
-                                $sql = "SELECT playername, teamname, position, count(teamname), SUM(result=1) / count(teamname) * 100, SUM(kills + assists) / SUM(deaths), SUM(kills) / count(teamname), SUM(deaths) / count(teamname), SUM(assists) / count(teamname), SUM(kills + assists) / SUM(teamkills) * 100, sum(damageshare) / count(teamname) * 100, SUM(dpm) / count(playername) * 100 / 100, SUM(firstblood) / count(teamname) * 100, SUM(vspm) / count(teamname) * 100 / 100, SUM(cspm) / count(teamname), SUM(earnedgpm) / count(teamname), SUM(xpdiffat15) / count(teamname), sum(golddiffat15) / count(teamname), sum(csdiffat15) / count(teamname) from `cblol`
-                                where split in (select split from `cblol` where split = 'split 2')
-                                and position in (select position from `cblol` where position != 'team')
-                                GROUP BY playername order by playername asc;";
+                                $pesquisar = $_POST['pesquisar'];
+                                
+                                $sql = "SELECT playername, teamname, position, count(teamname), SUM(kills + assists) / SUM(deaths), SUM(kills) / count(teamname), SUM(deaths) / count(teamname), SUM(assists) / count(teamname), SUM(kills + assists) / SUM(teamkills) * 100, sum(damageshare) / count(teamname) * 100, SUM(dpm) / count(playername) * 100 / 100, SUM(firstblood) / count(teamname) * 100, SUM(vspm) / count(teamname) * 100 / 100,  SUM(cspm) / count(teamname), SUM(earnedgpm) / count(teamname), SUM(xpdiffat15) / count(teamname), sum(golddiffat15) / count(teamname), sum(csdiffat15) / count(teamname) from `cblol` where playername like '%$pesquisar%'
+                                and split in (select split from `cblol` where split = 'split 1')
+                                and position in (select position from cblol `cblol` where position != 'team') 
+                                GROUP BY playername order by playername asc";
                                 $resultado = $conn->query($sql);
                                 
                                 while ($registro = $resultado->fetch_array()) 
-                                {                                  
-                                    $nome       = $registro[0];
-                                    $team       = $registro[1]; 
+                                {                           
+                                    $nome       =  $registro[0];
+                                    $team       =  $registro[1]; 
                                     $position   = $registro[2];                                  
-                                    $games      = $registro[3];
-                                    $winratio   = $registro[4];
-                                    $KDA        = $registro[5];
-                                    $mabates    = $registro[6];
-                                    $mmortes    = $registro[7];
-                                    $massist    = $registro[8];
-                                    $killpart   = $registro[9];    
-                                    $perdano    = $registro[10];                               
-                                    $dpm        = $registro[11];                                                                       
-                                    $fbpart     = $registro[12];
-                                    $wardpm     = $registro[13];
-                                    $cspm       = $registro[14];
-                                    $goldpm     = $registro[15];
-                                    $xpdiff     = $registro[16];
-                                    $goldiff    = $registro[17];
-                                    $csdiff     = $registro[18];
+                                    $games      =  $registro[3];
+                                    $KDA        = $registro[4];
+                                    $mabates    = $registro[5];
+                                    $mmortes    = $registro[6];
+                                    $massist    = $registro[7];
+                                    $killpart   = $registro[8];    
+                                    $perdano    = $registro[9];                               
+                                    $dpm        = $registro[10];                                                                       
+                                    $fbpart     = $registro[11];
+                                    $wardpm     = $registro[12];
+                                    $cspm       = $registro[13];
+                                    $goldpm     = $registro[14];
+                                    $xpdiff     = $registro[15];
+                                    $goldiff    = $registro[16];
+                                    $csdiff     = $registro[17];
 
                                     // FORMATADO                                                       
                                     $format_mabates     = number_format($mabates, 2);
@@ -107,17 +112,15 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
                                     $format_cspm        = number_format($cspm, 2, '.', '.');
                                     $format_goldpm      = number_format($goldpm, 2, '.', '.');
                                     $format_perdano     = number_format($perdano, 2, '.', '.');
-                                    $format_wardpm      = number_format($wardpm, 2, '.', '.');
-                                    $format_xpdiff      = number_format($xpdiff, 2, '.', '.');
+                                    $format_wardpm     = number_format($wardpm, 2, '.', '.');
+                                    $format_xpdiff     = number_format($xpdiff, 2, '.', '.');
                                     $format_goldiff     = number_format($goldiff, 2, '.', '.');
-                                    $format_csdiff      = number_format($csdiff, 2, '.', '.');
-                                    $format_winratio    = number_format($winratio, 1, '.', '.');
+                                    $format_csdiff   = number_format($csdiff, 2, '.', '.');
 
                                     $nome       = htmlentities($nome, ENT_QUOTES, "UTF-8");
                                     $team       = htmlentities($team, ENT_QUOTES, "UTF-8");
                                     $position   = htmlentities($position, ENT_QUOTES, "UTF-8");  
-                                    $games      = htmlentities($games, ENT_QUOTES, "UTF-8"); 
-                                    $winratio   = htmlentities($winratio, ENT_QUOTES, "UTF-8");
+                                    $games      = htmlentities($games, ENT_QUOTES, "UTF-8");  
                                     $KDA        = htmlentities($KDA, ENT_QUOTES, "UTF-8");
                                     $mabates    = htmlentities($mabates, ENT_QUOTES, "UTF-8");
                                     $mmortes    = htmlentities($mmortes, ENT_QUOTES, "UTF-8");
@@ -129,8 +132,8 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
                                     $cspm       = htmlentities($cspm, ENT_QUOTES, "UTF-8");
                                     $goldpm     = htmlentities($goldpm, ENT_QUOTES, "UTF-8");
                                     $xpdiff     = htmlentities($xpdiff, ENT_QUOTES, "UTF-8");
-                                    $goldiff    = htmlentities($goldiff, ENT_QUOTES, "UTF-8");
-                                    $csdiff     = htmlentities($csdiff, ENT_QUOTES, "UTF-8");
+                                    $goldiff     = htmlentities($goldiff, ENT_QUOTES, "UTF-8");
+                                    $csdiff    = htmlentities($csdiff, ENT_QUOTES, "UTF-8");
                                     $format_mabates     = htmlentities($format_mabates, ENT_QUOTES, "UTF-8");
                                     $format_mmortes     = htmlentities($format_mmortes, ENT_QUOTES, "UTF-8");                                 
                                     $format_massist     = htmlentities($format_massist, ENT_QUOTES, "UTF-8");
@@ -144,15 +147,13 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
                                     $format_wardpm      = htmlentities($format_wardpm, ENT_QUOTES, "UTF-8");
                                     $format_xpdiff      = htmlentities($format_xpdiff, ENT_QUOTES, "UTF-8");
                                     $format_goldiff     = htmlentities($format_goldiff, ENT_QUOTES, "UTF-8");
-                                    $format_csdiff      = htmlentities($format_csdiff, ENT_QUOTES, "UTF-8");
-                                    $format_winratio    = htmlentities($format_winratio, ENT_QUOTES, "UTF-8");
+                                    $format_csdiff     = htmlentities($format_csdiff, ENT_QUOTES, "UTF-8");
                                     
                                     echo "<tr>
                                                 <td> $nome </td> 
                                                 <td> $team</td>
                                                 <td> $position</td>
                                                 <td> $games</td>
-                                                <td> $format_winratio%</td>
                                                 <td> $format_KDA</td>
                                                 <td> $format_mabates </td>
                                                 <td> $format_mmortes </td>
@@ -169,7 +170,7 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
                                                 <td> $format_csdiff</td>
                                                 </td>";
                                 }
-                            ?>                          
+                            ?>
                         </tr>                 
            </div>
         </div>

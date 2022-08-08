@@ -1,5 +1,14 @@
 <?php
-$conn = mysqli_connect('localhost','root','', 'bdlolcblol');
+//Get Heroku ClearDB connection information  
+$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$cleardb_server = $cleardb_url["host"];
+$cleardb_username = $cleardb_url["user"];
+$cleardb_password = $cleardb_url["pass"];
+$cleardb_db = substr($cleardb_url["path"],1);
+$active_group = 'default';
+$query_builder = TRUE;
+// Connect to DB
+$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 ?>
 
 <!DOCTYPE html> 
@@ -17,7 +26,7 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
         </div>
             <div class="search">
                 <label>
-                    <form class="form-inline" action="../busca/buscachamp.php" method="POST">
+                    <form class="form-inline" action="../busca/buscachamp1.php" method="POST">
                         <input type="text" placeholder="Pesquisar campeão" name="pesquisar"><img class="lupa" src="../image/search.png" width="20">           
                     </form>
                 </label>
@@ -71,11 +80,12 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
                        <tr>     
                            <?php
                                 $pesquisar = $_POST['pesquisar'];
+                                $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
                                 $sql = "SELECT all champion, sum(champion=champion) 'Jogos', sum(champion=champion and side='blue') 'Jogos blueside', sum(champion=champion and side='red') 'Jogos redside', sum(result=1) / sum(champion=champion) * 100  'win ratio', sum(kills) 'kills', sum(deaths) 'mortes', sum(assists) 'assistencia', SUM(kills + assists) / SUM(deaths) 'KDA', avg(firstblood) * 100 'FB participação', avg(dpm) 'dano por minuto', avg(cspm) 'Cs por minuto', avg(earnedgpm)'Gold por minuto', avg(xpdiffat15)'xp aos 15', avg(golddiffat15)  'gold diff aos 15', avg(csdiffat15) 'cs diff aos 15'  FROM `cblol` where champion like '%$pesquisar%'
                                 and league in (SELECT league FROM `cblol` WHERE league = 'CBLOL') 
                                 and position in (SELECT position FROM `cblol` WHERE position != 'team')
-                                and split in (select split from `cblol` where split = 'split 2')
+                                and split in (select split from `cblol` where split = 'split 1')
                                 GROUP BY champion order by sum(champion=champion) desc";
                                 $resultado = $conn->query($sql);
 

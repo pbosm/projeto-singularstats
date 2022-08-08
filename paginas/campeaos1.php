@@ -17,7 +17,7 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
         </div>
             <div class="search">
                 <label>
-                    <form class="form-inline" action="../busca/buscachamp.php" method="POST">
+                    <form class="form-inline" action="../busca/buscachamp1.php" method="POST">
                         <input type="text" placeholder="Pesquisar campeão" name="pesquisar"><img class="lupa" src="../image/search.png" width="20">           
                     </form>
                 </label>
@@ -36,13 +36,7 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
        <div class="details">
            <div class="recentOrders">
                <div class="cardHeader">
-                   <?php $pesquisar = $_POST['pesquisar']; ?>
-                   <h3><?php 
-                   if ($pesquisar == null) {
-                        $pesquisar = ''; 
-                   } else  {
-                      echo "Campeãos com as inicias ", $pesquisar;
-                   } ?> </h3>
+                   <h3>Campeões - 1 semestre</h3>
                    <a href="../paginas/campeaos1.php" class="btn">1 split</a>
                    <a href="../paginas/campeaos.php" class="btn2">2 split</a>
                </div>
@@ -70,12 +64,11 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
                    <tbody >
                        <tr>     
                            <?php
-                                $pesquisar = $_POST['pesquisar'];
 
-                                $sql = "SELECT all champion, sum(champion=champion) 'Jogos', sum(champion=champion and side='blue') 'Jogos blueside', sum(champion=champion and side='red') 'Jogos redside', sum(result=1) / sum(champion=champion) * 100  'win ratio', sum(kills) 'kills', sum(deaths) 'mortes', sum(assists) 'assistencia', SUM(kills + assists) / SUM(deaths) 'KDA', avg(firstblood) * 100 'FB participação', avg(dpm) 'dano por minuto', avg(cspm) 'Cs por minuto', avg(earnedgpm)'Gold por minuto', avg(xpdiffat15)'xp aos 15', avg(golddiffat15)  'gold diff aos 15', avg(csdiffat15) 'cs diff aos 15'  FROM `cblol` where champion like '%$pesquisar%'
-                                and league in (SELECT league FROM `cblol` WHERE league = 'CBLOL') 
+                                $sql = "SELECT all champion, sum(champion=champion) 'Jogos', sum(champion=champion and side='blue') 'Jogos blueside', sum(champion=champion and side='red') 'Jogos redside', sum(result=1) / sum(champion=champion) * 100  'win ratio', sum(kills) 'kills', sum(deaths) 'mortes', sum(assists) 'assistencia', SUM(kills + assists) / SUM(deaths) 'KDA', avg(firstblood) * 100 'FB participação', avg(dpm) 'dano por minuto', avg(cspm) 'Cs por minuto', avg(earnedgpm)'Gold por minuto', avg(xpdiffat15)'xp aos 15', avg(golddiffat15)  'gold diff aos 15', avg(csdiffat15) 'cs diff aos 15'  FROM `cblol` 
+                                where league in (SELECT league FROM `cblol` WHERE league = 'CBLOL') 
                                 and position in (SELECT position FROM `cblol` WHERE position != 'team')
-                                and split in (select split from `cblol` where split = 'split 2')
+                                and split in (select split from `cblol` where split = 'split 1')
                                 GROUP BY champion order by sum(champion=champion) desc";
                                 $resultado = $conn->query($sql);
 
@@ -127,7 +120,7 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
                                     $cs15           = htmlentities($cs15, ENT_QUOTES, "UTF-8");
 
                                     echo "<tr>                                    
-                                                <td><img class='champion' src='../image/".$champion.".png'> $registro[0] </td> 
+                                                <td><img class='champion' src='../image/".$champion.".png'> $champion </td> 
                                                 <td> $registro[1]</td>
                                                 <td> $registro[2]</td>
                                                 <td> $registro[3]</td>
@@ -146,11 +139,47 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
                                                 </td>";
                                 }                                
                             ?>                                           
-                        </tr>                 
+                         </tr>                 
            </div>
         </div>
    </div>                               
 </div>  
 
+
+<!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawStacked);
+
+function drawStacked() {
+      var data = google.visualization.arrayToDataTable([
+        ['', '2010 Population', '2000 Population'],
+        ['', parseInt(''), 100]
+      ]);
+
+      var options = {
+      	width: 100,
+        height: 50,
+        chartArea: {width: '50%'},
+        isStacked: true,
+        legend: {position: 'none'},
+        backgroundColor: 'transparent',
+       	baselineColor: 'transparent',
+        colors: ['#2b2b50','#242424'],
+        enableInteractivity: false,
+        hAxis: {
+          minValue: 0,
+          textPosition: 'none',
+          gridlines: {color: 'transparent'},
+
+        },
+        vAxis: {
+        }
+      };
+      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+</script> -->
+
 </body>
-</html>
+</html> 

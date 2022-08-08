@@ -30,15 +30,11 @@ a {
 
 .navigation
 {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 5%;
     background: #15151e;
     border-left: 10px solid var(--blue);
-    transition: 0.5s;
-    overflow: auto;
-    z-index: 500;
-    top:0px;
 }
 
 .title
@@ -57,28 +53,27 @@ a {
 /* main */
 .main
 {
-    position: fixed;
+    position: relative;
     width: 100%;
-    top: 27px;
-    height: 14%;
+    top: 25px;
+    height: 155px;
     background-color: #1c1c1c;
     z-index: 500;
 }
 
 .menu {
-    position: fixed;
-    width: 100%;
-    top: 87px;
-    margin-top: 25px;
+    position: relative;
+    top: 85px;
+    margin-top: -120px;
     z-index: 500;
-    left: 350px;
+    margin-left: 20%;
 }
 
 .logo-logo
 {
-    position: fixed;
-    margin-left: 19%;
-    margin-top: 28px;
+    position: absolute;
+    margin-left: 21.5%;
+    margin-top: 50px;
 }
 
 .details .recentOrders
@@ -91,7 +86,7 @@ a {
     width: 1750px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 200px;
+    margin-top: 120px;
 }
 
 .cardHeader
@@ -118,6 +113,8 @@ a {
     color: var(--grey);
     border-radius: 20px;
     font-size: small;
+    text-transform: uppercase;
+    font-family: monospace;
 }
 .details table
 {
@@ -156,30 +153,6 @@ a {
     padding-right: 10px;
 }
 
-/* .details .recentOrders table tr td
-{
-    padding: 20px;
-    text-align: center;
-}
-.details .recentOrders table tr td:last-child
-{
-    padding: 30px;
-    text-align: center;
-}
-.details .recentOrders table tr td:nth-child(2)
-{
-    text-align: center;
-}
-.details .recentOrders table tr td:nth-child(3)
-{
-    text-align: center;
-} */
-
-/* .menu a {
-    width: 36%;
-    margin-left: 15px;
-} */
-
 .recentCustomers
 {
     position: relative;
@@ -193,7 +166,7 @@ a {
 
 .logo {
     margin-left: 15px;
-    margin-top: 5px;
+    margin-top: -15px;
 }
 
 .search input
@@ -208,14 +181,6 @@ a {
     margin-left: 1385px;
 }
 
-.fa {
-    position: relative;
-    height: 55px;
-    color: #b8cbcd;
-    top: 40px;
-    left: 1300px;
-}
-
 .champion{
     left:0px;
     border-radius: 100%;
@@ -225,9 +190,9 @@ a {
 }
 
 .home {
-    position: fixed;
-    left: 320px;
-    top: 132px;
+    position: relative;
+    left: -5px;
+    top: 5px;
 }
 
 .lupa {
@@ -242,15 +207,15 @@ a {
 }
 
 
-@media screen and (max-width: 100%) {
+@media (max-width: 920px) {
     .title {
         left: 175px;
     }
-    .menu {
-        top: 80px;
+    .menu {   
+        flex-wrap: wrap;
     }
-    .main {
-        top:25px;
+    .main {   
+        flex-wrap: wrap;
     }
     .logo {
         left: -5px;
@@ -268,24 +233,17 @@ a {
     .navigation {
         height: 4%;
     }
-    .fa {
-        left:960px;
-        top:35px;
+    .home {
+        left: 5%;
     }
-    /* img {
-        left: 17%;
-    } */
   }
 
-@media (min-width: 1366px) and (max-width: 1680px) {
+@media (max-width: 380px) {
     .title {
         left: 330px;
     }
     .menu {
-        top: 75px;
-    }
-    .main {
-        top:25px;
+        flex-wrap: wrap;
     }
     .logo {
         left: 90px;
@@ -304,12 +262,7 @@ a {
     .navigation {
         height: 4%;
     }
-    .fa {
-        left:1160px;
-        top:25px;
+    .home {
+        left: 5%;
     }
-/* 
-    img {
-        left: 23%;
-    } */
 }

@@ -1,14 +1,5 @@
 <?php
-//Get Heroku ClearDB connection information  
-$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-$cleardb_server = $cleardb_url["host"];
-$cleardb_username = $cleardb_url["user"];
-$cleardb_password = $cleardb_url["pass"];
-$cleardb_db = substr($cleardb_url["path"],1);
-$active_group = 'default';
-$query_builder = TRUE;
-// Connect to DB
-$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+$conn = mysqli_connect('localhost','root','', 'bdlolcblol');
 ?>
 
 <!DOCTYPE html> 
@@ -52,6 +43,8 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                    } else  {
                       echo "Jogadores com as inicias ", $pesquisar;
                    } ?> </h3>
+                   <a href="../paginas/jogadores1.php" class="btn">1 split</a>
+                   <a href="../paginas/jogadores.php" class="btn2">2 split</a>
                </div>
                <table >
                    <thead>
@@ -80,10 +73,9 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                        <tr>     
                            <?php
                                 $pesquisar = $_POST['pesquisar'];
-                                $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
                                 
                                 $sql = "SELECT playername, teamname, position, count(teamname), SUM(kills + assists) / SUM(deaths), SUM(kills) / count(teamname), SUM(deaths) / count(teamname), SUM(assists) / count(teamname), SUM(kills + assists) / SUM(teamkills) * 100, sum(damageshare) / count(teamname) * 100, SUM(dpm) / count(playername) * 100 / 100, SUM(firstblood) / count(teamname) * 100, SUM(vspm) / count(teamname) * 100 / 100,  SUM(cspm) / count(teamname), SUM(earnedgpm) / count(teamname), SUM(xpdiffat15) / count(teamname), sum(golddiffat15) / count(teamname), sum(csdiffat15) / count(teamname) from `cblol` where playername like '%$pesquisar%'
-                                and split in (select split from `cblol` where split = 'split 1')
+                                and split in (select split from `cblol` where split = 'split 2')
                                 and position in (select position from cblol `cblol` where position != 'team') 
                                 GROUP BY playername order by playername asc";
                                 $resultado = $conn->query($sql);

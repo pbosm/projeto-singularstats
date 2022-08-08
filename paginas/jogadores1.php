@@ -17,7 +17,7 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
         </div>
             <div class="search">
                 <label>
-                    <form class="form-inline" action="../busca/buscajogadores.php" method="POST">
+                    <form class="form-inline" action="../busca/buscajogadores1.php" method="POST">
                         <input type="text" placeholder="Pesquisar jogadores" name="pesquisar"><img class="lupa" src="../image/search.png" width="20">           
                     </form>
                 </label>
@@ -36,7 +36,7 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
        <div class="details">
            <div class="recentOrders">
                <div class="cardHeader">
-                   <h3>Jogadores - 2 semestre</h3>
+                   <h3>Jogadores - 1 semestre</h3>
                    <a href="../paginas/jogadores1.php" class="btn">1 split</a>
                    <a href="../paginas/jogadores.php" class="btn2">2 split</a>
                </div>
@@ -69,7 +69,7 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
                            <?php
 
                                 $sql = "SELECT playername, teamname, position, count(teamname), SUM(result=1) / count(teamname) * 100, SUM(kills + assists) / SUM(deaths), SUM(kills) / count(teamname), SUM(deaths) / count(teamname), SUM(assists) / count(teamname), SUM(kills + assists) / SUM(teamkills) * 100, sum(damageshare) / count(teamname) * 100, SUM(dpm) / count(playername) * 100 / 100, SUM(firstblood) / count(teamname) * 100, SUM(vspm) / count(teamname) * 100 / 100, SUM(cspm) / count(teamname), SUM(earnedgpm) / count(teamname), SUM(xpdiffat15) / count(teamname), sum(golddiffat15) / count(teamname), sum(csdiffat15) / count(teamname) from `cblol`
-                                where split in (select split from `cblol` where split = 'split 2')
+                                where split in (select split from `cblol` where split = 'split 1')
                                 and position in (select position from `cblol` where position != 'team')
                                 GROUP BY playername order by playername asc;";
                                 $resultado = $conn->query($sql);

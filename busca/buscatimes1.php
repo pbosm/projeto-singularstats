@@ -17,7 +17,7 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
         </div>
             <div class="search">
                 <label>
-                    <form class="form-inline" action="../busca/buscatimes2.php" method="POST">
+                    <form class="form-inline" action="../busca/buscatimes.php" method="POST">
                         <input type="text" placeholder="Pesquisar times" name="pesquisar"><img class="lupa" src="../image/search.png" width="20">           
                     </form>
                 </label>
@@ -68,8 +68,9 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
                        <?php
                            $pesquisar = $_POST['pesquisar'];
 
+
                            $sql = "SELECT teamname, count(teamname), sum(duracaogame) / count(teamname) / 60, Sum(side='Blue'), sum(result=1 and side='Blue') / sum(side='blue') * 100,  Sum(side='Red'), sum(result=1 and side='red') / sum(side='red') * 100, SUM(result=1) / count(teamname) * 100, sum(firsttower) / count(teamname) * 100, sum(firsttower=1 and side='Blue') / sum(side='blue') * 100, sum(firsttower=1 and side='red') / sum(side='red') * 100, sum(firstblood) / count(teamname) * 100 from `cblol` where teamname like '%$pesquisar%'
-                           and split in (select split from `cblol` where split = 'split 2')
+                           and split in (select split from `cblol` where split = 'split 1')
                            and position in (select position from `cblol` where position = 'team')
                            GROUP BY teamname;";
                            $resultado = $conn->query($sql);

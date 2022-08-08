@@ -18,7 +18,7 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
         </div>
             <div class="search">
                 <label>
-                    <form class="form-inline" action="../busca/buscatimes.php" method="POST">
+                    <form class="form-inline" action="../busca/buscatimes1.php" method="POST">
                         <input type="text" placeholder="Pesquisar times" name="pesquisar"><img class="lupa" src="../image/search.png" width="20">           
                     </form>
                 </label>
@@ -37,7 +37,7 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
        <div class="details">
            <div class="recentOrders">
                <div class="cardHeader">
-                   <h3>Times - 2 semestre</h3> 
+                   <h3>Times - 1 semestre</h3> 
                    <a href="../paginas/times1.php" class="btn">1 split</a>
                    <a href="../paginas/times.php" class="btn2">2 split</a>  
                </div>
@@ -63,7 +63,7 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
                            <?php
 
                                 $sql = "SELECT teamname, count(teamname), sum(duracaogame) / count(teamname) / 60, Sum(side='Blue'), sum(result=1 and side='Blue') / sum(side='blue') * 100,  Sum(side='Red'), sum(result=1 and side='red') / sum(side='red') * 100, SUM(result=1) / count(teamname) * 100, sum(firsttower) / count(teamname) * 100, sum(firsttower=1 and side='Blue') / sum(side='blue') * 100, sum(firsttower=1 and side='red') / sum(side='red') * 100, sum(firstblood) / count(teamname) * 100 from `cblol`
-                                where split in (select split from `cblol` where split = 'split 2')
+                                where split in (select split from `cblol` where split = 'split 1')
                                 and position in (select position from `cblol` where position = 'team')
                                 GROUP BY teamname;";
                                 $resultado = $conn->query($sql);
@@ -113,7 +113,7 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
                                     $format_fb = htmlentities($format_fb,  ENT_QUOTES, "UTF-8");
 
                                     echo "<tr>
-                                                <td><a href='../times2/$time.php'> $registro[0]</td> 
+                                                <td><a href='../times/$time.php'> $registro[0]</td> 
                                                 <td> $registro[1]</td>
                                                 <td> $format_duracao minutos</td>
                                                 <td> $registro[3]</td>
@@ -136,3 +136,4 @@ $conn = mysqli_connect('localhost','root','', 'bdlolcblol');
 
 </body>
 </html>
+
