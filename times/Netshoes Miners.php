@@ -16,7 +16,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 <head> 
   <meta charset="utf-8"> 
   <title> Netshoes Miners </title> 
-  <link rel="stylesheet" type="text/css" href="../cssdostimes/stylenetshoes.css"> 
+  <link rel="stylesheet" type="text/css" href="../cssdostimes/styleflaacademy.css"> 
   <div class="navigation"></div>
 </head> 
 
