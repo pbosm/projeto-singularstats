@@ -6,7 +6,7 @@ Um website que mostra dados estatísticos sobre times de e-sports da liga brasil
 
 ## Demonstração
 
-![unknown_2022 08 15-17 16_1](https://user-images.githubusercontent.com/99605685/184711799-59b93f85-fc0d-40a6-9d2d-ac1e50eed14b.gif)
+![unknown_2022 08 15-17 21_1](https://user-images.githubusercontent.com/99605685/184712751-da1a4c2a-4354-43e7-8b36-aca66511697c.gif)
 
 
 ## Tecnologias usadas
