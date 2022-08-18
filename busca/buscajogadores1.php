@@ -126,7 +126,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                     $format_goldiff     = number_format($goldiff, 2, '.', '.');
                                     $format_csdiff   = number_format($csdiff, 2, '.', '.');
 
-                                    $nome       = htmlentities($nome, ENT_QUOTES, "UTF-8");
+                                    $nome       = htmlentities($nome, ENT_QUOTES, "ISO-8859-1");
                                     $team       = htmlentities($team, ENT_QUOTES, "UTF-8");
                                     $position   = htmlentities($position, ENT_QUOTES, "UTF-8");  
                                     $games      = htmlentities($games, ENT_QUOTES, "UTF-8");  

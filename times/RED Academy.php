@@ -181,7 +181,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                     $format_csdiff      = number_format($csdiff, 2, '.', '.');
                                     $format_winratio    = number_format($winratio, 1, '.', '.');
 
-                                    $nome       = htmlentities($nome, ENT_QUOTES, "UTF-8");
+                                    $nome       = htmlentities($nome, ENT_QUOTES, "ISO-8859-1");
                                     $position   = htmlentities($position, ENT_QUOTES, "UTF-8");  
                                     $games      = htmlentities($games, ENT_QUOTES, "UTF-8"); 
                                     $winratio   = htmlentities($winratio, ENT_QUOTES, "UTF-8");
