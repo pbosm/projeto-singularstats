@@ -238,14 +238,13 @@ body
 }
 
 @media (max-width: 920px) {
-    .title {
-        left: 175px;
-    }
     .menu {   
         flex-wrap: wrap;
+        width: 200%;
     }
     .main {   
-        flex-wrap: wrap;
+        width: 200%;
+        position: relative;
     }
     .logo {
         left: -5px;
@@ -257,29 +256,34 @@ body
         left: 60px;
     }
     .search input{
+        width: 200%;
         left: 1000px;
         top: 35px;
     }
     .navigation {
         height: 4%;
-    }
-    .home {
-        left: 5%;
+        width: 200%;
+        position: relative;
     }
   }
 
 @media (max-width: 380px) {
-    .title {
-        left: 330px;
+    .main {   
+        width: 200%;
+        position: relative;
     }
-    .menu {
+    .menu {   
         flex-wrap: wrap;
+        width: 200%;
+    }
+    .main {   
+        width: 200%;
+        position: relative;
     }
     .logo {
-        left: 90px;
+        left: 50px;
         top: -5px;
     }
-
     .details {
         top: 155px;
         width: 70%;
@@ -291,8 +295,15 @@ body
     }
     .navigation {
         height: 4%;
+        width: 200%;
+        position: relative;
     }
     .home {
         left: 5%;
+    }
+    .search input{
+        width: 200%;
+        left: 1000px;
+        top: 35px;
     }
 }
