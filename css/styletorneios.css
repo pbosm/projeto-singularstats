@@ -261,12 +261,10 @@ a {
     .logo {
         left: -5px;
     }
-
     .details {
-        top: 155px;
+        margin-top: 125px;
         width: 70%;
-        margin-left: auto;
-        margin-right: auto;
+        left: 60px;
     }
     .search input{
         width: 200%;
@@ -289,16 +287,12 @@ a {
         flex-wrap: wrap;
         width: 200%;
     }
-    .main {   
-        width: 200%;
-        position: relative;
-    }
     .logo {
         left: 50px;
         top: -5px;
     }
     .details {
-        top: 155px;
+        margin-top: 125px;
         width: 70%;
         left: 250px;
     }

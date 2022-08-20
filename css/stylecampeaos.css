@@ -275,9 +275,8 @@ body
     .logo {
         left: -5px;
     }
-
     .details {
-        top: 165px;
+        margin-top: 125px;
         width: 70%;
         left: 60px;
     }
@@ -302,16 +301,12 @@ body
         flex-wrap: wrap;
         width: 200%;
     }
-    .main {   
-        width: 200%;
-        position: relative;
-    }
     .logo {
         left: 50px;
         top: -5px;
     }
     .details {
-        top: 155px;
+        margin-top: 125px;
         width: 70%;
         left: 250px;
     }

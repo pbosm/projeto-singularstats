@@ -292,11 +292,7 @@ a {
     }
   }
 
-@media (max-width: 380px) {
-    .main {   
-        width: 200%;
-        position: relative;
-    }
+  @media (max-width: 920px) {
     .menu {   
         flex-wrap: wrap;
         width: 200%;
@@ -306,11 +302,40 @@ a {
         position: relative;
     }
     .logo {
+        left: -5px;
+    }
+    .details {
+        margin-top: 125px;
+        width: 70%;
+        left: 60px;
+    }
+    .search input{
+        width: 200%;
+        left: 1000px;
+        top: 35px;
+    }
+    .navigation {
+        height: 4%;
+        width: 200%;
+        position: relative;
+    }
+  }
+
+@media (max-width: 380px) {
+    .main {   
+        width: 200%;
+        position: relative;
+    }
+    .menu {   
+        flex-wrap: wrap;
+        width: 200%;
+    }
+    .logo {
         left: 50px;
         top: -5px;
     }
     .details {
-        top: 155px;
+        margin-top: 125px;
         width: 70%;
         left: 250px;
     }
