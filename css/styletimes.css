@@ -292,7 +292,7 @@ a {
     }
   }
 
-  @media (max-width: 920px) {
+@media (max-width: 920px) {
     .menu {   
         flex-wrap: wrap;
         width: 200%;
