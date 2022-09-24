@@ -17,6 +17,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
     <meta charset="utf-8"> 
     <title> Campeões </title> 
     <link rel="stylesheet" type="text/css" href="../css/stylecampeaos.css"> 
+    <link rel="icon" href="../image/icon.png">
     <div class="navigation"></div>
 </head> 
 
