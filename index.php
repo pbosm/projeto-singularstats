@@ -46,7 +46,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
     <div class="details">
            <div class="recentOrders">
                <div class="cardHeader">
-                   <h3>Ultimos jogos</h3>
+                   <h3>Ultimos 15 jogos</h3>
                    <a href="./paginas/times.php" class="btn">Ver todos times</a>
                </div>
                <table>
@@ -82,32 +82,38 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                                 $sql = "SELECT teamname, league, split, DATE_FORMAT(datahora,'%d/%m/%Y'), side, result=1, kills, deaths, firstdragon, dragons, firstherald, heralds, barons, firsttower, towers, towersenemy, totalgold FROM `cblol`
                                 where position in (SELECT position FROM `cblol` WHERE position = 'team')
                                 and league in (select league from `cblol` where league != 'LPL')
-                                order by datahora desc";
+                                order by datahora desc
+                                limit 15";
                                 $resultado = $conn->query($sql);
  
                                 $sqltop = "SELECT champion FROM `cblol`
                                 where position in (SELECT position FROM `cblol` WHERE position = 'top')
-                                order by datahora desc";
+                                order by datahora desc
+                                limit 15";
                                 $resultadotop = $conn->query($sqltop);
  
                                 $sqljng = "SELECT champion FROM `cblol`
                                 where position in (SELECT position FROM `cblol` WHERE position = 'jng')
-                                order by datahora desc";
+                                order by datahora desc
+                                limit 15";
                                 $resultadojng = $conn->query($sqljng);
  
                                 $sqlmid = "SELECT champion FROM `cblol`
                                 where position in (SELECT position FROM `cblol` WHERE position = 'mid')
-                                order by datahora desc";
+                                order by datahora desc
+                                limit 15";
                                 $resultadomid = $conn->query($sqlmid);
  
                                 $sqlbot = "SELECT champion FROM `cblol`
                                 where position in (SELECT position FROM `cblol` WHERE position = 'bot')
-                                order by datahora desc";
+                                order by datahora desc
+                                limit 15";
                                 $resultadobot = $conn->query($sqlbot);
  
                                 $sqlsup = "SELECT champion FROM `cblol`  
                                 where position in (SELECT position FROM `cblol` WHERE position = 'sup')
-                                order by datahora desc";
+                                order by datahora desc
+                                limit 15";
                                 $resultadosup = $conn->query($sqlsup);
  
                                 while ($registro = $resultado->fetch_array())
