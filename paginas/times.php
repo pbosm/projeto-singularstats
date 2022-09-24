@@ -17,7 +17,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
     <meta charset="utf-8"> 
     <title> Times </title> 
     <link rel="stylesheet" type="text/css" href="../css/styletimes.css">
-    <link rel="icon" href="../image/icon.png">
+    <link rel="icon" href="../image/icone.png">
     <div class="navigation"></div>
 </head>
 
