@@ -68,8 +68,6 @@
                        <tr>
                             <?php                            
                                 require_once('connection.php');
-                                $conexao = new Database();
-                                $conexao->connectionPDO();
                                 $conn = Database::connectionPDO();
                             
                                 $sql = "SELECT teamname, league, split, DATE_FORMAT(datahora,'%d/%m/%Y'), side, result=1, kills, deaths, firstdragon, dragons, firstherald, heralds, barons, firsttower, towers, towersenemy, totalgold FROM `cblol`
