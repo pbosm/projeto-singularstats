@@ -5,7 +5,7 @@ class Database
     protected static $db;
     private function __construct()
     {
-        $url = parse_url(getenv("DATABASE_URL"));
+        $url = parse_url(getenv("mysql://b16d12bb28e769:07d75b41@us-cdbr-east-06.cleardb.net/heroku_4fbca0687799a5f?reconnect=true"));
 
         $servername     = $url["host"];
         $username       = $url["user"];
