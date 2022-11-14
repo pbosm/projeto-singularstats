@@ -13,7 +13,7 @@ class Database
 
         try
         {
-            self::$db = new PDO("mysql:host=".$cleardb_server."; dbname=".$cleardb_db, $cleardb_username, $cleardb_password);
+            self::$db = new PDO("$db_driver:host=$cleardb_server; dbname=$cleardb_db, $cleardb_username, $cleardb_password");
             self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             // self::$db->exec('SET NAMES utf8');
             self::$db->exec('SET NAMES utf8mb4');
