@@ -71,49 +71,46 @@
                    <tbody>
                        <tr>
                             <?php
-                                require_once('connection.php');
-                                $conn = Database::connectionPDO();
                             
                                 $sql = "SELECT teamname, league, split, DATE_FORMAT(datahora,'%d/%m/%Y'), side, result=1, kills, deaths, firstdragon, dragons, firstherald, heralds, barons, firsttower, towers, towersenemy, totalgold FROM `cblol`
                                 where position in (SELECT position FROM `cblol` WHERE position = 'team')
                                 and league in (select league from `cblol` where league != 'LPL')
                                 order by datahora desc
                                 limit 15";
-                                $code = $conn->prepare($sql, array());
-                                $code->execute(); 
-                    
+                                $resultado = $conn->query($sql);
+ 
                                 $sqltop = "SELECT champion FROM `cblol`
                                 where position in (SELECT position FROM `cblol` WHERE position = 'top')
-                                order by datahora desc";
-                                $codetop = $conn->prepare($sqltop, array());
-                                $codetop->execute(); 
-                    
+                                order by datahora desc
+                                limit 15";
+                                $resultadotop = $conn->query($sqltop);
+ 
                                 $sqljng = "SELECT champion FROM `cblol`
                                 where position in (SELECT position FROM `cblol` WHERE position = 'jng')
-                                order by datahora desc";
-                                $codejng = $conn->prepare($sqljng, array());
-                                $codejng->execute();                                
-                    
+                                order by datahora desc
+                                limit 15";
+                                $resultadojng = $conn->query($sqljng);
+ 
                                 $sqlmid = "SELECT champion FROM `cblol`
                                 where position in (SELECT position FROM `cblol` WHERE position = 'mid')
-                                order by datahora desc";
-                                $codemid = $conn->prepare($sqlmid, array());
-                                $codemid->execute();
-                    
+                                order by datahora desc
+                                limit 15";
+                                $resultadomid = $conn->query($sqlmid);
+ 
                                 $sqlbot = "SELECT champion FROM `cblol`
                                 where position in (SELECT position FROM `cblol` WHERE position = 'bot')
-                                order by datahora desc";
-                                $codebot = $conn->prepare($sqlbot, array());
-                                $codebot->execute();
-                    
+                                order by datahora desc
+                                limit 15";
+                                $resultadobot = $conn->query($sqlbot);
+ 
                                 $sqlsup = "SELECT champion FROM `cblol`  
                                 where position in (SELECT position FROM `cblol` WHERE position = 'sup')
-                                order by datahora desc";
-                                $codesup = $conn->prepare($sqlsup, array());
-                                $codesup->execute();
-                    
-                                while ($registro = $code->fetch()) {
-                    
+                                order by datahora desc
+                                limit 15";
+                                $resultadosup = $conn->query($sqlsup);
+ 
+                                while ($registro = $resultado->fetch_array())
+                                {                                                                  
                                     $teamname    =  $registro[0];
                                     $league      =  $registro[1];
                                     $split       =  $registro[2];
@@ -131,7 +128,13 @@
                                     $torres      =  $registro[14];
                                     $torresenemy =  $registro[15];
                                     $totalgold   =  $registro[16];
-                    
+
+                                    if ($registro[5] == 0){
+                                        $result = 'lose';
+                                    } else {
+                                        $result = 'win';
+                                    }
+ 
                                     $teamname       = htmlentities($teamname, ENT_QUOTES, "UTF-8");
                                     $league         = htmlentities($league, ENT_QUOTES, "UTF-8");
                                     $split          = htmlentities($split, ENT_QUOTES, "UTF-8");
@@ -149,30 +152,25 @@
                                     $torres         = htmlentities($torres, ENT_QUOTES, "UTF-8");
                                     $torresenemy    = htmlentities($torresenemy, ENT_QUOTES, "UTF-8");
                                     $totalgold      = htmlentities($totalgold, ENT_QUOTES, "UTF-8");
-                    
-                                    if ($registro[5] == 0){
-                                        $result = 'lose';
-                                    } else {
-                                        $result = 'win';
-                                    }
-                    
-                                    if($registrotop = $codetop->fetch()) {
+
+ 
+                                    if($registrotop = $resultadotop->fetch_array()) {
                                         $championtop   =  $registrotop[0];
                                         $championtop    = htmlentities($championtop, ENT_QUOTES, "UTF-8");
-                                    } if($registrojng = $codejng->fetch()) {
+                                    } if($registrojng = $resultadojng->fetch_array()) {
                                         $championjng   =  $registrojng[0];
                                         $championjng    = htmlentities($championjng, ENT_QUOTES, "UTF-8");
-                                    } if($registromid = $codemid->fetch()) {
+                                    } if($registromid = $resultadomid->fetch_array()) {
                                         $championmid   =  $registromid[0];
                                         $championmid    = htmlentities($championmid, ENT_QUOTES, "UTF-8");
-                                    } if($registrobot = $codebot->fetch()) {
+                                    } if($registrobot = $resultadobot->fetch_array()) {
                                         $championbot   =  $registrobot[0];
                                         $championbot    = htmlentities($championbot, ENT_QUOTES, "UTF-8");
-                                    } if($registrosup = $codesup->fetch()) {
+                                    } if($registrosup = $resultadosup->fetch_array()) {
                                         $championsup   =  $registrosup[0];
                                         $championsup    = htmlentities($championsup, ENT_QUOTES, "UTF-8");
                                     }
-                    
+                                   
                                     echo "<tr>
                                     <td> $teamname</td>
                                     <td> $league</td>
