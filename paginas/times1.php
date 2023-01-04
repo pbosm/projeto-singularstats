@@ -1,63 +1,73 @@
-<?php require_once "../assets/header.php"; ?>
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+    <meta charset="utf-8"> 
+    <title> Times </title> 
+    <link rel="stylesheet" type="text/css" href="../css/styletimes.css">
+    <link rel="icon" href="../image/icone.png">
+    <div class="navigation"></div>
+</head>
 
-<div class="linear"></div>
-<div class="logo-head text-center">
-    <div class="row">
-        <div class="col-sm-7">
-            <a href="../index.php"><img class='logo' src="../image/SingularPreto.png" alt="Imagem" title="SingularStats"
-                    width="350"></a>
+<body>
+    <div class="main">
+        <div class="logo-logo">
+            <a href="../index.php"><img class='logo' src="../image/SingularPreto.png" alt="Imagem" title="SingularStats" width="300"></a>
         </div>
-        <div class="col-sm-5">
-            <form class="col-sm d-inline-block" action="../busca/buscatimes1.php" method="POST">
-                <input class="form-search me-2" name="pesquisar" type="search" placeholder="Pesquisar times"
-                    aria-label="Search">
-            </form>
-        </div>
-    </div>
-</div>
-
-<?php require_once "../assets/menu.php"; ?>
-
-<div class="all-table table-responsive mt-5">
-    <table class="table mt-4">
-        <div class="row">
-            <div class="col-10">
-                <h3 class="title-table mt-2 mb-4">
-                    Times - 1 semestre
-                </h3>
+            <div class="search">
+                <label>
+                    <form class="form-inline" action="../busca/buscatimes1.php" method="POST">
+                        <input type="text" placeholder="Pesquisar times" name="pesquisar"><img class="lupa" src="../image/search.png" width="20">           
+                    </form>
+                </label>
             </div>
-            <div class="col btn-all">
-                <a class="btn-1 mt-5" href="../paginas/times1.php">1 split</a>
-                <a class="btn-2 mt-5" href="../paginas/times.php">2 split</a>
-            </div>
+          </div>
         </div>
-        <thead>
-            <tr>
-                <td>Time</td>
-                <td>Total jogos</td>
-                <td>Duração media das partidas</td>
-                <td>Jogos blueside</td>
-                <td>Win ratio blueside</td>
-                <td>Jogos redside</td>
-                <td>Win ratio redside</td>
-                <td>Win ratio</td>
-                <td>First torre</td>
-                <td>First torre blueside</td>
-                <td>First torre redside</td>
-                <td>First blood</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <?php
-                require_once "../classes/teams.php";
-                $teamssplit1 = new Teams();
+        
+        <div class="menu"><img class ="home" src="../image/home.png" width="20">
+            <a href="../index.php"><span class="title">Home </span><img class='icons' src="../image/torneios.png" width="30"></a>
+            <a href="../paginas/torneios.php"><span class="title">Torneios</span><img class='icons' src="../image/times.png" width="30"></a>
+            <a href="../paginas/times.php"><span class="title">Times</span><img class='icons' src="../image/jogadores.png" width="30"></a>
+            <a href="../paginas/jogadores.php"><span class="title">Jogadores</span><img class='icons' src="../image/campeoes.png" width="25"></a>
+            <a href="../paginas/campeaos.php"><span class="title">Campeões</span></a>
+        </div>
 
-                $teamssplit1->getTeamsSplit1();
-                ?>
-            </tr>
-        </tbody>
-    </table>
-</div>
+       <div class="details">
+           <div class="recentOrders">
+               <div class="cardHeader">
+                   <h3>Times - 1 semestre</h3> 
+                   <a href="../paginas/times1.php" class="btn">1 split</a>
+                   <a href="../paginas/times.php" class="btn2">2 split</a>  
+               </div>
+               <table >
+                   <thead>
+                       <tr>                          
+                          <td>Time</td>
+                          <td>Total jogos</td>
+                          <td>Duração media das partidas</td>
+                          <td>Jogos blueside</td>
+                          <td>Win ratio blueside</td>
+                          <td>Jogos redside</td>
+                          <td>Win ratio redside</td>
+                          <td>Win ratio</td>
+                          <td>First torre</td>
+                          <td>First torre blueside</td>
+                          <td>First torre redside</td>
+                          <td>First blood</td>
+                       </tr>                            
+                   </thead>
+                   <tbody >
+                       <tr>     
+                       <?php
+                                require_once "../classes/teams.php";
+                                $teamssplit1 = new Teams();
 
-<?php require_once "../assets/footer.php"; ?>
+                                $teamssplit1->getTeamsSplit1();
+                        ?>  
+           </div>
+        </div>
+   </div>                               
+</div>  
+
+</body>
+</html>
+

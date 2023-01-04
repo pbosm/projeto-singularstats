@@ -2,9 +2,8 @@
 <html lang="pt-BR"> 
 <head> 
     <meta charset="utf-8"> 
-    <title> Jogadores </title> 
-    <link rel="stylesheet" type="text/css" href="../css/stylejogadores.css"> 
-    <link rel="icon" href="../image/icone.png">
+    <title> Campeões </title> 
+    <link rel="stylesheet" type="text/css" href="../css/stylecampeaos.css"> 
     <div class="navigation"></div>
 </head> 
 
@@ -14,8 +13,8 @@
         </div>
             <div class="search">
                 <label>
-                    <form class="form-inline" action="../busca/buscajogadores.php" method="POST">
-                        <input type="text" placeholder="Pesquisar jogadores" name="pesquisar"><img class="lupa" src="../image/search.png" width="20">           
+                    <form class="form-inline" action="../busca/buscachamp.php" method="POST">
+                        <input type="text" placeholder="Pesquisar campeão" name="pesquisar"><img class="lupa" src="../image/search.png" width="20">           
                     </form>
                 </label>
             </div>
@@ -33,42 +32,45 @@
        <div class="details">
            <div class="recentOrders">
                <div class="cardHeader">
-                   <h3>Jogadores - 2 semestre</h3>
-                   <a href="../paginas/jogadores1.php" class="btn">1 split</a>
-                   <a href="../paginas/jogadores.php" class="btn2">2 split</a>
+                   <?php $pesquisar = $_POST['pesquisar']; ?>
+                   <h3><?php 
+                   if ($pesquisar == null) {
+                        $pesquisar = ''; 
+                   } else  {
+                      echo "Campeãos com as inicias ", $pesquisar;
+                   } ?> </h3>
+                   <a href="../paginas/campeaos1.php" class="btn">1 split</a>
+                   <a href="../paginas/campeaos.php" class="btn2">2 split</a>
                </div>
                <table >
                    <thead>
                        <tr>                          
-                          <td>Player</td>
-                          <td>Time</td>
-                          <td>Posição</td>
-                          <td>Games</td>
+                          <td>Campeão</td>
+                          <td>Jogos</td>
+                          <td>Jogos blueside</td>
+                          <td>Jogos redside</td>
                           <td>Winratio</td>
+                          <td>Kills</td>
+                          <td>Mortes</td>
+                          <td>Assistência</td>
                           <td>KDA</td>
-                          <td>Média de abates</td>
-                          <td>Média de mortes</td>
-                          <td>Média de assistência</td>
-                          <td>Média de participação</td>
+                          <td>Participação no FB</td>
                           <td>Dano por minuto</td>
-                          <td>Porcentagem de dano</td>
-                          <td>Ward por minuto</td>
-                          <td>Participação no FirstBlood</td>
                           <td>CS por minuto</td>
-                          <td>GOLD por minuto</td>
+                          <td>Gold por minuto</td>
                           <td>XP diff aos 15</td>
-                          <td>GOLD diff aos 15</td>
+                          <td>Gold diff aos 15</td>
                           <td>CS diff aos 15</td>
                        </tr>                            
                    </thead>
                    <tbody >
                         <tr>     
                             <?php
-                                require_once "../classes/players.php";
-                                $playerssplit2 = new Players();
+                                require_once "../classes/champ.php";
+                                $searchchamp2 = new Champ();
 
-                                $playerssplit2->getPlayersSplit2();
-                            ?>                            
+                                $searchchamp2->getSearchChamp2();                         
+                            ?>                                            
                         </tr>                 
            </div>
         </div>

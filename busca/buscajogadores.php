@@ -4,7 +4,6 @@
     <meta charset="utf-8"> 
     <title> Jogadores </title> 
     <link rel="stylesheet" type="text/css" href="../css/stylejogadores.css"> 
-    <link rel="icon" href="../image/icone.png">
     <div class="navigation"></div>
 </head> 
 
@@ -33,18 +32,23 @@
        <div class="details">
            <div class="recentOrders">
                <div class="cardHeader">
-                   <h3>Jogadores - 2 semestre</h3>
+                   <?php $pesquisar = $_POST['pesquisar']; ?>
+                   <h3><?php 
+                   if ($pesquisar == null) {
+                        $pesquisar = ''; 
+                   } else  {
+                      echo "Jogadores com as inicias ", $pesquisar;
+                   } ?> </h3>
                    <a href="../paginas/jogadores1.php" class="btn">1 split</a>
                    <a href="../paginas/jogadores.php" class="btn2">2 split</a>
                </div>
                <table >
                    <thead>
                        <tr>                          
-                          <td>Player</td>
+                       <td>Player</td>
                           <td>Time</td>
                           <td>Posição</td>
                           <td>Games</td>
-                          <td>Winratio</td>
                           <td>KDA</td>
                           <td>Média de abates</td>
                           <td>Média de mortes</td>
@@ -65,10 +69,10 @@
                         <tr>     
                             <?php
                                 require_once "../classes/players.php";
-                                $playerssplit2 = new Players();
+                                $searchplayers2 = new Players();
 
-                                $playerssplit2->getPlayersSplit2();
-                            ?>                            
+                                $searchplayers2->getSearchPlayers2();
+                            ?>
                         </tr>                 
            </div>
         </div>

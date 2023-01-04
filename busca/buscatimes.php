@@ -3,12 +3,10 @@
 <head> 
     <meta charset="utf-8"> 
     <title> Times </title> 
-    <link rel="stylesheet" type="text/css" href="../css/styletimes.css">
-    <link rel="icon" href="../image/icone.png">
+    <link rel="stylesheet" type="text/css" href="../css/styletimes.css"> 
     <div class="navigation"></div>
-</head>
+</head> 
 
-<body>
     <div class="main">
         <div class="logo-logo">
             <a href="../index.php"><img class='logo' src="../image/SingularPreto.png" alt="Imagem" title="SingularStats" width="300"></a>
@@ -22,7 +20,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="menu"><img class ="home" src="../image/home.png" width="20">
             <a href="../index.php"><span class="title">Home </span><img class='icons' src="../image/torneios.png" width="30"></a>
             <a href="../paginas/torneios.php"><span class="title">Torneios</span><img class='icons' src="../image/times.png" width="30"></a>
@@ -34,14 +32,20 @@
        <div class="details">
            <div class="recentOrders">
                <div class="cardHeader">
-                   <h3>Times - 2 semestre</h3> 
+                   <?php $pesquisar = $_POST['pesquisar']; ?>
+                   <h3><?php 
+                   if ($pesquisar == null) {
+                        $pesquisar = ''; 
+                   } else  {
+                      echo "Times com as inicias ", $pesquisar;
+                   } ?> </h3>
                    <a href="../paginas/times1.php" class="btn">1 split</a>
-                   <a href="../paginas/times.php" class="btn2">2 split</a>  
+                   <a href="../paginas/times.php" class="btn2">2 split</a>
                </div>
                <table >
                    <thead>
                        <tr>                          
-                          <td>Time</td>
+                       <td>Time</td>
                           <td>Total jogos</td>
                           <td>Duração media das partidas</td>
                           <td>Jogos blueside</td>
@@ -57,11 +61,11 @@
                    </thead>
                    <tbody >
                        <tr>     
-                       <?php
-                                require_once "../classes/teams.php";
-                                $teamssplit2 = new Teams();
+                        <?php
+                            require_once "../classes/teams.php";
+                            $searchteamns2 = new Teams();
 
-                                $teamssplit2->getTeamsSplit2();
+                            $searchteamns2->getSearchTeams2();
                         ?>  
            </div>
         </div>
