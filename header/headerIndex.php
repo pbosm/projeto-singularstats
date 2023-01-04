@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -14,6 +15,7 @@
 
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/aa4b28b8ec.js" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
