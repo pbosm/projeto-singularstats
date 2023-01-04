@@ -215,6 +215,10 @@ img.list-champ {
     margin-left: -5px;
 }
 
+.champion-icon {
+    white-space: nowrap;
+}
+
 @media (max-width: 1320px) {
     .title-table {
         margin-left: 12px;

@@ -124,7 +124,7 @@
                 <td> $torresenemy </td>
                 <td> $barons </td>
                 <td> $totalgold</td>
-                <td> <img class='champion' src='./image/".$championtop.".png'><br>$championtop </td>
+                <td class='champion-icon'> <img class='champion' src='./image/".$championtop.".png'><br>$championtop </td>
                 <td> <img class='champion' src='./image/".$championjng.".png'><br>$championjng </td>
                 <td> <img class='champion' src='./image/".$championmid.".png'><br>$championmid </td>
                 <td> <img class='champion' src='./image/".$championbot.".png'><br>$championbot </td>
