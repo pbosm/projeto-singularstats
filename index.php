@@ -1,4 +1,4 @@
-<?php require_once "./assets/headerIndex.php"; ?>
+<?php require_once "../assets/headerIndex.php"; ?>
 
 <div class="linear"></div>
 <div class="logo-head text-center">
@@ -15,7 +15,7 @@
     </div>
 </div>
 
-<?php require_once "./assets/menuIndex.php"; ?>
+<?php require_once "../assets/menuIndex.php"; ?>
 
 <div class="table-responsive mt-5">
     <table class="table mt-4">
