@@ -1,72 +1,60 @@
-<!DOCTYPE html> 
-<html lang="pt-BR"> 
-<head> 
-    <meta charset="utf-8"> 
-    <title> Torneios </title> 
-    <link rel="stylesheet" type="text/css" href="../css/styletorneios.css"> 
-    <link rel="icon" href="../image/icone.png">
-    <div class="navigation"></div>
-</head>
+<?php require_once "../assets/header.php"; ?>
 
-<body>
-    <div class="main">
-            <div class="logo-logo">
-                <a href="../index.php"><img class='logo' src="../image/SingularPreto.png" alt="Imagem" title="SingularStats" width="300"></a>
+<div class="linear"></div>
+<div class="logo-head text-center">
+    <div class="row">
+        <div class="col-sm-7">
+            <a href="../index.php"><img class='logo' src="../image/SingularPreto.png" alt="Imagem" title="SingularStats"
+                    width="350"></a>
+        </div>
+        <div class="col-sm-5">
+            <form class="col-sm d-inline-block" action="../busca/buscatimes.php" method="POST">
+                <input class="form-search me-2" name="pesquisar" type="search" placeholder="Pesquisar times"
+                    aria-label="Search">
+            </form>
+        </div>
+    </div>
+</div>
+
+<?php require_once "../assets/menu.php"; ?>
+
+<div class="all-table table-responsive mt-5">
+    <table class="table mt-4">
+        <div class="row">
+            <div class="col-10">
+                <h3 class="title-table mt-2 mb-4">
+                    Torneios - 2 semestre
+                </h3>
             </div>
-                <div class="search">
-                    <label>
-                        <form class="form-inline" action="../busca/buscatimes.php" method="POST">
-                            <input type="text" placeholder="Pesquisar times" name="pesquisar"><img class="lupa" src="../image/search.png" width="20">           
-                        </form>
-                    </label>
-                </div>
+            <div class="col btn-all">
+                <a class="btn-1" href="../paginas/torneios1.php">1 split</a>
+                <a class="btn-2" href="../paginas/torneios.php">2 split</a>
             </div>
         </div>
+        <thead>
+            <tr>
+                <td>Região</td>
+                <td>Split</td>
+                <td>Número de jogos</td>
+                <td>Duração das partidas</td>
+                <td>Média de kills</td>
+                <td>Winratio Blueside</td>
+                <td>Winratio Redside</td>
+                <td>Dragons por jogo</td>
+                <td>Barons por jogo</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <?php
+                require_once "../classes/torneios.php";
+                $torneios = new Torneios();
 
-        <div class="menu"><img class ="home" src="../image/home.png" width="20">
-            <a href="../index.php"><span class="title">Home </span><img class='icons' src="../image/torneios.png" width="30"></a>
-            <a href="../paginas/torneios.php"><span class="title">Torneios</span><img class='icons' src="../image/times.png" width="30"></a>
-            <a href="../paginas/times.php"><span class="title">Times</span><img class='icons' src="../image/jogadores.png" width="30"></a>
-            <a href="../paginas/jogadores.php"><span class="title">Jogadores</span><img class='icons' src="../image/campeoes.png" width="25"></a>
-            <a href="../paginas/campeaos.php"><span class="title">Campeões</span></a>
-        </div>
+                $torneios->getTournamentSplit2();
+                ?>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-       <div class="details">
-           <div class="recentOrders">
-               <div class="cardHeader">
-                   <h3>Torneios - 2 semestre</h3>
-                   <a href="../paginas/torneios1.php" class="btn">1 split</a>
-                   <a href="../paginas/torneios.php" class="btn2">2 split</a>
-               </div>
-               <table>
-                   <thead>
-                       <tr>                          
-                          <td>Região</td>
-                          <td>Split</td>
-                          <td>Número de jogos</td>
-                          <td>Duração das partidas</td>
-                          <td>Média de kills</td>
-                          <td>Winratio Blueside</td>
-                          <td>Winratio Redside</td>
-                          <td>Dragons por jogo</td>
-                          <td>Barons por jogo</td>
-                       </tr>                            
-                   </thead>
-                   <tbody >
-                       <tr>     
-                           <?php
-                                require_once "../classes/torneios.php";
-                                $torneios = new Torneios();
-
-                                $torneios->getTournamentSplit2();
-                            ?>
-                    </tr>            
-                </tbody>  
-            </table>                                                 
-        </div>
-   </div>                               
-</div>  
-
-</body>
-</html>
-
+<?php require_once "../assets/footer.php"; ?>
