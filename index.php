@@ -1,5 +1,5 @@
 <?php require_once "./assets/headerIndex.php"; ?>
-
+<link rel="stylesheet" href="./css/style.css">
 <div class="linear"></div>
 <div class="logo-head text-center">
     <div class="row">
