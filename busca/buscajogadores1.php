@@ -23,7 +23,7 @@
         <div class="row">
             <div class="col-10">
                 <?php $pesquisar = $_POST['pesquisar']; ?>
-                <h3 class="title-search mb-4" style="color: #0098ad;">
+                <h3 class="title-search mb-4" style="color: #0098ad; font-size: 15px;">
                     <?php
                     if ($pesquisar == null) {
                         $pesquisar = '';
