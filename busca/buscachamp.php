@@ -1,4 +1,4 @@
-<?php require_once "../assets/header.php"; ?>
+<?php require_once "../includes/header.php"; ?>
 
 <div class="linear"></div>
 <div class="logo-head text-center">
@@ -16,7 +16,7 @@
     </div>
 </div>
 
-<?php require_once "../assets/menu.php"; ?>
+<?php require_once "../includes/menu.php"; ?>
 
 <div class="all-table table-responsive mt-3">
     <table class="table mt-4">
@@ -70,4 +70,4 @@
     </table>
 </div>
 
-<?php require_once "../assets/footer.php"; ?>
+<?php require_once "../includes/footer.php"; ?>
