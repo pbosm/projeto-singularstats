@@ -1,278 +1,240 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-*
-{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
     text-decoration: none;
 }
-  
-:root
-{
-    --blue: #131314;
-    --white: #0f0d1a;
-    --grey: #f5f5f5;
-    --black1: rgb(172, 172, 172);
-    --black2: #999;
+
+:root {
+    --black1: #131314;
+    --black2: #0f0d1a;
+    --white: #f5f5f5;
+    --gray: rgb(172, 172, 172);
+    --gray1: #999;
+    --purple: #15151e;
 }
 
-body
-{
+body {
     min-height: 100vh;
     overflow: auto;
-    background: var(--blue);
+    background: var(--black1);
 }
 
 a {
-    color: inherit;
-}
-
-.navigation
-{
-    position: absolute;
-    width: 100%;
-    height: 5%;
-    background: #15151e;
-    border-left: 10px solid var(--blue);
-}
-
-.title
-{    
-    position: relative;
-    padding-left: 55px;
-    line-height: 60px;
-    color: #e9e5e5;
-    text-transform: uppercase;
-    font-family: monospace;
-    font-size: 15px;
-    left: -45px;
-    font-weight: bold;
-}
-
-/* main */
-.main
-{
-    position: relative;
-    width: 100%;
-    top: 25px;
-    height: 155px;
-    background-color: #1c1c1c;
-    z-index: 500;
-}
-
-.menu {
-    position: relative;
-    top: 85px;
-    margin-top: -120px;
-    z-index: 500;
-    margin-left: 20%;
-}
-
-.logo-logo
-{
-    position: absolute;
-    margin-left: 21.5%;
-    margin-top: 50px;
-}
-
-.details .recentOrders
-{
-    min-height: 500px;
-    background: #1a1a1a;
-    padding: 20px;
-    box-shadow: 0 7px 25px rgba(0,0,0, 50%);
-    border-radius: 20px;
-    width: 1750px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 120px;
-}
-
-.cardHeader
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-.cardHeader h3
-{
-    font-weight: 400;
-    color: #0098ad;
-    font-weight: bold;
-    margin-left: 20px;
-    text-transform: uppercase;
-    font-family: monospace;
-}
-.btn
-{
-    position: relative;
-    padding: 10px 40px;
-    background: var(--blue);
+    color: var(--gray1);
     text-decoration: none;
-    color: var(--grey);
-    border-radius: 20px;
-    font-size: small;
-    text-transform: uppercase;
-    font-family: monospace;
-}
-.details table
-{
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-.details table thead td
-{
-    font-weight: 600;
-    text-transform: uppercase;
-    font-family: monospace;
-    color: rgb(118 123 187);
-}
-.details .recentOrders table tr
-{
-    color: var(--black1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-.details .recentOrders table tr:last-child
-{
-    border-bottom: none;
-}
-.details .recentOrders table tbody tr:hover
-{
-    background: #11101a;
-    color: var(--grey);
-}
-.details .recentOrders table tr td
-{
-    padding: 5px;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: monospace;
-    width: 550px;
-    padding-right: 10px;
 }
 
-.recentCustomers
-{
-    position: relative;
-    display: grid;
-    min-height: 500px;
-    padding: 20px;
-    background: #1c1c1c;
-    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
-    border-radius: 20px;
+a:hover {
+    color: var(--gray1);
 }
 
-.logo {
-    margin-left: 15px;
-    margin-top: -15px;
+.navbar-nav {
+    list-style: inside;
 }
 
-.search input
-{
+.linear {
+    background-color: var(--purple);
+    height: 25px;
+}
+
+.navbar-expand-lg {
+    background-color: #1c1c1c;
+}
+
+.logo-head {
+    background-color: #1c1c1c;
+    padding: 25px;
+}
+
+.form-search {
     height: 40px;
     border-radius: 40px;
     padding: 20px;
     font-size: 12px;
     background: #121212;
     color: #b8cbcd;
-    margin-top: 45px;
-    margin-left: 1385px;
 }
 
-.champion{
-    left:0px;
-    border-radius: 100%;
-    padding-right: 4px;
-    padding-bottom: 10px;
+.title-menu {
+    color: var(--white);
+    text-transform: uppercase;
     font-weight: bold;
+    font-size: 15px;
+    font-family: monospace;
 }
 
 .home {
-    position: relative;
-    left: -5px;
-    top: 5px;
-}
-
-.lupa {
-    margin-left: -40px;
-    margin-bottom: -5px;
+    margin: 10px;
 }
 
 .icons {
-    left:405px;
-    top: 8px;
-    margin-bottom: -10px;
+    margin: 5px;
 }
 
-@media (max-width: 920px) {
-    .menu {   
-        flex-wrap: wrap;
-        width: 200%;
-    }
-    .main {   
-        width: 200%;
-        position: relative;
-    }
-    .logo {
-        left: -5px;
+.table-responsive {
+    min-height: 500px;
+    background: #1a1a1a;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgb(0 0 0 / 50%);
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 96%;
+}
+
+.title-table {
+    color: #0098ad;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: monospace;
+    font-size: 15px;
+    margin-left: 35px;
+}
+
+.btn-all-teams {
+    padding: 5px 25px;
+    background: var(--black1);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 20px;
+    font-size: small;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+
+.btn-all {
+    text-align: end;
+}
+
+.table tr {
+    color: var(--gray1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.table-responsive .table table tr td {
+    padding: 5px 6px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: monospace;
+    padding-right: 6px;
+}
+
+.table>:not(caption)>*>* {
+    padding-right: 18px;
+}
+
+.table>thead {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table>tbody{
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+tbody, td, tfoot, th, thead, tr {
+    border-style: none;
+}
+
+.table-responsive table thead td {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: monospace;
+    color: rgb(118 123 187);
+    font-size: 13px;
+}
+
+.table-responsive table tbody tr:hover
+{
+    background: #11101a;
+    color: var(--white);
+}
+
+td:nth-child(3) {
+    white-space: nowrap;
+}
+
+td:last-child {
+    white-space: nowrap;
+}
+
+footer {
+    background-color: #1a1a1a;
+}
+
+.btn-1 {
+    padding: 10px 20px;
+    background: var(--black1);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 20px;
+    font-size: small;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+
+.btn-2 {
+    padding: 10px 20px;
+    background: var(--black1);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 20px;
+    font-size: small;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+
+.all-table {
+    background: #1a1a1a;
+    box-shadow: 0 7px 25px rgb(0 0 0 / 50%);
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 96%;
+    min-height: auto;
+}
+
+.all-table table tbody tr:hover
+{
+    background: #11101a;
+    color: var(--white);
+}
+
+img.list-champ {
+    padding-right: 120px;
+    height: 25px;
+    display: flex;
+    margin-bottom: -20px;
+    margin-left: -5px;
+}
+
+@media (max-width: 1320px) {
+    .title-table {
+        margin-left: 12px;
     }
 
-    .details {
-        top: 165px;
-        width: 70%;
-        left: 60px;
+    .btn-all {
+        text-align: initial;
+        white-space: nowrap;
     }
-    .search input{
-        width: 200%;
-        left: 1000px;
-        top: 35px;
-    }
-    .navigation {
-        height: 4%;
-        width: 200%;
-        position: relative;
-    }
-  }
+
+}
 
 @media (max-width: 380px) {
-    .main {   
-        width: 200%;
-        position: relative;
+    .title-table {
+        margin-left: 12px;
     }
-    .menu {   
-        flex-wrap: wrap;
-        width: 200%;
+
+    .btn-all {
+        text-align: initial;
+        white-space: nowrap;
     }
-    .main {   
-        width: 200%;
-        position: relative;
-    }
-    .logo {
-        left: 50px;
-        top: -5px;
-    }
-    .details {
-        top: 155px;
-        width: 70%;
-        left: 250px;
-    }
-    .search input{
-        left: 1200px;
-        top: 25px;
-    }
-    .navigation {
-        height: 4%;
-        width: 200%;
-        position: relative;
-    }
-    .home {
-        left: 5%;
-    }
-    .search input{
-        width: 200%;
-        left: 1000px;
-        top: 35px;
-    }
+
 }
