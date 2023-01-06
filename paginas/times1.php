@@ -18,7 +18,7 @@
 
 <?php require_once "../includes/menu.php"; ?>
 
-<div class="table-responsive mt-5">
+<div class="all-table table-responsive mt-5">
     <table class="table mt-4">
         <div class="row">
             <div class="col-10">
