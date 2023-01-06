@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg">
     <div class="container">
         <div class="navbar-collapse">
             <ul class="navbar-nav">
