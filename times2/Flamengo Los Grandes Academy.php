@@ -59,7 +59,7 @@
                     <tbody>
                         <tr>
                             <?php
-                            require_once "../classes/pageteamsacademy.php";
+                            require_once "./classes/pageteamsacademy.php";
                             $playersStats = new StatsTeamAcademy();
 
                             $playersStats->getPlayersStats($nameteam);
@@ -78,7 +78,7 @@
                             <tbody>
                                 <tr>
                                     <?php
-                                    require_once "../classes/pageteamsacademy.php";
+                                    require_once "./classes/pageteamsacademy.php";
                                     $economyTeam = new StatsTeamAcademy();
 
                                     $economyTeam->getEconomyTeam($nameteam);
@@ -95,7 +95,7 @@
                             <tbody>
                                 <tr>
                                     <?php
-                                    require_once "../classes/pageteamsacademy.php";
+                                    require_once "./classes/pageteamsacademy.php";
                                     $aggressiveTeam = new StatsTeamAcademy();
 
                                     $aggressiveTeam->getAggressiveTeam($nameteam);
@@ -112,7 +112,7 @@
                             <tbody>
                                 <tr>
                                     <?php
-                                    require_once "../classes/pageteamsacademy.php";
+                                    require_once "./classes/pageteamsacademy.php";
                                     $objectiveTeam = new StatsTeamAcademy();
 
                                     $objectiveTeam->getObjectiveTeam($nameteam);
@@ -127,4 +127,4 @@
 </div>
 
 
-<?php require_once "./includes/footer.php"; ?>
+<?php require_once "../includes/footer.php"; ?>
