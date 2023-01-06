@@ -4,7 +4,7 @@
 
         public function getTournamentSplit1() 
         {
-            require_once('connection.php');
+            require_once('../connection.php');
             $conn = Database::connectionPDO();
 
             $sql = "SELECT league, split, sum(result=1) 'jogos', sum(duracaogame) / 2 / sum(result=1) / 60 'Duração game', sum(teamkills) / sum(result=1) 'Media de kill', sum(result=1 and side='blue') / sum(result=1) * 100'WinratioBlueside', sum(result=1 and side='red') / sum(result=1) * 100 'WinratioRedside', sum(dragons) / sum(result=1), sum(barons) / sum(result=1) FROM  `lck`
@@ -75,7 +75,7 @@
         
         public function getTournamentSplit2()
         {
-            require_once('connection.php');
+            require_once('../connection.php');
             $conn = Database::connectionPDO();
             
             $sql = "SELECT league, split, sum(result=1) 'jogos', sum(duracaogame) / 2 / sum(result=1) / 60 'Duração game', sum(teamkills) / sum(result=1) 'Media de kill', sum(result=1 and side='blue') / sum(result=1) * 100 'WinratioBlueside', sum(result=1 and side='red') / sum(result=1) * 100 'WinratioRedside', sum(dragons) / sum(result=1), sum(barons) / sum(result=1) FROM `cblol`

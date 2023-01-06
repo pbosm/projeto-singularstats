@@ -132,14 +132,19 @@ a:hover {
     text-align: center;
 }
 
-.table>tbody{
+.table>tbody {
     vertical-align: middle;
     text-align: center;
     text-transform: uppercase;
     font-size: 12px;
 }
 
-tbody, td, tfoot, th, thead, tr {
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
     border-style: none;
 }
 
@@ -151,8 +156,7 @@ tbody, td, tfoot, th, thead, tr {
     font-size: 13px;
 }
 
-.table-responsive table tbody tr:hover
-{
+.table-responsive table tbody tr:hover {
     background: #11101a;
     color: var(--white);
 }
@@ -201,8 +205,7 @@ footer {
     min-height: auto;
 }
 
-.all-table table tbody tr:hover
-{
+.all-table table tbody tr:hover {
     background: #11101a;
     color: var(--white);
 }
@@ -213,10 +216,6 @@ img.list-champ {
     display: flex;
     margin-bottom: -20px;
     margin-left: -5px;
-}
-
-.champion-icon {
-    white-space: nowrap;
 }
 
 @media (max-width: 1320px) {
@@ -241,4 +240,101 @@ img.list-champ {
         white-space: nowrap;
     }
 
+}
+
+.logoteam {
+    background: #1a1a1a;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgb(0 0 0 / 50%);
+    border-radius: 30px;
+    text-align: center;
+    max-height: 300px;
+    height: 240px;
+}
+
+.logoteam-intz {
+    background: #1a1a1a;
+    padding: 50px;
+    box-shadow: 0 7px 25px rgb(0 0 0 / 50%);
+    border-radius: 30px;
+    text-align: center;
+    max-height: 300px;
+    height: 240px;
+}
+
+.logoteam-red {
+    background: #1a1a1a;
+    padding: 50px;
+    box-shadow: 0 7px 25px rgb(0 0 0 / 50%);
+    border-radius: 30px;
+    text-align: center;
+    max-height: 300px;
+    height: 240px; 
+}
+
+.teamroster {
+    background: #1a1a1a;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgb(0 0 0 / 50%);
+    border-radius: 30px;
+}
+
+.table-responsive-economy {
+    background: #1a1a1a;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgb(0 0 0 / 50%);
+    border-radius: 30px;
+}
+
+.table-responsive-aggressive {
+    background: #1a1a1a;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgb(0 0 0 / 50%);
+    border-radius: 30px;
+}
+
+.table-responsive-objective {
+    background: #1a1a1a;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgb(0 0 0 / 50%);
+    border-radius: 30px;
+}
+
+.tableTitulo {
+    text-align: center;
+    color: #0098ad;
+}
+
+.info {
+    display: flex;
+    background: #1a1a1a;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgb(0 0 0 / 50%);
+    border-radius: 20px;
+    min-height: 440px;
+    height: 200px;
+}
+
+img.team {
+    display: flex;
+    width: 70%;
+    margin: auto;
+}
+
+.table-responsive-objective table tbody tr:hover
+{
+    background: #11101a;
+    color: var(--gray1);
+}
+
+.table-responsive-aggressive table tbody tr:hover
+{
+    background: #11101a;
+    color: var(--gray1);
+}
+
+.table-responsive-economy table tbody tr:hover
+{
+    background: #11101a;
+    color: var(--gray1);
 }
