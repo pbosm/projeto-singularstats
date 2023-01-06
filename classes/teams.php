@@ -79,7 +79,7 @@
 
         public function getTeamsSplit1()
         {
-            require_once('../connection.php');
+            require_once('connection.php');
             $conn = Database::connectionPDO();
     
             $code = $conn->prepare($sql = "SELECT teamname, count(teamname) AS game, sum(duracaogame) / count(teamname) / 60 AS duracao, Sum(side='Blue') gblue, sum(result=1 and side='Blue') / sum(side='blue') * 100 AS wblue,  Sum(side='Red') gred, sum(result=1 and side='red') / sum(side='red') * 100 AS wred, SUM(result=1) / count(teamname) * 100 AS wr, sum(firsttower) / count(teamname) * 100 AS ft, sum(firsttower=1 and side='Blue') / sum(side='blue') * 100 AS ftblue, sum(firsttower=1 and side='red') / sum(side='red') * 100 AS ftred, sum(firstblood) / count(teamname) * 100 AS fb from `cblol`
