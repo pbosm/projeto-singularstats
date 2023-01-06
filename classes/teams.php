@@ -83,8 +83,8 @@
             $conn = Database::connectionPDO();
 
             $sql = "SELECT teamname, count(teamname), sum(duracaogame) / count(teamname) / 60, Sum(side='Blue'), sum(result=1 and side='Blue') / sum(side='blue') * 100,  Sum(side='Red'), sum(result=1 and side='red') / sum(side='red') * 100, SUM(result=1) / count(teamname) * 100, sum(firsttower) / count(teamname) * 100, sum(firsttower=1 and side='Blue') / sum(side='blue') * 100, sum(firsttower=1 and side='red') / sum(side='red') * 100, sum(firstblood) / count(teamname) * 100 from `cblol`
-            where split in (select split from `cblol` where split = 'split 1')
-            and position in (select position from `cblol` where position = 'team')
+            where position in (select position from `cblol` where position = 'team')
+            and split in (select split from `cblol` where split = 'split 1')
             GROUP BY teamname;";
             $code = $conn->prepare($sql, array());
             $code->execute(); 
@@ -147,8 +147,8 @@
                             <td> $format_firsttorrered%</td>
                             <td> $format_fb%</td>
                             </td>";
-                }             
-                
+                }                         
+
                 return;
         }
 
