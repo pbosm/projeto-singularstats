@@ -133,7 +133,7 @@
                 $format_fb = number_format($registro['fb'], 2, '.', '.');
                 $format_fb = htmlentities($format_fb,  ENT_QUOTES, "UTF-8");
     
-                echo "<tr>
+                print "<tr>
                                <td><a href='../times/$registro[teamname].php'> $registro[teamname]</td> 
                                <td> $registro[game]</td>
                                <td> $format_duracao Minutos</td>
