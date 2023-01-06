@@ -104,18 +104,6 @@
                 $team[$key]['ftred']    = $registro['ftred'];
                 $team[$key]['fb']       = $registro['fb'];
     
-                $registro['teamname']= htmlentities($registro['teamname'], ENT_QUOTES, "UTF-8");
-                $registro['game']    = htmlentities($registro['game'],  ENT_QUOTES, "UTF-8");
-                $registro['gblue']   = htmlentities($registro['gblue'],  ENT_QUOTES, "UTF-8");
-                $registro['wblue']   = htmlentities($registro['wblue'],  ENT_QUOTES, "UTF-8");
-                $registro['gred']    = htmlentities($registro['gred'],  ENT_QUOTES, "UTF-8");
-                $registro['wred']    = htmlentities($registro['wred'],  ENT_QUOTES, "UTF-8");
-                $registro['wr']      = htmlentities($registro['wr'],  ENT_QUOTES, "UTF-8");
-                $registro['ft']      = htmlentities($registro['ft'],  ENT_QUOTES, "UTF-8");
-                $registro['ftblue']  = htmlentities($registro['ftblue'],  ENT_QUOTES, "UTF-8");
-                $registro['ftred']   = htmlentities($registro['ftred'],  ENT_QUOTES, "UTF-8");
-                $registro['fb']      = htmlentities($registro['fb'],  ENT_QUOTES, "UTF-8");
-    
                 $format_duracao = number_format($registro['duracao'], 0);
                 $format_duracao = htmlentities($format_duracao,  ENT_QUOTES, "UTF-8");
                 $format_winratioblue = number_format($registro['wblue'], 2, '.', '.');
@@ -133,7 +121,7 @@
                 $format_fb = number_format($registro['fb'], 2, '.', '.');
                 $format_fb = htmlentities($format_fb,  ENT_QUOTES, "UTF-8");
     
-                print "<tr>
+                echo "<tr>
                                <td><a href='../times/$registro[teamname].php'> $registro[teamname]</td> 
                                <td> $registro[game]</td>
                                <td> $format_duracao Minutos</td>
