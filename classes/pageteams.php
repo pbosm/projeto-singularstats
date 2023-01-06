@@ -4,7 +4,7 @@ class StatsTeam
 {
     public function getInfoTeam($nameteam)
     {
-        require_once('./connection.php');
+        require_once('connection.php');
         $conn = Database::connectionPDO();
 
         $sql = "SELECT teamname, league, split, year, sum(result=1), sum(result=0), avg(result=1) * 100 'Winratio', avg(duracaogame) / 60  from `cblol` 
@@ -72,7 +72,7 @@ class StatsTeam
     }
     public function getPlayersStats($nameteam)
     {
-        require_once('./connection.php');
+        require_once('connection.php');
         $conn = Database::connectionPDO();
 
         $sql = "SELECT distinct playername, position, count(teamname)'Jogos', SUM(result=1) / count(teamname) * 100 'Winratio', SUM(kills + assists) / SUM(deaths) 'KDA', SUM(kills) / count(teamname) 'Media de Kills', SUM(deaths) / count(teamname) 'Media de mortes', SUM(assists) / count(teamname)'Media de assist', SUM(kills + assists) / SUM(teamkills) * 100 'Kill participação', sum(damageshare) / count(teamname) * 100 '% dano', SUM(dpm) / count(playername) * 100 / 100 'dano por minuto', SUM(firstblood) / count(teamname) * 100 'FB participação', SUM(vspm) / count(teamname) * 100 / 100 'Ward p minuto', SUM(cspm) / count(teamname) 'Cs por minuto', SUM(earnedgpm) / count(teamname)'Gold por minuto', SUM(xpdiffat15) / count(teamname)'xp aos 15', sum(golddiffat15) / count(teamname) 'gold diff aos 15', sum(csdiffat15) / count(teamname) 'cs diff aos 15'from cblol
@@ -163,7 +163,7 @@ class StatsTeam
     }
     public function getEconomyTeam($nameteam)
     {
-        require_once('./connection.php');
+        require_once('connection.php');
         $conn = Database::connectionPDO();
 
         $sql = "SELECT  sum(firsttower) / count(teamname) * 100, sum(firsttower=1 and side='Blue') / sum(side='blue') * 100, sum(firsttower=1 and side='red') / sum(side='red') * 100, sum(towers) / count(teamname), sum(towersenemy) / count(teamname), sum(towers) / count(teamname) - sum(towersenemy) / count(teamname) 'Media de torres diff', SUM(earnedgpm) / count(teamname), SUM(xpdiffat15) / count(teamname), sum(golddiffat15) / count(teamname), sum(csdiffat15) / count(teamname), SUM(cspm) / count(teamname) from `cblol` where teamname = '$nameteam'
@@ -255,7 +255,7 @@ class StatsTeam
     }
     public function getAggressiveTeam($nameteam)
     {
-        require_once('./connection.php');
+        require_once('connection.php');
         $conn = Database::connectionPDO();
 
         $sql = "SELECT teamname, avg(teamkills), avg(teamdeaths), avg(dpm), avg(firstblood) * 100, avg(firstblood and side='blue') * 100, avg(firstblood and side='red') * 100, avg(vspm), avg(wpm) from `cblol`
@@ -341,7 +341,7 @@ class StatsTeam
     }
     public function getObjectiveTeam($nameteam)
     {
-        require_once('./connection.php');
+        require_once('connection.php');
         $conn = Database::connectionPDO();
 
         $sql = "SELECT avg(dragons) 'Dragons p game', sum(firstdragon=1 and side='blue') / sum(side='blue') * 100 '1 Drag Blueside', sum(firstdragon=1 and side='red') / sum(side='red') * 100 '1 Drag Redside', sum(firstherald) / count(teamname) * 100 '% de 1 Arauto', sum(firstherald=1 and side='blue') / sum(side='blue') * 100 '1 Arauto Blue side', sum(firstherald=1 and side='red') / sum(side='red') * 100 '1 Arauto Red side', sum(firstbaron=1 and side='blue') / sum(side='blue') * 100 '1 Baron Blue side', sum(firstbaron=1 and side='red') / sum(side='red') * 100 '1 Baron Red side', sum(firstbaron) / count(teamname) * 100 '% de Firts Baron', sum(barons) / count(teamname) 'Barons p game'  from `cblol`
@@ -447,7 +447,7 @@ class StatsTeam
 
     public function getInfoTeam1($nameteam)
     {
-        require_once('./connection.php');
+        require_once('connection.php');
         $conn = Database::connectionPDO();
 
         $sql = "SELECT teamname, league, split, year, sum(result=1), sum(result=0), avg(result=1) * 100 'Winratio', avg(duracaogame) / 60  from `cblol` 
@@ -515,7 +515,7 @@ class StatsTeam
     }
     public function getPlayersStats1($nameteam)
     {
-        require_once('./connection.php');
+        require_once('connection.php');
         $conn = Database::connectionPDO();
 
         $sql = "SELECT distinct playername, position, count(teamname)'Jogos', SUM(result=1) / count(teamname) * 100 'Winratio', SUM(kills + assists) / SUM(deaths) 'KDA', SUM(kills) / count(teamname) 'Media de Kills', SUM(deaths) / count(teamname) 'Media de mortes', SUM(assists) / count(teamname)'Media de assist', SUM(kills + assists) / SUM(teamkills) * 100 'Kill participação', sum(damageshare) / count(teamname) * 100 '% dano', SUM(dpm) / count(playername) * 100 / 100 'dano por minuto', SUM(firstblood) / count(teamname) * 100 'FB participação', SUM(vspm) / count(teamname) * 100 / 100 'Ward p minuto', SUM(cspm) / count(teamname) 'Cs por minuto', SUM(earnedgpm) / count(teamname)'Gold por minuto', SUM(xpdiffat15) / count(teamname)'xp aos 15', sum(golddiffat15) / count(teamname) 'gold diff aos 15', sum(csdiffat15) / count(teamname) 'cs diff aos 15'from cblol
@@ -606,7 +606,7 @@ class StatsTeam
     }
     public function getEconomyTeam1($nameteam)
     {
-        require_once('./connection.php');
+        require_once('connection.php');
         $conn = Database::connectionPDO();
 
         $sql = "SELECT  sum(firsttower) / count(teamname) * 100, sum(firsttower=1 and side='Blue') / sum(side='blue') * 100, sum(firsttower=1 and side='red') / sum(side='red') * 100, sum(towers) / count(teamname), sum(towersenemy) / count(teamname), sum(towers) / count(teamname) - sum(towersenemy) / count(teamname) 'Media de torres diff', SUM(earnedgpm) / count(teamname), SUM(xpdiffat15) / count(teamname), sum(golddiffat15) / count(teamname), sum(csdiffat15) / count(teamname), SUM(cspm) / count(teamname) from `cblol` where teamname = '$nameteam'
@@ -698,7 +698,7 @@ class StatsTeam
     }
     public function getAggressiveTeam1($nameteam)
     {
-        require_once('./connection.php');
+        require_once('connection.php');
         $conn = Database::connectionPDO();
 
         $sql = "SELECT teamname, avg(teamkills), avg(teamdeaths), avg(dpm), avg(firstblood) * 100, avg(firstblood and side='blue') * 100, avg(firstblood and side='red') * 100, avg(vspm), avg(wpm) from `cblol`
@@ -784,7 +784,7 @@ class StatsTeam
     }
     public function getObjectiveTeam1($nameteam)
     {
-        require_once('./connection.php');
+        require_once('connection.php');
         $conn = Database::connectionPDO();
 
         $sql = "SELECT avg(dragons) 'Dragons p game', sum(firstdragon=1 and side='blue') / sum(side='blue') * 100 '1 Drag Blueside', sum(firstdragon=1 and side='red') / sum(side='red') * 100 '1 Drag Redside', sum(firstherald) / count(teamname) * 100 '% de 1 Arauto', sum(firstherald=1 and side='blue') / sum(side='blue') * 100 '1 Arauto Blue side', sum(firstherald=1 and side='red') / sum(side='red') * 100 '1 Arauto Red side', sum(firstbaron=1 and side='blue') / sum(side='blue') * 100 '1 Baron Blue side', sum(firstbaron=1 and side='red') / sum(side='red') * 100 '1 Baron Red side', sum(firstbaron) / count(teamname) * 100 '% de Firts Baron', sum(barons) / count(teamname) 'Barons p game'  from `cblol`

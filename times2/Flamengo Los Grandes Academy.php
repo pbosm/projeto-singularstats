@@ -59,10 +59,10 @@
                     <tbody>
                         <tr>
                             <?php
-                require_once "../classes/class.php";
-                $home = new Stats();
+                            require_once "../classes/pageteamsacademy.php";
+                            $playersStats = new StatsTeamAcademy();
 
-                $home->getLastGames();
+                            $playersStats->getPlayersStats($nameteam);
                             ?>
                     </tbody>
                 </table>
