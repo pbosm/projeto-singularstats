@@ -53,7 +53,7 @@
                 require_once "../classes/teams.php";
                 $teamssplit1 = new Teams();
 
-                $teamssplit1->getTeamsSplit2();
+                $teamssplit1->getTeamsSplit1();
                 ?>
             </tr>
         </tbody>

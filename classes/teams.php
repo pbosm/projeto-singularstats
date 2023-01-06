@@ -147,8 +147,8 @@
                             <td> $format_firsttorrered%</td>
                             <td> $format_fb%</td>
                             </td>";
-                }             
-                
+                }                         
+
                 return;
         }
 
