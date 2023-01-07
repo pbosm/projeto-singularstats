@@ -82,10 +82,11 @@
             require_once('connection.php');
             $conn = Database::connectionPDO();
     
-            $code = $conn->prepare($sql = "SELECT teamname, count(teamname) AS game, sum(duracaogame) / count(teamname) / 60 AS duracao, Sum(side='Blue') gblue, sum(result=1 and side='Blue') / sum(side='blue') * 100 AS wblue,  Sum(side='Red') gred, sum(result=1 and side='red') / sum(side='red') * 100 AS wred, SUM(result=1) / count(teamname) * 100 AS wr, sum(firsttower) / count(teamname) * 100 AS ft, sum(firsttower=1 and side='Blue') / sum(side='blue') * 100 AS ftblue, sum(firsttower=1 and side='red') / sum(side='red') * 100 AS ftred, sum(firstblood) / count(teamname) * 100 AS fb from `cblol`
+            $code = $conn->prepare("SELECT teamname, count(teamname) AS game, sum(duracaogame) / count(teamname) / 60 AS duracao, Sum(side='Blue') gblue, sum(result=1 and side='Blue') / sum(side='blue') * 100 AS wblue,  Sum(side='Red') gred, sum(result=1 and side='red') / sum(side='red') * 100 AS wred, SUM(result=1) / count(teamname) * 100 AS wr, sum(firsttower) / count(teamname) * 100 AS ft, sum(firsttower=1 and side='Blue') / sum(side='blue') * 100 AS ftblue, sum(firsttower=1 and side='red') / sum(side='red') * 100 AS ftred, sum(firstblood) / count(teamname) * 100 AS fb from `cblol`
             where split in (select split from `cblol` where split = 'split 1')
             and position in (select position from `cblol` where position = 'team')
-            GROUP BY teamname;");
+            and teamname in (select teamname from `cblol` where teamname != 'MINERS ACADEMY')
+            GROUP BY teamname");
             $code->execute();
             $team = $code->fetchAll(PDO::FETCH_ASSOC);
     
@@ -125,15 +126,15 @@
                                <td><a href='../times/$registro[teamname].php'> $registro[teamname]</td> 
                                <td> $registro[game]</td>
                                <td> $format_duracao Minutos</td>
-                               <td> $registro[gblue]</td>
-                               <td> $format_winratioblue</td>
+                               <td> $registro[gblue]%</td>
+                               <td> $format_winratioblue%</td>
                                <td> $registro[gred]</td>
-                               <td> $registro[wred]</td>
-                               <td> $format_winratio</td>
-                               <td> $format_firsttorre</td>
-                               <td> $format_firsttorreblue</td>
-                               <td> $format_firsttorrered</td>
-                               <td> $format_fb</td>
+                               <td> $registro[wred]%</td>
+                               <td> $format_winratio%</td>
+                               <td> $format_firsttorre%</td>
+                               <td> $format_firsttorreblue%</td>
+                               <td> $format_firsttorrered%</td>
+                               <td> $format_fb%</td>
                                </td>";
             }
     
