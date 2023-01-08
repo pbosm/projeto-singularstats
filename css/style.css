@@ -222,30 +222,6 @@ img.list-champ {
     white-space: nowrap;
 }
 
-@media (max-width: 1320px) {
-    .title-table {
-        margin-left: 12px;
-    }
-
-    .btn-all {
-        text-align: initial;
-        white-space: nowrap;
-    }
-
-}
-
-@media (max-width: 380px) {
-    .title-table {
-        margin-left: 12px;
-    }
-
-    .btn-all {
-        text-align: initial;
-        white-space: nowrap;
-    }
-
-}
-
 .logoteam {
     background: #1a1a1a;
     padding: 20px;
@@ -341,4 +317,74 @@ img.team {
 {
     background: #11101a;
     color: var(--gray1);
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.toggle-button {
+    position: absolute;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .fas fa-bars {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 1320px) {
+    .title-table {
+        margin-left: 12px;
+    }
+
+    .btn-all {
+        text-align: initial;
+        white-space: nowrap;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 380px) {
+    .title-table {
+        margin-left: 12px;
+    }
+
+    .btn-all {
+        text-align: initial;
+        white-space: nowrap;
+    }
+
 }
