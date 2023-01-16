@@ -355,6 +355,9 @@ img.team {
         white-space: nowrap;
     }
 
+    .logo {
+        margin-left: -10px;
+    }
 }
 
 @media (max-width: 800px) {
@@ -375,6 +378,10 @@ img.team {
     .navbar-links.active {
         display: flex;
     }
+
+    .logo {
+        margin-left: -10px;
+    }
 }
 
 @media (max-width: 380px) {
@@ -387,4 +394,7 @@ img.team {
         white-space: nowrap;
     }
 
+    .logo {
+        margin-left: -10px;
+    }
 }
