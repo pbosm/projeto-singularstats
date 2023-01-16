@@ -4,7 +4,7 @@
 <div class="logo-head text-center">
     <div class="row">
         <div class="col-sm-7">
-            <a href="index.php"><img class='logo' src="./image/SingularPreto.png" alt="Imagem" title="SingularStats"
+            <a href="index.php"><img class='logo mb-2' src="./image/SingularPreto.png" alt="Imagem" title="SingularStats"
                     width="330"></a>
         </div>
         <div class="col-sm-5">
