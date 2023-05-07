@@ -16,14 +16,20 @@ class Database
         $username = "root";
         $pass     = "qGrq84De7I3FqSvDK0Ir";
         $port     = "7704";
-        $db = "railway";
+        $db       = "railway";
+        $charset = 'utf8mb4';
+        $options    = array(
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+          );
 
+        $dsn = "mysql:host=$host;dbname=$db;charset=$charset;port=$port";
+        
         try
         {
-            self::$db = new PDO("mysql:host=$host;dbname=$db;port=$port, $username, $pass");
-            self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            self::$db = new \PDO($dsn, $username, $pass, $options);
+            // self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             // self::$db->exec('SET NAMES utf8');
-            self::$db->exec('SET NAMES utf8mb4');
+            // self::$db->exec('SET NAMES utf8mb4');
         }
         catch (PDOException $e)
         {   
