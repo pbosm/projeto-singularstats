@@ -204,7 +204,7 @@
                 $cs15           = $registro[15];
 
                 $format_winratio    = number_format($winratio, 2);
-                $format_kda         = number_format($kda, 2);
+                $format_kda         = number_format(floatval($kda));
                 $format_fbpart      = number_format($fbpart, 2, '.', '.');
                 $format_dpm         = number_format($dpm, 2, '.', '.');
                 $format_cspm        = number_format($cspm, 2, '.', '.');
@@ -221,7 +221,7 @@
                 $kills          = htmlentities($kills, ENT_QUOTES, "UTF-8");
                 $mortes         = htmlentities($mortes, ENT_QUOTES, "UTF-8");
                 $assist         = htmlentities($assist, ENT_QUOTES, "UTF-8");
-                $kda            = htmlentities($kda, ENT_QUOTES, "UTF-8");
+                $kda            = htmlentities($kda);
                 $fbpart         = htmlentities($fbpart, ENT_QUOTES, "UTF-8");
                 $dpm            = htmlentities($dpm, ENT_QUOTES, "UTF-8");
                 $cspm           = htmlentities($cspm, ENT_QUOTES, "UTF-8");
