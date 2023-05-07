@@ -209,9 +209,9 @@
                 $format_dpm         = number_format($dpm, 2, '.', '.');
                 $format_cspm        = number_format($cspm, 2, '.', '.');
                 $format_goldpm      = number_format($goldpm, 2, '.', '.');
-                $format_xp15      = number_format($xp15, 2, '.', '.');
-                $format_gold15     = number_format($gold15, 2, '.', '.');
-                $format_cs15      = number_format($cs15, 2, '.', '.');
+                $format_xp15        = number_format($xp15, 2, '.', '.');
+                $format_gold15      = number_format($gold15, 2, '.', '.');
+                $format_cs15        = number_format($cs15, 2, '.', '.');
 
                 $champion       = htmlentities($champion, ENT_QUOTES, "UTF-8");
                 $jogos          = htmlentities($jogos, ENT_QUOTES, "UTF-8");
@@ -286,7 +286,7 @@
                 $cs15           = $registro[15];
 
                 $format_winratio    = number_format($winratio, 2);
-                $format_kda         = number_format($kda, 2);
+                $format_kda         = number_format(floatval($kda));
                 $format_fbpart      = number_format($fbpart, 2, '.', '.');
                 $format_dpm         = number_format($dpm, 2, '.', '.');
                 $format_cspm        = number_format($cspm, 2, '.', '.');
@@ -295,7 +295,7 @@
                 $format_gold15     = number_format($gold15, 2, '.', '.');
                 $format_cs15      = number_format($cs15, 2, '.', '.');
 
-                $champion       = htmlentities($champion, ENT_QUOTES, "UTF-8");
+                // $champion       = htmlentities($champion, ENT_QUOTES, "UTF-8");
                 $jogos          = htmlentities($jogos, ENT_QUOTES, "UTF-8");
                 $jogosblueside  = htmlentities($jogosblueside, ENT_QUOTES, "UTF-8");
                 $jogosredside   = htmlentities($jogosredside, ENT_QUOTES, "UTF-8");
@@ -303,7 +303,7 @@
                 $kills          = htmlentities($kills, ENT_QUOTES, "UTF-8");
                 $mortes         = htmlentities($mortes, ENT_QUOTES, "UTF-8");
                 $assist         = htmlentities($assist, ENT_QUOTES, "UTF-8");
-                $kda            = htmlentities($kda, ENT_QUOTES, "UTF-8");
+                // $kda            = htmlentities($kda, ENT_QUOTES, "UTF-8");
                 $fbpart         = htmlentities($fbpart, ENT_QUOTES, "UTF-8");
                 $dpm            = htmlentities($dpm, ENT_QUOTES, "UTF-8");
                 $cspm           = htmlentities($cspm, ENT_QUOTES, "UTF-8");
