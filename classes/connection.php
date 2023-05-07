@@ -18,14 +18,14 @@ class Database
         $port     = "7704";
         $db       = "railway";
 
-        $connecthost = "mysql:host=$host;dbname=$db;port=$port";
+        $dsn = "mysql:host=$host;dbname=$db;port=$port";
         
         try
         {
-            self::$db = new \PDO($connecthost, $username, $pass);
-            self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            self::$db = new \PDO($dsn, $username, $pass);
+            // self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             // self::$db->exec('SET NAMES utf8');
-            self::$db->exec('SET NAMES utf8mb4');
+            // self::$db->exec('SET NAMES utf8mb4');
         }
         catch (PDOException $e)
         {   
