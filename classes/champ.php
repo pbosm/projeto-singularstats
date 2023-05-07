@@ -221,7 +221,6 @@
                 $kills          = htmlentities($kills, ENT_QUOTES, "UTF-8");
                 $mortes         = htmlentities($mortes, ENT_QUOTES, "UTF-8");
                 $assist         = htmlentities($assist, ENT_QUOTES, "UTF-8");
-                $kda            = htmlentities($kda);
                 $fbpart         = htmlentities($fbpart, ENT_QUOTES, "UTF-8");
                 $dpm            = htmlentities($dpm, ENT_QUOTES, "UTF-8");
                 $cspm           = htmlentities($cspm, ENT_QUOTES, "UTF-8");
