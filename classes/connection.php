@@ -12,10 +12,10 @@ class Database
         // $cleardb_password = $cleardb_url["pass"];
         // $cleardb_db = substr($cleardb_url["path"],1);
 
-        $host     = "containers-us-west-195.railway.app";
+        $host     = getenv("host");
         $username = "root";
-        $pass     = "qGrq84De7I3FqSvDK0Ir";
-        $port     = "7704";
+        $pass     = getenv("pass");
+        $port     = getenv("port");
         $db       = "railway";
 
         $connecthost = "mysql:host=$host;dbname=$db;port=$port";
