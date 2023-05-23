@@ -14,7 +14,8 @@
             and position in (select position from cblol `cblol` where position != 'team') 
             GROUP BY playername order by playername asc";
             $code = $conn->prepare($sql, array());
-            $code->execute([':pesquisar' => '%' . $pesquisar . '%']); 
+            $code->bindValue(':pesquisar', '%' . $pesquisar . '%');
+            $code->execute();
             
             while ($registro = $code->fetch()) 
             {                           
@@ -120,7 +121,8 @@
             and position in (select position from cblol `cblol` where position != 'team') 
             GROUP BY playername order by playername asc";
             $code = $conn->prepare($sql, array());
-            $code->execute([':pesquisar' => '%' . $pesquisar . '%']);
+            $code->bindValue(':pesquisar', '%' . $pesquisar . '%');
+            $code->execute();
             
             while ($registro = $code->fetch()) 
             {                           

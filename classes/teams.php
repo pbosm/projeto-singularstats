@@ -228,7 +228,8 @@
            and position in (select position from `cblol` where position = 'team')
            GROUP BY teamname;";
            $code = $conn->prepare($sql, array());
-           $code->execute([':pesquisar' => '%' . $pesquisar . '%']); 
+           $code->bindValue(':pesquisar', '%' . $pesquisar . '%');
+           $code->execute();
            
            while ($registro = $code->fetch()) 
            {                                   
